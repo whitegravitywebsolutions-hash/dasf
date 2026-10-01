@@ -162,7 +162,6 @@ export const companyDetails = {
     { title: 'National Training Certificate', code: 'Certified Training', desc: 'National Standard Tactical & Defense Training' }
   ],
   phone: '84006 01349',
-  altPhone: '+91 75990 46800',
   phoneClean: '918400601349',
   email: 'dasf09485@gmail.com',
   location: 'Panchsheel Colony, Ghaziabad, Uttar Pradesh',

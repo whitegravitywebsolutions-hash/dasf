@@ -88,15 +88,16 @@ export default function OwnerSection() {
                   className="gold-btn px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-lg"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>Call {companyDetails.phone}</span>
+                  <span>Call Hotline: {companyDetails.phone}</span>
                 </a>
 
                 <a
-                  href={`tel:${companyDetails.altPhone.replace(/[^0-9]/g, '')}`}
-                  className="px-6 py-3 rounded-xl bg-slate-950 hover:bg-slate-800 text-amber-300 border border-amber-500/40 text-xs font-bold transition-colors flex items-center gap-2"
+                  href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20D.S.%20Tomar%20Sir,%20I%20want%20to%20enquire%20about%20DASF%20security%20services.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 rounded-xl bg-emerald-950/80 border border-emerald-500/50 hover:bg-emerald-900 text-emerald-400 text-xs font-bold transition-colors flex items-center gap-2"
                 >
-                  <Phone className="w-4 h-4 text-amber-400" />
-                  <span>Alt Call: {companyDetails.altPhone}</span>
+                  <span>Chat on WhatsApp</span>
                 </a>
               </div>
 
