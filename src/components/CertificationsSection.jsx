@@ -35,21 +35,21 @@ export default function CertificationsSection() {
   ];
 
   return (
-    <section className="py-16 bg-slate-950 border-t border-b border-amber-500/20 relative overflow-hidden">
+    <section className="py-16 bg-[#faf8f3] border-t border-b border-[#eae6df] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold">
-            <Award className="w-4 h-4 text-amber-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider">
+            <Award className="w-4 h-4 text-amber-600" />
             <span>Government Approved & Certified</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-serif tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif tracking-tight">
             Official Accreditations & <span className="gold-gradient-text">Certifications</span>
           </h2>
 
-          <p className="text-slate-400 text-sm sm:text-base">
+          <p className="text-slate-600 text-sm sm:text-base">
             Dharm Armed Security Force operates under full statutory compliance and verified government credentials across Ghaziabad & Pan India.
           </p>
         </div>
@@ -61,34 +61,34 @@ export default function CertificationsSection() {
             return (
               <div 
                 key={idx}
-                className="bg-slate-900/90 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-6 transition-all duration-300 card-hover flex flex-col justify-between space-y-4 group shadow-xl"
+                className="bg-white border border-[#eae6df] hover:border-amber-500 rounded-2xl p-6 transition-all duration-300 card-hover flex flex-col justify-between space-y-4 shadow-sm group"
               >
                 <div className="space-y-3">
                   <div className="flex justify-between items-start">
-                    <div className="p-3 bg-amber-500/10 border border-amber-500/30 rounded-xl text-amber-400 group-hover:scale-110 transition-transform">
+                    <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-amber-600 group-hover:scale-110 transition-transform">
                       <Icon className="w-7 h-7" />
                     </div>
-                    <span className="text-[10px] font-extrabold bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                    <span className="text-[10px] font-extrabold bg-amber-100 text-amber-900 border border-amber-300 px-2.5 py-1 rounded-full uppercase tracking-wider">
                       {cert.badge}
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-bold text-white font-serif group-hover:text-amber-300 transition-colors">
+                    <h3 className="text-lg font-bold text-slate-900 font-serif group-hover:text-amber-600 transition-colors">
                       {cert.title}
                     </h3>
-                    <p className="text-xs font-semibold text-amber-400 mt-0.5">
+                    <p className="text-xs font-semibold text-amber-700 mt-0.5">
                       {cert.subtitle}
                     </p>
                   </div>
 
-                  <p className="text-xs text-slate-400 leading-relaxed">
+                  <p className="text-xs text-slate-600 leading-relaxed">
                     {cert.desc}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-slate-800 flex items-center gap-1.5 text-xs text-emerald-400 font-medium">
-                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                <div className="pt-3 border-t border-slate-100 flex items-center gap-1.5 text-xs text-emerald-700 font-bold">
+                  <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
                   <span>Verified Certification</span>
                 </div>
               </div>

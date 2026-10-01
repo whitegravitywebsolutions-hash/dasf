@@ -8,7 +8,8 @@ import {
   SlidersHorizontal, 
   Tag, 
   Sparkles,
-  Layers
+  Layers,
+  MessageSquare
 } from 'lucide-react';
 import { servicesData, companyDetails } from '../data/servicesData';
 import InquiryModal from '../components/InquiryModal';
@@ -38,38 +39,34 @@ export default function Services() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-12">
+    <div className="min-h-screen bg-[#faf8f3] text-slate-900 py-12">
       
       {/* HEADER BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 border border-amber-500/30 rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-2xl">
+        <div className="bg-white border border-[#eae6df] rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-sm">
           
-          <div className="absolute right-0 top-0 opacity-10 pointer-events-none">
-            <img src={companyDetails.logo} alt="" className="w-80 h-80 object-contain" />
-          </div>
-
           <div className="max-w-3xl relative z-10 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold">
-              <Layers className="w-4 h-4 text-amber-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider">
+              <Layers className="w-4 h-4 text-amber-600" />
               <span>Full Service Catalog • Armed & Unarmed Force</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-white font-serif tracking-tight">
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 font-serif tracking-tight">
               Categories of <span className="gold-gradient-text">Dharm Armed Security Force</span>
             </h1>
 
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
               Explore our certified security manpower catalog featuring Armed Gunmen, Armed Gunwomen, Tactical Commandos, VIP Bodyguards, and Event Bouncers. Operating under PSARA, GST & MSME certifications across Ghaziabad & Pan India.
             </p>
 
-            <div className="pt-2 flex flex-wrap gap-4 text-xs font-semibold text-slate-400">
-              <span className="flex items-center gap-1.5 text-amber-400">
-                <CheckCircle className="w-4 h-4" /> 14+ Specialized Service Categories
+            <div className="pt-2 flex flex-wrap gap-4 text-xs font-bold text-slate-700">
+              <span className="flex items-center gap-1.5 text-amber-700">
+                <CheckCircle className="w-4 h-4" /> 15+ Specialized Service Categories
               </span>
-              <span className="flex items-center gap-1.5 text-amber-400">
-                <CheckCircle className="w-4 h-4" /> Gunmen • Gunwomen • Commandos
+              <span className="flex items-center gap-1.5 text-amber-700">
+                <CheckCircle className="w-4 h-4" /> Gunmen • Gunwomen • Commandos • PSOs
               </span>
-              <span className="flex items-center gap-1.5 text-amber-400">
+              <span className="flex items-center gap-1.5 text-amber-700">
                 <CheckCircle className="w-4 h-4" /> PSARA & GST Certified
               </span>
             </div>
@@ -79,7 +76,7 @@ export default function Services() {
 
       {/* FILTER & SEARCH BAR */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 sm:p-6 space-y-4">
+        <div className="bg-white border border-[#eae6df] rounded-2xl p-4 sm:p-6 space-y-4 shadow-sm">
           
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             
@@ -88,30 +85,30 @@ export default function Services() {
               <Search className="w-5 h-5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
-                placeholder="Search gunman, commando, bouncer, bank..."
+                placeholder="Search gunman, commando, bouncer, pso..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-slate-950 border border-slate-700 focus:border-amber-400 rounded-xl pl-11 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none"
+                className="w-full bg-[#faf8f3] border border-[#eae6df] focus:border-amber-500 rounded-xl pl-11 pr-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none"
               />
             </div>
 
             {/* Results Count */}
-            <div className="text-xs text-slate-400 font-medium">
-              Showing <span className="text-amber-400 font-bold">{filteredServices.length}</span> of <span className="text-white font-bold">{servicesData.length}</span> Security Categories
+            <div className="text-xs text-slate-600 font-bold">
+              Showing <span className="text-amber-700 font-black">{filteredServices.length}</span> of <span className="text-slate-900 font-black">{servicesData.length}</span> Security Categories
             </div>
 
           </div>
 
           {/* Category Tabs */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none pt-2 border-t border-slate-800">
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none pt-2 border-t border-slate-100">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
+                className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all ${
                   selectedCategory === cat
-                    ? 'bg-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/20'
-                    : 'bg-slate-950 text-slate-300 hover:bg-slate-800 hover:text-amber-300 border border-slate-800'
+                    ? 'bg-amber-500 text-slate-950 shadow-md font-extrabold'
+                    : 'bg-[#faf8f3] text-slate-700 hover:bg-slate-200 border border-[#eae6df]'
                 }`}
               >
                 {cat}
@@ -129,7 +126,7 @@ export default function Services() {
             {filteredServices.map((service) => (
               <div
                 key={service.id}
-                className="bg-slate-900/90 rounded-2xl overflow-hidden border border-slate-800 hover:border-amber-500/60 transition-all duration-300 flex flex-col card-hover group shadow-xl"
+                className="bg-white rounded-2xl overflow-hidden border border-[#eae6df] hover:border-amber-500 transition-all duration-300 flex flex-col card-hover group shadow-sm"
               >
                 {/* Image Container with Badge */}
                 <div className="relative h-56 overflow-hidden">
@@ -138,15 +135,15 @@ export default function Services() {
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
+                  <div className="absolute inset-0 bg-slate-950/20"></div>
                   
                   {/* Category Pill */}
-                  <span className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-sm text-amber-400 border border-amber-500/40 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                  <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-slate-900 border border-slate-200 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
                     {service.category}
                   </span>
 
                   {/* Badge */}
-                  <span className="absolute top-3 right-3 bg-amber-500 text-slate-950 font-extrabold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded shadow">
+                  <span className="absolute top-3 right-3 bg-amber-500 text-slate-950 font-black text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
                     {service.badge}
                   </span>
                 </div>
@@ -154,23 +151,23 @@ export default function Services() {
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    <h3 className="text-xl font-bold text-white font-serif group-hover:text-amber-300 transition-colors">
+                    <h3 className="text-xl font-bold text-slate-900 font-serif group-hover:text-amber-700 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-xs text-slate-300 mt-2 leading-relaxed">
+                    <p className="text-xs text-slate-600 mt-2 leading-relaxed">
                       {service.description}
                     </p>
                   </div>
 
                   {/* Feature Checklist */}
-                  <div className="space-y-2 pt-2 border-t border-slate-800/80">
-                    <div className="text-[11px] font-bold text-amber-400 uppercase tracking-wider">
+                  <div className="space-y-2 pt-2 border-t border-slate-100">
+                    <div className="text-[11px] font-bold text-amber-700 uppercase tracking-wider">
                       Key Highlights:
                     </div>
-                    <ul className="space-y-1.5 text-xs text-slate-300">
+                    <ul className="space-y-1.5 text-xs text-slate-700">
                       {service.features.map((feat, idx) => (
                         <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
+                          <CheckCircle className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </li>
                       ))}
@@ -178,10 +175,10 @@ export default function Services() {
                   </div>
 
                   {/* Booking Action Button */}
-                  <div className="pt-4 border-t border-slate-800 flex gap-2">
+                  <div className="pt-4 border-t border-slate-100 flex gap-2">
                     <button
                       onClick={() => handleOpenModal(service)}
-                      className="gold-btn flex-1 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md"
+                      className="gold-btn flex-1 py-3 text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm"
                     >
                       <span>Book Service</span>
                       <ArrowRight className="w-4 h-4" />
@@ -189,7 +186,7 @@ export default function Services() {
 
                     <a
                       href={`tel:${companyDetails.phone}`}
-                      className="p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-400 border border-slate-700 transition-colors flex items-center justify-center"
+                      className="p-3 rounded-full bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300 transition-colors flex items-center justify-center"
                       title="Call Dispatch"
                     >
                       <Phone className="w-4 h-4" />
@@ -200,15 +197,15 @@ export default function Services() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-16 bg-slate-900/60 rounded-3xl border border-slate-800 space-y-4">
-            <Search className="w-12 h-12 text-slate-500 mx-auto" />
-            <h3 className="text-xl font-bold text-white font-serif">No Services Found</h3>
-            <p className="text-sm text-slate-400 max-w-md mx-auto">
+          <div className="text-center py-16 bg-white rounded-3xl border border-[#eae6df] space-y-4">
+            <Search className="w-12 h-12 text-slate-400 mx-auto" />
+            <h3 className="text-xl font-bold text-slate-900 font-serif">No Services Found</h3>
+            <p className="text-sm text-slate-600 max-w-md mx-auto">
               We couldn't find any service matching "{searchQuery}". Try selecting a different category or call our security hotline directly.
             </p>
             <button
               onClick={() => { setSearchQuery(''); setSelectedCategory('All'); }}
-              className="px-6 py-2.5 bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-xl text-xs font-bold hover:bg-amber-500/30 transition-colors"
+              className="px-6 py-2.5 bg-amber-100 text-amber-900 border border-amber-300 rounded-full text-xs font-bold hover:bg-amber-200 transition-colors"
             >
               Reset Filters
             </button>
@@ -218,45 +215,6 @@ export default function Services() {
 
       {/* CERTIFICATIONS SECTION */}
       <CertificationsSection />
-
-      {/* ALL CATEGORIES INDEX LIST */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
-        <div className="bg-slate-900 border border-amber-500/20 rounded-3xl p-6 sm:p-8 space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-amber-500/10 border border-amber-500/30 rounded-xl text-amber-400">
-              <Tag className="w-6 h-6" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white font-serif">
-                Complete Service Catalog (Ghaziabad & Pan India)
-              </h3>
-              <p className="text-xs text-slate-400">
-                Direct listing of all gunman, gunwoman, commando & security services provided by Dharm Armed Security Force
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {servicesData.map((item, idx) => (
-              <button
-                key={item.id}
-                onClick={() => handleOpenModal(item)}
-                className="p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-amber-400 text-left transition-all flex items-center justify-between group"
-              >
-                <div className="flex items-center gap-2.5 overflow-hidden">
-                  <span className="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center justify-center shrink-0">
-                    {idx + 1}
-                  </span>
-                  <span className="text-xs font-bold text-slate-200 group-hover:text-amber-300 truncate">
-                    {item.title}
-                  </span>
-                </div>
-                <ArrowRight className="w-3.5 h-3.5 text-amber-400 shrink-0 group-hover:translate-x-1 transition-transform" />
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* INQUIRY MODAL */}
       <InquiryModal

@@ -1,53 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
+
+:root {
+  --accent-gold: #d97706;
+  --accent-gold-hover: #b45309;
+  --accent-yellow: #f59e0b;
+  --accent-yellow-light: #fef08a;
+  --bg-page: #faf8f3;
+  --bg-surface: #ffffff;
+  --text-heading: #090e17;
+  --text-main: #111827;
+  --text-body: #4b5563;
+  --border-card: #eae6df;
+}
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   body {
-    background-color: #090d14;
-    color: #e2e8f0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
     overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-heading);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
   }
 }
 
-/* Custom Gold & Tactical Styling */
+/* Gold & Amber Tactical Solid Colors (No Gradients) */
 .gold-gradient-text {
-  background: linear-gradient(135deg, #FFF5B8 0%, #E5C158 40%, #B8860B 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gold-border-gradient {
-  border-image: linear-gradient(to right, #D4AF37, #F3C649, #996515) 1;
+  color: #d97706;
 }
 
 .gold-btn {
-  background: linear-gradient(135deg, #D4AF37 0%, #F3C649 50%, #B8860B 100%);
-  color: #090d14;
+  background-color: #d97706;
+  color: #ffffff;
+  border: 1.5px solid #d97706;
+  border-radius: 9999px;
   font-weight: 700;
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .gold-btn:hover {
-  background: linear-gradient(135deg, #F3C649 0%, #FFF5B8 50%, #D4AF37 100%);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  background-color: #b45309;
+  border-color: #b45309;
   transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(217, 119, 6, 0.4);
 }
 
-.dark-glass {
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+.btn-yellow {
+  background-color: #fbbf24;
+  color: #111827;
+  border: 1.5px solid #f59e0b;
+  border-radius: 9999px;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-yellow:hover {
+  background-color: #f59e0b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.35);
+}
+
+.btn-dark {
+  background-color: #090e17;
+  color: #ffffff;
+  border: 1.5px solid #090e17;
+  border-radius: 9999px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.btn-dark:hover {
+  background-color: #1f2937;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.btn-call-pill {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1.5px solid #fde68a;
+  border-radius: 9999px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-call-pill:hover {
+  background-color: #fde68a;
+  color: #78350f;
+  transform: translateY(-1px);
+}
+
+.btn-wa-pill {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1.5px solid #bbf7d0;
+  border-radius: 9999px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-wa-pill:hover {
+  background-color: #bbf7d0;
+  color: #166534;
+  transform: translateY(-1px);
 }
 
 .card-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card-hover:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px -10px rgba(212, 175, 55, 0.25);
-  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+  border-color: #f59e0b;
 }
