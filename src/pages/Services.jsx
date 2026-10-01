@@ -213,6 +213,43 @@ export default function Services() {
         )}
       </section>
 
+      {/* CALL TO ACTION BANNER */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
+        <div className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 text-center space-y-6 relative overflow-hidden border border-slate-800 shadow-xl">
+          <div className="w-14 h-14 bg-emerald-500/20 border border-emerald-500/40 rounded-full flex items-center justify-center mx-auto text-emerald-400 shadow-md">
+            <MessageSquare className="w-7 h-7" />
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-serif">
+            Need Immediate Security Force Deployment?
+          </h2>
+
+          <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">
+            Connect directly with our security coordinator on WhatsApp for instant quote, guard profiles & rapid deployment across Pan India.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+            <a
+              href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-wa-pill px-8 py-4 text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl w-full sm:w-auto"
+            >
+              <MessageSquare className="w-5 h-5" />
+              <span>Connect on WhatsApp ({companyDetails.phone})</span>
+            </a>
+
+            <a
+              href={`tel:${companyDetails.phone}`}
+              className="gold-btn px-8 py-4 text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl w-full sm:w-auto"
+            >
+              <Phone className="w-5 h-5" />
+              <span>Call Hotline: {companyDetails.phone}</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CERTIFICATIONS SECTION */}
       <CertificationsSection />
 

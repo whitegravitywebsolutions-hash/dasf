@@ -287,7 +287,7 @@ export default function Home() {
               className="gold-btn px-8 py-4 text-base uppercase tracking-wider flex items-center gap-3 shadow-2xl"
             >
               <Phone className="w-5 h-5" />
-              <span>Direct Call: 84006 01349</span>
+              <span>Direct Call: {companyDetails.phone}</span>
             </a>
 
             <a
