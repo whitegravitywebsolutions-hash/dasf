@@ -19,6 +19,7 @@ import {
 import { companyDetails, servicesData } from '../data/servicesData';
 import InquiryModal from '../components/InquiryModal';
 import CertificationsSection from '../components/CertificationsSection';
+import OwnerSection from '../components/OwnerSection';
 
 export default function Home() {
   const [selectedService, setSelectedService] = useState(null);
@@ -210,6 +211,9 @@ export default function Home() {
 
       {/* CERTIFICATIONS SECTION */}
       <CertificationsSection />
+
+      {/* OWNER & LEADERSHIP PROFILE */}
+      <OwnerSection />
 
       {/* CORE CAPABILITIES */}
       <section className="py-20 bg-slate-950">

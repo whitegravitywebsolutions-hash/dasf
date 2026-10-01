@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { companyDetails } from '../data/servicesData';
 import CertificationsSection from '../components/CertificationsSection';
+import OwnerSection from '../components/OwnerSection';
 
 export default function About() {
   const coreValues = [
@@ -146,6 +147,9 @@ export default function About() {
 
       {/* CERTIFICATIONS SECTION */}
       <CertificationsSection />
+
+      {/* OWNER LEADERSHIP SECTION */}
+      <OwnerSection />
 
       {/* CORE VALUES */}
       <section className="py-16 bg-slate-900/50 border-t border-b border-amber-500/20">

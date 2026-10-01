@@ -4,9 +4,18 @@ export const servicesData = [
     title: 'Armed Gunman Services',
     category: 'Armed & Tactical',
     image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
-    description: 'Licensed, highly lethal & trained armed gunmen for high-risk assets, personal escorting, bank vaults, and high-threat perimeter defense.',
+    description: 'Licensed, highly trained armed gunmen for high-risk assets, personal escorting, bank vaults, and high-threat perimeter defense.',
     features: ['Licensed Firearm Gunmen', 'Ex-Military & Defense Gunmen', 'Personal Weapon Escorts', 'Immediate Tactical Counter-Fire'],
     badge: 'Armed Gunman'
+  },
+  {
+    id: 'pso-personal-security-officer',
+    title: 'Personal Security Officer (PSO)',
+    category: 'VIP & Executive',
+    image: '/images/owner.jpg',
+    description: 'Specialized 1-on-1 Personal Security Officers (PSO) and close protection details supervised under D.S. Tomar (Ansh PSO) for executives, VIPs, and dignitaries.',
+    features: ['Dedicated Personal Security Officer (PSO)', 'Tactical Bodyguard Escort', 'Route Reconnaissance & Threat Defense', 'Armed & Unarmed PSO Options'],
+    badge: 'PSO Specialist'
   },
   {
     id: 'armed-gunwoman-services',
@@ -133,6 +142,15 @@ export const companyDetails = {
   establishedYear: 2017,
   experience: 'Established in 2017 (9+ Years of Excellence)',
   tagline: 'Armed & Unarmed Manpower Services',
+  slogan: 'सुरक्षा आपकी, वादा हमारा',
+  sloganEnglish: 'Security Yours, Commitment Ours',
+  owner: {
+    name: 'D.S. Tomar (Ansh PSO)',
+    title: 'Proprietor & Founder',
+    image: '/images/owner.jpg',
+    bannerImage: '/images/owner-banner.jpg',
+    bio: 'Under the vision and tactical leadership of D.S. Tomar (Ansh PSO), Dharm Armed Security Force (DASF) has grown into a highly trusted security manpower provider across Pan India since 2017. Specializing in Personal Security Officer (PSO) escorting, armed gunmen deployment, and enterprise security management.'
+  },
   highlights: [
     'Certified Security Professionals in Pan India Services',
     'Trained • Reliable • Trusted • Est. 2017'
@@ -144,9 +162,11 @@ export const companyDetails = {
     { title: 'National Training Certificate', code: 'Certified Training', desc: 'National Standard Tactical & Defense Training' }
   ],
   phone: '84006 01349',
+  altPhone: '+91 75990 46800',
   phoneClean: '918400601349',
   email: 'dasf09485@gmail.com',
   location: 'Panchsheel Colony, Ghaziabad, Uttar Pradesh',
+  secondaryLocation: 'Choudhary Market, Shop No.6, Main Road, Chipiyana Buzurg, G.B. Nagar (U.P.)',
   logo: '/images/logo.jpg',
   coverage: 'Pan India Services',
   gmbLink: 'https://www.google.com/search?client=ms-android-transsion&hs=x93V&sca_esv=7238945f6dc4c904&sxsrf=APpeQnsB5flyXzpJQDZ6M-DIxwcc100_1Q%3A1790841162973&kgmid=%2Fg%2F11x2lsq5tb&q=Dharm%20Armed%20Security%20Force%20(DASF%20)&shem=epsd1%2Cltae%2Crimspwouoe&shndl=30&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=f548cebc5cc7d90f'
