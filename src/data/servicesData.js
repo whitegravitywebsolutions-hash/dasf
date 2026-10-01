@@ -164,7 +164,7 @@ export const companyDetails = {
   phone: '84006 01349',
   phoneClean: '918400601349',
   email: 'dasf09485@gmail.com',
-  location: 'Choudhary Market, Shop No.6, Main Road, Chipiyana Buzurg, G.B. Nagar (U.P.)',
+  location: 'Choudhary Market, Shop No.6, Main Road, Police Choky, near Lalkua, Gretar, Chipiyana Buzurg, Noida, Ghaziabad, Uttar Pradesh 201009',
   secondaryLocation: 'Panchsheel Colony, Ghaziabad, Uttar Pradesh',
   logo: '/images/logo.png',
   coverage: 'Pan India Services',
