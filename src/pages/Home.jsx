@@ -215,60 +215,6 @@ export default function Home() {
       {/* OWNER & LEADERSHIP PROFILE */}
       <OwnerSection />
 
-      {/* CORE CAPABILITIES */}
-      <section className="py-20 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest text-amber-400 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30">
-              Elite Security Deployment
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-serif">
-              Gunman, Gunwoman & Commando Protection
-            </h2>
-            <p className="text-slate-400 text-sm sm:text-base">
-              From licensed firearm gunmen and commandos to certified gunwomen and event bouncers, we deliver government certified security forces tailored to your safety requirements.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {highlights.map((item, idx) => {
-              const Icon = item.icon;
-              return (
-                <div 
-                  key={idx} 
-                  className="dark-glass p-6 rounded-2xl border border-amber-500/20 card-hover flex flex-col justify-between group"
-                >
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
-                        <Icon className="w-6 h-6" />
-                      </div>
-                      <span className="text-[10px] font-extrabold text-amber-300 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded uppercase">
-                        {item.tag}
-                      </span>
-                    </div>
-
-                    <h3 className="text-lg font-bold text-white font-serif group-hover:text-amber-300 transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-slate-400 leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                  <div className="pt-6 border-t border-slate-800/60 mt-6">
-                    <Link to="/services" className="text-xs text-amber-400 font-semibold flex items-center gap-1 group-hover:underline">
-                      View Service Details <ArrowRight className="w-3 h-3" />
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-        </div>
-      </section>
-
       {/* FEATURED SERVICES PREVIEW GRID */}
       <section className="py-20 bg-slate-900/40 border-t border-b border-amber-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
