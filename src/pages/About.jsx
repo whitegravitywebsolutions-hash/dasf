@@ -90,7 +90,7 @@ export default function About() {
                   Dharm Armed Security Force
                 </h3>
                 <p className="text-xs text-amber-400 font-semibold mt-1 uppercase tracking-wider">
-                  🔐 Trained • Reliable • Trusted
+                  🔐 Est. 2017 • Trained • Reliable • Trusted
                 </p>
                 <div className="text-xs text-slate-400 mt-2">
                   Head Office: Panchsheel Colony, Ghaziabad, UP
@@ -103,14 +103,14 @@ export default function About() {
           {/* Right Column: Mission and Narrative */}
           <div className="lg:col-span-7 space-y-6">
             <div className="space-y-2">
-              <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Our Profile</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Our Legacy (Est. 2017)</span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-serif">
                 Uncompromising Protection & Trained Manpower
               </h2>
             </div>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Dharm Armed Security Force was established with a single core mandate: to deliver high-calibre physical security, armed protection squads, and specialized manpower services to commercial institutions, banking sectors, events, and individuals.
+              Established in <strong>2017</strong>, Dharm Armed Security Force (DASF) was founded with a single core mandate: to deliver high-calibre physical security, armed protection squads, and specialized manpower services to commercial institutions, banking sectors, events, and individuals.
             </p>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">

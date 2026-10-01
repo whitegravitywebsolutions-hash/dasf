@@ -27,10 +27,10 @@ export default function Home() {
   };
 
   const stats = [
+    { label: 'Year Established', value: 'Est. 2017', icon: Award },
     { label: 'Pan India Presence', value: '28+ States', icon: ShieldCheck },
     { label: 'Trained Manpower', value: '1,500+', icon: Users },
     { label: 'Service Availability', value: '24 / 7', icon: Clock },
-    { label: 'Trust & Reliability', value: '100%', icon: Award },
   ];
 
   const highlights = [

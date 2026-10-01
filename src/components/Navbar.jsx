@@ -29,7 +29,7 @@ export default function Navbar() {
             <span className="hidden sm:inline text-slate-600">|</span>
             <span className="text-slate-300 font-medium">Pan India Services</span>
             <span className="hidden sm:inline text-slate-600">|</span>
-            <span className="text-slate-400">Trained • Reliable • Trusted</span>
+            <span className="text-slate-400">Est. 2017 • Trained • Reliable</span>
           </div>
 
           <div className="flex items-center gap-4">
@@ -71,7 +71,7 @@ export default function Navbar() {
                   Dharm <span className="gold-gradient-text">Armed Security</span>
                 </span>
                 <span className="text-xs text-amber-400/90 font-medium tracking-wider">
-                  FORCE • PAN INDIA
+                  FORCE • EST. 2017 • PAN INDIA
                 </span>
               </div>
             </Link>

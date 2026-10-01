@@ -121,10 +121,12 @@ export const servicesData = [
 export const companyDetails = {
   name: 'Dharm Armed Security Force',
   abbreviation: 'DASF',
+  establishedYear: 2017,
+  experience: 'Established in 2017 (9+ Years of Excellence)',
   tagline: 'Armed & Unarmed Manpower Services',
   highlights: [
     'Certified Security Professionals in Pan India Services',
-    'Trained • Reliable • Trusted'
+    'Trained • Reliable • Trusted • Est. 2017'
   ],
   phone: '84006 01349',
   phoneClean: '918400601349',
