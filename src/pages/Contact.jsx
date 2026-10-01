@@ -347,42 +347,35 @@ export default function Contact() {
       {/* CERTIFICATIONS SECTION */}
       <CertificationsSection />
 
-      {/* LOCATION MAP & GMB PLACEHOLDER */}
+      {/* LOCATION MAP PLACEHOLDER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
         <div className="bg-white border border-[#eae6df] rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
           <div className="flex items-center gap-3">
             <MapPin className="w-6 h-6 text-amber-600" />
             <h3 className="text-xl font-bold text-slate-900 font-serif">
-              Headquarters & Google Business Profile (GMB)
+              Official Headquarters Location
             </h3>
           </div>
           <p className="text-xs text-slate-600">
-            Panchsheel Colony, Ghaziabad, Uttar Pradesh. Verified Google Business Listing.
+            {companyDetails.location}
           </p>
 
           <div className="w-full h-64 rounded-2xl bg-[#faf8f3] border border-[#eae6df] flex flex-col items-center justify-center text-center p-6 space-y-3 relative overflow-hidden">
             <MapPin className="w-10 h-10 text-amber-600 animate-bounce" />
             <div className="text-base font-bold text-slate-900">Dharm Armed Security Force (DASF)</div>
-            <div className="text-xs text-amber-800 font-bold">PANCHSHEEL COLONY GHAZIABAD, Ghaziabad</div>
+            <div className="text-xs text-amber-800 font-bold max-w-lg">
+              {companyDetails.location}
+            </div>
             
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
               <a
-                href={companyDetails.gmbLink}
+                href={`https://maps.google.com/?q=${encodeURIComponent(companyDetails.location)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="gold-btn px-5 py-2.5 text-xs flex items-center gap-2"
               >
-                <span>View GMB Profile & Reviews</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-
-              <a
-                href="https://maps.google.com/?q=Panchsheel+Colony+Ghaziabad"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-yellow px-5 py-2.5 text-xs flex items-center gap-2"
-              >
                 <span>Open in Google Maps ↗</span>
+                <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
           </div>

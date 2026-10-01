@@ -114,18 +114,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              {/* GMB Google Business Link */}
-              <div className="pt-2 flex items-center justify-center lg:justify-start gap-2 text-xs">
-                <span className="text-slate-500 font-medium">Verified Google Business Profile:</span>
-                <a 
-                  href={companyDetails.gmbLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-amber-700 font-bold hover:underline flex items-center gap-1"
-                >
-                  <span>View GMB Reviews ↗</span>
-                </a>
-              </div>
+
 
             </div>
 
