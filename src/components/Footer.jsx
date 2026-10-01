@@ -40,7 +40,7 @@ export default function Footer() {
               <div className="flex items-center gap-2.5">
                 {/* Facebook */}
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/people/Dharm-Armed-Security-Force/61594678872450/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-slate-900 border border-slate-700 hover:border-amber-400 hover:text-amber-400 text-slate-300 flex items-center justify-center transition-colors"
@@ -53,7 +53,7 @@ export default function Footer() {
 
                 {/* Instagram */}
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/shreeambeypackaging/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-slate-900 border border-slate-700 hover:border-amber-400 hover:text-amber-400 text-slate-300 flex items-center justify-center transition-colors"
