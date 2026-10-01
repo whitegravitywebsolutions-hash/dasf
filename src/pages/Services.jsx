@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { servicesData, companyDetails } from '../data/servicesData';
 import InquiryModal from '../components/InquiryModal';
+import CertificationsSection from '../components/CertificationsSection';
 
 export default function Services() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -19,7 +20,7 @@ export default function Services() {
   const [selectedService, setSelectedService] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const categories = ['All', 'Manpower', 'Armed & Tactical', 'VIP & Executive', 'Event Security', 'Nightlife & Venues', 'Commercial', 'Banking & Financial', 'Specialized', 'Advisory'];
+  const categories = ['All', 'Armed & Tactical', 'VIP & Executive', 'Manpower', 'Specialized', 'Event Security', 'Nightlife & Venues', 'Commercial', 'Banking & Financial', 'Advisory'];
 
   const filteredServices = servicesData.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -50,7 +51,7 @@ export default function Services() {
           <div className="max-w-3xl relative z-10 space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold">
               <Layers className="w-4 h-4 text-amber-400" />
-              <span>Full Service Catalog • Pan India Manpower</span>
+              <span>Full Service Catalog • Armed & Unarmed Force</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold text-white font-serif tracking-tight">
@@ -58,18 +59,18 @@ export default function Services() {
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Explore our comprehensive range of 13 certified security manpower categories. Deploy armed officers, trained security guards, event bouncers, and commercial protection teams tailored for Panchsheel Colony Ghaziabad and Pan India requirements.
+              Explore our certified security manpower catalog featuring Armed Gunmen, Armed Gunwomen, Tactical Commandos, VIP Bodyguards, and Event Bouncers. Operating under PSARA, GST & MSME certifications across Ghaziabad & Pan India.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-4 text-xs font-semibold text-slate-400">
               <span className="flex items-center gap-1.5 text-amber-400">
-                <CheckCircle className="w-4 h-4" /> 13+ Specialized Service Categories
+                <CheckCircle className="w-4 h-4" /> 14+ Specialized Service Categories
               </span>
               <span className="flex items-center gap-1.5 text-amber-400">
-                <CheckCircle className="w-4 h-4" /> Armed & Unarmed Manpower
+                <CheckCircle className="w-4 h-4" /> Gunmen • Gunwomen • Commandos
               </span>
               <span className="flex items-center gap-1.5 text-amber-400">
-                <CheckCircle className="w-4 h-4" /> 24/7 Fast Deployment
+                <CheckCircle className="w-4 h-4" /> PSARA & GST Certified
               </span>
             </div>
           </div>
@@ -87,7 +88,7 @@ export default function Services() {
               <Search className="w-5 h-5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
-                placeholder="Search services (e.g. Armed, Bouncer, Bank)..."
+                placeholder="Search gunman, commando, bouncer, bank..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-slate-950 border border-slate-700 focus:border-amber-400 rounded-xl pl-11 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none"
@@ -96,7 +97,7 @@ export default function Services() {
 
             {/* Results Count */}
             <div className="text-xs text-slate-400 font-medium">
-              Showing <span className="text-amber-400 font-bold">{filteredServices.length}</span> of <span className="text-white font-bold">{servicesData.length}</span> Security Services
+              Showing <span className="text-amber-400 font-bold">{filteredServices.length}</span> of <span className="text-white font-bold">{servicesData.length}</span> Security Categories
             </div>
 
           </div>
@@ -215,8 +216,11 @@ export default function Services() {
         )}
       </section>
 
-      {/* ALL 13 CATEGORIES QUICK INDEX LIST */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      {/* CERTIFICATIONS SECTION */}
+      <CertificationsSection />
+
+      {/* ALL CATEGORIES INDEX LIST */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
         <div className="bg-slate-900 border border-amber-500/20 rounded-3xl p-6 sm:p-8 space-y-6">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-amber-500/10 border border-amber-500/30 rounded-xl text-amber-400">
@@ -224,10 +228,10 @@ export default function Services() {
             </div>
             <div>
               <h3 className="text-xl font-bold text-white font-serif">
-                Full Category List (Ghaziabad & Pan India Catalog)
+                Complete Service Catalog (Ghaziabad & Pan India)
               </h3>
               <p className="text-xs text-slate-400">
-                Direct listing of all security services provided by Dharm Armed Security Force
+                Direct listing of all gunman, gunwoman, commando & security services provided by Dharm Armed Security Force
               </p>
             </div>
           </div>

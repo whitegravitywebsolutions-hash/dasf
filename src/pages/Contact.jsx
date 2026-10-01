@@ -10,9 +10,11 @@ import {
   HelpCircle,
   ChevronDown,
   ChevronUp,
-  MessageSquare
+  MessageSquare,
+  ExternalLink
 } from 'lucide-react';
 import { companyDetails, servicesData } from '../data/servicesData';
+import CertificationsSection from '../components/CertificationsSection';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -48,24 +50,24 @@ export default function Contact() {
 
   const faqs = [
     {
+      q: 'Are your security operations GST and PSARA certified?',
+      a: 'Yes, Dharm Armed Security Force is PSARA Licensed, GST Registered, MSME Recognized by the Government of India, and holds National Training Certification.'
+    },
+    {
       q: 'What types of security personnel does DASF provide?',
-      a: 'Dharm Armed Security Force provides licensed armed security officers, trained unarmed guards, event bouncers, pub door managers, VIP personal bodyguards, female security staff, ATM & bank vault protection squads, and commercial facility security.'
+      a: 'DASF provides licensed armed gunmen, certified gunwomen, tactical commando squads, trained unarmed guards, event bouncers, VIP bodyguards, ATM & bank protection squads, and commercial security.'
     },
     {
       q: 'Do you provide services across Pan India or only in Ghaziabad?',
       a: 'We are headquartered in Panchsheel Colony, Ghaziabad, Uttar Pradesh, but we provide certified security manpower across Pan India for commercial enterprises, industrial units, events, and personal protection details.'
     },
     {
-      q: 'How quickly can guards be deployed to a location?',
-      a: 'For emergency or rapid deployment in Ghaziabad and Delhi NCR, guards can be dispatched within 24 hours. For large-scale multi-guard or Pan-India commercial contracts, deployment schedules are aligned with client onboarding.'
+      q: 'How quickly can gunmen or commandos be deployed?',
+      a: 'For emergency or rapid deployment in Ghaziabad and Delhi NCR, personnel can be dispatched within 24 hours. For large-scale multi-guard or Pan-India commercial contracts, deployment schedules are aligned with client onboarding.'
     },
     {
-      q: 'Are all your security guards background verified?',
-      a: 'Yes. Every security guard and armed officer undergoes 100% background checks, criminal record verification, address confirmation, and medical fitness assessment before being deployed.'
-    },
-    {
-      q: 'How can I request a quote or book security services?',
-      a: 'You can call our direct hotline at 84006 01349, send an email to dasf09485@gmail.com, fill out the contact form on this page, or click the WhatsApp button to chat instantly with our dispatch team.'
+      q: 'Are all your security officers background verified?',
+      a: 'Yes. Every gunman, gunwoman, commando, and guard undergoes 100% background checks, criminal record verification, address confirmation, and medical fitness assessment before deployment.'
     }
   ];
 
@@ -78,7 +80,7 @@ export default function Contact() {
           <div className="max-w-3xl relative z-10 space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold">
               <Phone className="w-4 h-4 text-amber-400" />
-              <span>Direct 24/7 Security Line: 84006 01349</span>
+              <span>Direct 24/7 Security Hotline: 84006 01349</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold text-white font-serif tracking-tight">
@@ -86,7 +88,7 @@ export default function Contact() {
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Get in touch with our security officers for instant quotes, manpower deployment inquiries, or emergency security staffing in Panchsheel Colony Ghaziabad & across India.
+              Inquire for Gunman, Gunwoman, Commando force, or Security Guard deployment in Panchsheel Colony Ghaziabad & across India.
             </p>
           </div>
         </div>
@@ -162,11 +164,11 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Service Coverage Badge */}
+            {/* Service Coverage & Certifications Badge */}
             <div className="p-6 bg-slate-900/60 rounded-3xl border border-slate-800 text-center space-y-2">
               <ShieldCheck className="w-8 h-8 text-amber-400 mx-auto" />
-              <div className="text-sm font-bold text-white">Certified Security Professionals in Pan India Services</div>
-              <div className="text-xs text-slate-400">🔐 Trained • Reliable • Trusted</div>
+              <div className="text-sm font-bold text-white">PSARA • GST • MSME Certified Force</div>
+              <div className="text-xs text-slate-400">🔐 Gunman • Gunwoman • Commando • Bouncer</div>
             </div>
 
           </div>
@@ -271,11 +273,12 @@ export default function Contact() {
                           onChange={(e) => setFormData({ ...formData, manpowerType: e.target.value })}
                           className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400"
                         >
-                          <option value="Armed Security Officers">Armed Security Officers</option>
+                          <option value="Armed Gunman Personnel">Armed Gunman Personnel</option>
+                          <option value="Armed Gunwoman Personnel">Armed Gunwoman Personnel</option>
+                          <option value="Tactical Commando Squad">Tactical Commando Squad</option>
                           <option value="Unarmed Security Guards">Unarmed Security Guards</option>
                           <option value="Event / Pub Bouncers">Event / Pub Bouncers</option>
                           <option value="VIP Bodyguard Detail">VIP Bodyguard Detail</option>
-                          <option value="Female Security Guards">Female Security Guards</option>
                           <option value="ATM / Bank Protection Squad">ATM / Bank Protection Squad</option>
                         </select>
                       </div>
@@ -289,7 +292,7 @@ export default function Contact() {
                         rows="4"
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder="Mention site type, working shift hours, total guards needed..."
+                        placeholder="Mention site type, gunman/commando preference, duration..."
                         className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
                       ></textarea>
                     </div>
@@ -329,32 +332,48 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* LOCATION MAP PLACEHOLDER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      {/* CERTIFICATIONS SECTION */}
+      <CertificationsSection />
+
+      {/* LOCATION MAP & GMB PLACEHOLDER */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
         <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-4">
           <div className="flex items-center gap-3">
             <MapPin className="w-6 h-6 text-amber-400" />
             <h3 className="text-xl font-bold text-white font-serif">
-              Headquarters Location - Ghaziabad
+              Headquarters & Google Business Profile (GMB)
             </h3>
           </div>
           <p className="text-xs text-slate-400">
-            Panchsheel Colony, Ghaziabad, Uttar Pradesh. Serving NCR region & Pan India.
+            Panchsheel Colony, Ghaziabad, Uttar Pradesh. Verified Google Business Listing.
           </p>
 
           <div className="w-full h-64 rounded-2xl bg-slate-950 border border-amber-500/20 flex flex-col items-center justify-center text-center p-6 space-y-3 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 via-transparent to-amber-500/5"></div>
             <MapPin className="w-10 h-10 text-amber-400 animate-bounce" />
-            <div className="text-base font-bold text-white">Dharm Armed Security Force HQ</div>
+            <div className="text-base font-bold text-white">Dharm Armed Security Force (DASF)</div>
             <div className="text-xs text-amber-300">PANCHSHEEL COLONY GHAZIABAD, Ghaziabad</div>
-            <a
-              href="https://maps.google.com/?q=Panchsheel+Colony+Ghaziabad"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-amber-500/20 border border-amber-500/40 rounded-xl text-amber-300 text-xs font-bold hover:bg-amber-500/30 transition-colors"
-            >
-              Open in Google Maps ↗
-            </a>
+            
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+              <a
+                href={companyDetails.gmbLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gold-btn px-5 py-2.5 rounded-xl text-slate-950 font-bold text-xs flex items-center gap-2 shadow"
+              >
+                <span>View GMB Profile & Reviews</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+
+              <a
+                href="https://maps.google.com/?q=Panchsheel+Colony+Ghaziabad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 bg-slate-800 border border-slate-700 rounded-xl text-amber-300 text-xs font-bold hover:bg-slate-700 transition-colors"
+              >
+                Open in Google Maps ↗
+              </a>
+            </div>
           </div>
         </div>
       </section>

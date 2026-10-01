@@ -12,10 +12,13 @@ import {
   UserCheck, 
   Building2, 
   ShieldAlert, 
-  Briefcase 
+  FileCheck,
+  ExternalLink,
+  Target
 } from 'lucide-react';
 import { companyDetails, servicesData } from '../data/servicesData';
 import InquiryModal from '../components/InquiryModal';
+import CertificationsSection from '../components/CertificationsSection';
 
 export default function Home() {
   const [selectedService, setSelectedService] = useState(null);
@@ -29,30 +32,34 @@ export default function Home() {
   const stats = [
     { label: 'Year Established', value: 'Est. 2017', icon: Award },
     { label: 'Pan India Presence', value: '28+ States', icon: ShieldCheck },
-    { label: 'Trained Manpower', value: '1,500+', icon: Users },
+    { label: 'Trained Force', value: '1,500+', icon: Users },
     { label: 'Service Availability', value: '24 / 7', icon: Clock },
   ];
 
   const highlights = [
     {
-      title: 'Armed Security Personnel',
-      desc: 'Certified and licensed weapon-trained officers for high-vulnerability facilities, VIP transit, and banking assets.',
+      title: 'Licensed Armed Gunmen',
+      desc: 'Highly experienced and licensed firearm gunmen for high-vulnerability facilities, VIP transit, and vault protection.',
       icon: ShieldAlert,
+      tag: 'Gunman Force'
     },
     {
-      title: 'Unarmed Guard Services',
-      desc: 'Rigorously trained and background-verified security guards for corporate offices, malls, societies, and institutions.',
+      title: 'Armed Gunwoman & Female Officers',
+      desc: 'Certified female security staff and gunwomen for female VIP protection, institutional screening, and sensitive venue security.',
       icon: UserCheck,
+      tag: 'Gunwoman Force'
     },
     {
-      title: 'VIP & Event Bouncers',
-      desc: 'Robust physical protection specialists for high-profile events, pubs, concerts, and personal executive bodyguards.',
-      icon: Lock,
+      title: 'Tactical Commando Squads',
+      desc: 'Elite commando tactical units trained in anti-terror drills, rapid reaction force, and high-threat VIP escorting.',
+      icon: Target,
+      tag: 'Commando Squad'
     },
     {
-      title: 'Commercial & Banking Security',
-      desc: 'Comprehensive security management for ATMs, financial institutions, corporate offices, and industrial hubs.',
+      title: 'Commercial & Bank Security',
+      desc: 'Comprehensive security management for ATMs, financial vaults, corporate headquarters, and industrial plants.',
       icon: Building2,
+      tag: 'Enterprise Security'
     },
   ];
 
@@ -62,9 +69,8 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="relative pt-12 pb-24 lg:py-28 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-b border-amber-500/20">
         
-        {/* Background Glow & Shield Overlay */}
+        {/* Background Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-600/5 rounded-full blur-2xl pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -73,9 +79,14 @@ export default function Home() {
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               
               {/* Badges */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-amber-500/40 text-amber-300 text-xs sm:text-sm font-semibold shadow-inner">
-                <Award className="w-4 h-4 text-amber-400 animate-pulse" />
-                <span>Certified Security Professionals in Pan India Services</span>
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-amber-500/40 text-amber-300 text-xs font-semibold shadow-inner">
+                  <Award className="w-4 h-4 text-amber-400 animate-pulse" />
+                  <span>Certified Security Professionals • Pan India</span>
+                </div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+                  <span>PSARA • GST • MSME Certified</span>
+                </div>
               </div>
 
               {/* Main Headline */}
@@ -86,26 +97,26 @@ export default function Home() {
 
               {/* Subheadline / Tagline */}
               <p className="text-xl sm:text-2xl font-bold text-amber-400/90 tracking-wide font-sans">
-                🛡️ Armed & Unarmed Manpower Services
+                🛡️ Armed Gunmen • Gunwomen • Commandos • Guards
               </p>
 
               <p className="text-base sm:text-lg text-slate-300 max-w-2xl font-light leading-relaxed">
-                Empowering businesses, commercial facilities, VIPs, and financial hubs with unyielding, highly disciplined security personnel across Ghaziabad & all over India.
+                Deploying elite Gunmen, Gunwomen, Tactical Commandos, and Certified Security Guards for VIP protection, commercial facilities, banks, and events across Ghaziabad & Pan India.
               </p>
 
-              {/* Pill Features */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2 text-sm text-slate-200">
-                <span className="flex items-center gap-2 bg-slate-900/80 px-3.5 py-1.5 rounded-lg border border-slate-800">
-                  <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span>🔐 Trained</span>
+              {/* Force Badges */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2 text-xs text-slate-200">
+                <span className="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-amber-500/30 text-amber-300 font-semibold">
+                  <CheckCircle className="w-4 h-4 text-amber-400" />
+                  <span>🔫 Licensed Gunmen</span>
                 </span>
-                <span className="flex items-center gap-2 bg-slate-900/80 px-3.5 py-1.5 rounded-lg border border-slate-800">
-                  <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span>🛡️ Reliable</span>
+                <span className="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-amber-500/30 text-amber-300 font-semibold">
+                  <CheckCircle className="w-4 h-4 text-amber-400" />
+                  <span>👩‍✈️ Armed Gunwomen</span>
                 </span>
-                <span className="flex items-center gap-2 bg-slate-900/80 px-3.5 py-1.5 rounded-lg border border-slate-800">
-                  <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span>🤝 Trusted</span>
+                <span className="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-amber-500/30 text-amber-300 font-semibold">
+                  <CheckCircle className="w-4 h-4 text-amber-400" />
+                  <span>🎖️ Tactical Commandos</span>
                 </span>
               </div>
 
@@ -123,16 +134,21 @@ export default function Home() {
                   to="/services"
                   className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold tracking-wider text-slate-200 bg-slate-900 hover:bg-slate-800 border border-amber-500/40 hover:border-amber-400 transition-all flex items-center justify-center gap-2"
                 >
-                  <span>Explore 13+ Services</span>
+                  <span>Explore Gunmen & Commandos</span>
                   <ArrowRight className="w-4 h-4 text-amber-400" />
                 </Link>
               </div>
 
-              {/* Contact direct bar */}
-              <div className="pt-2 text-xs text-slate-400">
-                <span>Direct Contact: </span>
-                <a href={`mailto:${companyDetails.email}`} className="text-amber-400 underline hover:text-amber-300">
-                  {companyDetails.email}
+              {/* GMB Google Business Link */}
+              <div className="pt-2 flex items-center justify-center lg:justify-start gap-2 text-xs">
+                <span className="text-slate-400">Verified Google Business Listing:</span>
+                <a 
+                  href={companyDetails.gmbLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-amber-400 font-bold hover:underline flex items-center gap-1"
+                >
+                  <span>View GMB Reviews ↗</span>
                 </a>
               </div>
 
@@ -159,10 +175,10 @@ export default function Home() {
                       Dharm Armed Security Force
                     </div>
                     <div className="text-xs font-semibold text-amber-400 uppercase tracking-widest">
-                      Panchsheel Colony, Ghaziabad
+                      GST • PSARA • MSME CERTIFIED
                     </div>
                     <div className="text-xs text-slate-400">
-                      Licensed Security Provider • Pan India Deployment
+                      Gunman • Gunwoman • Commando • Bouncers
                     </div>
                   </div>
 
@@ -192,19 +208,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CERTIFICATIONS SECTION */}
+      <CertificationsSection />
+
       {/* CORE CAPABILITIES */}
       <section className="py-20 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             <span className="text-xs font-bold uppercase tracking-widest text-amber-400 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30">
-              Why Trust DASF Security
+              Elite Security Deployment
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-serif">
-              Complete Tactical & Manpower Solutions
+              Gunman, Gunwoman & Commando Protection
             </h2>
             <p className="text-slate-400 text-sm sm:text-base">
-              From armed tactical squads to corporate static guarding, we deliver certified security manpower tailored to your precise risk profile.
+              From licensed firearm gunmen and commandos to certified gunwomen and event bouncers, we deliver government certified security forces tailored to your safety requirements.
             </p>
           </div>
 
@@ -217,9 +236,15 @@ export default function Home() {
                   className="dark-glass p-6 rounded-2xl border border-amber-500/20 card-hover flex flex-col justify-between group"
                 >
                   <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
-                      <Icon className="w-6 h-6" />
+                    <div className="flex justify-between items-center">
+                      <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
+                        <Icon className="w-6 h-6" />
+                      </div>
+                      <span className="text-[10px] font-extrabold text-amber-300 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded uppercase">
+                        {item.tag}
+                      </span>
                     </div>
+
                     <h3 className="text-lg font-bold text-white font-serif group-hover:text-amber-300 transition-colors">
                       {item.title}
                     </h3>
@@ -228,9 +253,9 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="pt-6 border-t border-slate-800/60 mt-6">
-                    <span className="text-xs text-amber-400 font-semibold flex items-center gap-1 group-hover:underline">
-                      Learn More <ArrowRight className="w-3 h-3" />
-                    </span>
+                    <Link to="/services" className="text-xs text-amber-400 font-semibold flex items-center gap-1 group-hover:underline">
+                      View Service Details <ArrowRight className="w-3 h-3" />
+                    </Link>
                   </div>
                 </div>
               );
@@ -246,7 +271,7 @@ export default function Home() {
           
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Our Services Showcase</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Our Tactical Force Catalog</span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-serif mt-1">
                 Featured Security Categories
               </h2>
@@ -255,7 +280,7 @@ export default function Home() {
               to="/services"
               className="text-amber-400 font-bold text-sm hover:underline flex items-center gap-1 self-start md:self-auto"
             >
-              View All 13 Categories in Catalog →
+              View All Services Catalog →
             </Link>
           </div>
 
@@ -266,7 +291,7 @@ export default function Home() {
                 className="bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 hover:border-amber-500/50 transition-all duration-300 flex flex-col card-hover group"
               >
                 {/* Service Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-52 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
@@ -315,7 +340,7 @@ export default function Home() {
               to="/services"
               className="gold-btn inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg"
             >
-              <span>Explore Complete Services List (13 Categories)</span>
+              <span>Explore Complete Tactical Catalog</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -331,11 +356,11 @@ export default function Home() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-serif">
-            Need Immediate Armed or Unarmed Guards?
+            Need Gunman, Gunwoman or Commando Deployment?
           </h2>
 
           <p className="text-amber-200/90 text-sm sm:text-base max-w-2xl mx-auto">
-            Contact Dharm Armed Security Force now for rapid deployment across Ghaziabad, Delhi NCR, and Pan India. Professionalism guaranteed.
+            Contact Dharm Armed Security Force now for rapid 24/7 deployment across Ghaziabad, Delhi NCR, and Pan India. PSARA, GST & MSME Certified.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
@@ -348,7 +373,7 @@ export default function Home() {
             </a>
 
             <a
-              href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20need%20urgent%20security%20manpower.`}
+              href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20need%20urgent%20Gunman/Gunwoman/Commando%20deployment.`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-xl text-base font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/50 hover:bg-emerald-900 transition-colors flex items-center gap-2"

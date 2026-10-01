@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Phone, Mail, MapPin, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
+import { Shield, Phone, Mail, MapPin, CheckCircle, ArrowRight, ExternalLink, Award, FileCheck } from 'lucide-react';
 import { companyDetails, servicesData } from '../data/servicesData';
 
 export default function Footer() {
@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           
-          {/* Column 1: Brand Info */}
+          {/* Column 1: Brand Info & Certifications */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img 
@@ -32,15 +32,31 @@ export default function Footer() {
               </div>
             </div>
             
-            <p className="text-sm text-slate-400 leading-relaxed">
-              Armed & Unarmed Manpower Services. Certified security professionals dedicated to protecting lives, commercial assets, VIPs, and corporate facilities across Pan India.
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Armed Gunmen, Gunwomen, Commandos & Guard Manpower Services. Protecting commercial assets, VIPs, banks, and corporate facilities across Pan India.
             </p>
 
-            <div className="pt-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold">
-                <CheckCircle className="w-4 h-4 text-amber-400" />
-                <span>Certified Security Professionals</span>
+            {/* Certifications Badge List */}
+            <div className="pt-1 space-y-1.5 text-[11px]">
+              <div className="text-amber-400 font-bold uppercase tracking-wider text-[10px]">Official Certifications:</div>
+              <div className="flex flex-wrap gap-1.5">
+                <span className="bg-slate-900 border border-amber-500/40 text-amber-300 px-2 py-0.5 rounded font-semibold">GST Certified</span>
+                <span className="bg-slate-900 border border-amber-500/40 text-amber-300 px-2 py-0.5 rounded font-semibold">PSARA License</span>
+                <span className="bg-slate-900 border border-amber-500/40 text-amber-300 px-2 py-0.5 rounded font-semibold">MSME Govt.</span>
+                <span className="bg-slate-900 border border-amber-500/40 text-amber-300 px-2 py-0.5 rounded font-semibold">National Training Cert.</span>
               </div>
+            </div>
+
+            {/* GMB Link */}
+            <div className="pt-2">
+              <a
+                href={companyDetails.gmbLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:text-amber-300 font-bold hover:underline"
+              >
+                <span>View Google Business (GMB) Listing ↗</span>
+              </a>
             </div>
           </div>
 
@@ -70,7 +86,7 @@ export default function Footer() {
           {/* Column 3: Featured Services */}
           <div className="space-y-4">
             <h4 className="text-base font-bold text-white border-b border-amber-500/30 pb-2 uppercase tracking-wider text-amber-400">
-              Our Key Services
+              Our Security Forces
             </h4>
             <ul className="space-y-2 text-xs">
               {servicesData.slice(0, 6).map((service) => (
@@ -86,7 +102,7 @@ export default function Footer() {
               ))}
               <li>
                 <Link to="/services" className="text-amber-400 hover:underline text-xs font-semibold pt-1 inline-block">
-                  View All 13+ Services →
+                  View Full Catalog →
                 </Link>
               </li>
             </ul>

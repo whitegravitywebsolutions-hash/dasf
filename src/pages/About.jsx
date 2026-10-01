@@ -14,12 +14,13 @@ import {
   Building
 } from 'lucide-react';
 import { companyDetails } from '../data/servicesData';
+import CertificationsSection from '../components/CertificationsSection';
 
 export default function About() {
   const coreValues = [
     {
       title: 'Tactical Vigilance',
-      desc: 'Our guards maintain constant high situational awareness to preempt and prevent threats before they escalate.',
+      desc: 'Our gunmen, gunwomen and commandos maintain constant high situational awareness to preempt threats.',
       icon: ShieldAlert
     },
     {
@@ -28,8 +29,8 @@ export default function About() {
       icon: BadgeCheck
     },
     {
-      title: 'Verifiable Integrity',
-      desc: '100% thorough background verification, criminal history checks, and medical fitness certification.',
+      title: 'PSARA & GST Certified',
+      desc: '100% thorough background verification, criminal history checks, and official statutory licenses.',
       icon: CheckCircle2
     },
     {
@@ -40,12 +41,12 @@ export default function About() {
   ];
 
   const trainingModules = [
-    'Firearm Handling & Safety (Armed Squads)',
-    'Physical Tactics & Hand-to-Hand Defense',
-    'VIP Escort & Motorcade Reconnaissance',
-    'CCTV & Surveillance Monitoring',
-    'Fire Safety & Emergency Evacuation',
-    'De-escalation & Conflict Management'
+    'Firearm Handling & Counter-Fire (Licensed Gunmen)',
+    'Gunwoman Escort & Female Screening Drills',
+    'Tactical Commando Anti-Threat Formations',
+    'VIP Motorcade & Route Reconnaissance',
+    'CCTV & Electronic Surveillance Operations',
+    'De-escalation & Physical Hand-to-Hand Defense'
   ];
 
   return (
@@ -57,7 +58,7 @@ export default function About() {
           <div className="max-w-3xl relative z-10 space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold">
               <Award className="w-4 h-4 text-amber-400" />
-              <span>Certified Security Force</span>
+              <span>PSARA • GST • MSME Certified Force</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold text-white font-serif tracking-tight">
@@ -65,7 +66,7 @@ export default function About() {
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Headquartered in Panchsheel Colony Ghaziabad, Dharm Armed Security Force (DASF) is a premier security agency offering certified armed and unarmed manpower solutions across India.
+              Headquartered in Panchsheel Colony Ghaziabad, Dharm Armed Security Force (DASF) is a premier security agency offering certified Gunmen, Gunwomen, Commandos, and Guards across India.
             </p>
           </div>
         </div>
@@ -90,7 +91,7 @@ export default function About() {
                   Dharm Armed Security Force
                 </h3>
                 <p className="text-xs text-amber-400 font-semibold mt-1 uppercase tracking-wider">
-                  🔐 Est. 2017 • Trained • Reliable • Trusted
+                  🔐 Est. 2017 • Gunman • Gunwoman • Commando
                 </p>
                 <div className="text-xs text-slate-400 mt-2">
                   Head Office: Panchsheel Colony, Ghaziabad, UP
@@ -105,16 +106,16 @@ export default function About() {
             <div className="space-y-2">
               <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Our Legacy (Est. 2017)</span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-serif">
-                Uncompromising Protection & Trained Manpower
+                Gunmen, Gunwomen & Tactical Commandos
               </h2>
             </div>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Established in <strong>2017</strong>, Dharm Armed Security Force (DASF) was founded with a single core mandate: to deliver high-calibre physical security, armed protection squads, and specialized manpower services to commercial institutions, banking sectors, events, and individuals.
+              Established in <strong>2017</strong>, Dharm Armed Security Force (DASF) was founded with a single core mandate: to deliver high-calibre licensed Gunmen, certified Gunwomen, tactical Commandos, and physical security guards to commercial institutions, banking sectors, events, and individuals.
             </p>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Whether guarding high-risk assets, managing crowds at major venues, escorting VIPs, or protecting commercial office buildings in Ghaziabad and NCR, our personnel undergo stringent physical drills, mental evaluation, and legal compliance procedures.
+              Whether guarding high-risk assets, managing crowds at major venues, escorting VIPs, or protecting commercial office buildings in Ghaziabad and NCR, our personnel undergo stringent physical drills, mental evaluation, firearm certification, and legal compliance under PSARA and GST standards.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
@@ -142,6 +143,9 @@ export default function About() {
 
         </div>
       </section>
+
+      {/* CERTIFICATIONS SECTION */}
+      <CertificationsSection />
 
       {/* CORE VALUES */}
       <section className="py-16 bg-slate-900/50 border-t border-b border-amber-500/20">
@@ -179,10 +183,10 @@ export default function About() {
           <div className="lg:col-span-7 space-y-4">
             <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Security Excellence</span>
             <h2 className="text-3xl font-extrabold text-white font-serif">
-              Rigorous Personnel Training Standards
+              Gunmen & Commando Training Standards
             </h2>
             <p className="text-sm text-slate-300 leading-relaxed">
-              At Dharm Armed Security Force, deployment is earned. Every guard, bouncer, and armed officer undergoes intense training modules prior to field assignment.
+              At Dharm Armed Security Force, deployment is earned. Every gunman, gunwoman, bouncer, and commando officer undergoes intense tactical training prior to field assignment.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
@@ -211,7 +215,7 @@ export default function About() {
               Certified Pan India Network
             </h3>
             <p className="text-xs text-slate-400">
-              We operate with full statutory compliance, verified records, and clear standard operating procedures (SOPs).
+              We operate with full PSARA, GST, MSME statutory compliance, verified records, and clear standard operating procedures (SOPs).
             </p>
             <div className="pt-2 text-xs font-bold text-amber-300">
               📞 Direct Hotline: {companyDetails.phone}
