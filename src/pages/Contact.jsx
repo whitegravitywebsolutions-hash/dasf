@@ -146,7 +146,6 @@ export default function Contact() {
                   <div>
                     <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Office Location</div>
                     <div className="text-sm font-bold text-slate-900">{companyDetails.location}</div>
-                    <div className="text-xs text-slate-500 mt-1">Branch: {companyDetails.secondaryLocation}</div>
                   </div>
                 </div>
 

@@ -67,7 +67,7 @@ export default function About() {
             </h1>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Headquartered in Panchsheel Colony Ghaziabad, Dharm Armed Security Force (DASF) is a premier security agency offering certified Gunmen, Gunwomen, Commandos, PSOs, and Guards across India.
+              Headquartered in Chipiyana Buzurg, Ghaziabad, Dharm Armed Security Force (DASF) is a premier security agency offering certified Gunmen, Gunwomen, Commandos, PSOs, and Guards across India.
             </p>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function About() {
                   🔐 Est. 2017 • Gunman • Gunwoman • Commando
                 </p>
                 <div className="text-xs text-slate-500 font-medium mt-1">
-                  Head Office: Panchsheel Colony, Ghaziabad, UP
+                  Head Office: Chipiyana Buzurg, Ghaziabad, UP
                 </div>
               </div>
 
