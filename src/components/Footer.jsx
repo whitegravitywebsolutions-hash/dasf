@@ -137,7 +137,17 @@ export default function Footer() {
         <div className="border-t border-slate-900 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} {companyDetails.name}. All Rights Reserved.</p>
           <div className="flex items-center gap-4">
-            <span className="text-amber-500/80 font-medium">🔐 Trained • Reliable • Trusted</span>
+            <p className="text-slate-400 font-medium">
+              Designed & Developed by{' '}
+              <a 
+                href="https://whitegravity.in/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-amber-400 hover:text-amber-300 font-bold hover:underline transition-colors"
+              >
+                White Gravity Web Solutions
+              </a>
+            </p>
           </div>
         </div>
       </div>
