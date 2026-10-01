@@ -241,13 +241,35 @@ export default function Home() {
                     ))}
                   </ul>
 
-                  <button
-                    onClick={() => handleOpenModal(service)}
-                    className="gold-btn w-full py-2.5 text-xs uppercase tracking-wider flex items-center justify-center gap-2"
-                  >
-                    <span>Enquire Now</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  {/* Action Buttons: Enquire + WhatsApp CTA + Call */}
+                  <div className="pt-3 border-t border-slate-100 flex items-center gap-2">
+                    <button
+                      onClick={() => handleOpenModal(service)}
+                      className="gold-btn flex-1 py-2.5 px-3 text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-sm"
+                    >
+                      <span>Enquire</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+
+                    <a
+                      href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20${encodeURIComponent(service.title)}.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-wa-pill px-3.5 py-2.5 text-xs flex items-center justify-center gap-1.5 shadow-sm"
+                      title="WhatsApp Inquiry"
+                    >
+                      <MessageSquare className="w-3.5 h-3.5" />
+                      <span>WhatsApp</span>
+                    </a>
+
+                    <a
+                      href={`tel:${companyDetails.phone}`}
+                      className="p-2.5 rounded-full bg-slate-900 hover:bg-slate-800 text-amber-400 border border-slate-700 transition-colors flex items-center justify-center shrink-0"
+                      title="Direct Call"
+                    >
+                      <Phone className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
