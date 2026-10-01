@@ -11,7 +11,8 @@ import {
   CheckCircle2, 
   BadgeCheck, 
   ShieldAlert,
-  Building
+  Building,
+  MessageSquare
 } from 'lucide-react';
 import { companyDetails } from '../data/servicesData';
 import CertificationsSection from '../components/CertificationsSection';
