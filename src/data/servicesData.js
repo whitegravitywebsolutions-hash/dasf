@@ -161,10 +161,10 @@ export const companyDetails = {
     { title: 'MSME Registered', code: 'MSME Govt. of India', desc: 'Micro, Small & Medium Enterprises' },
     { title: 'National Training Certificate', code: 'Certified Training', desc: 'National Standard Tactical & Defense Training' }
   ],
-  phone: '84006 01349',
+  phone: '+91 84006 01349',
   phoneClean: '918400601349',
   email: 'dasf09485@gmail.com',
-  location: 'Choudhary Market, Shop No.6, Main Road, Police Choky, near Lalkua, Gretar, Chipiyana Buzurg, Noida, Ghaziabad, Uttar Pradesh 201009',
+  location: 'Shop No. 6, Choudhary Market, Main Road, Chipiyana Buzurg, G.B. Nagar, Ghaziabad, Uttar Pradesh – 201009, India',
   secondaryLocation: 'Panchsheel Colony, Ghaziabad, Uttar Pradesh',
   logo: '/images/logo.png',
   coverage: 'Pan India Services',

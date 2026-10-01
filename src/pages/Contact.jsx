@@ -80,7 +80,7 @@ export default function Contact() {
           <div className="max-w-3xl relative z-10 space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider">
               <Phone className="w-4 h-4 text-amber-600" />
-              <span>Direct 24/7 Security Hotline: 84006 01349</span>
+              <span>Direct 24/7 Security Hotline: {companyDetails.phone}</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 font-serif tracking-tight">
