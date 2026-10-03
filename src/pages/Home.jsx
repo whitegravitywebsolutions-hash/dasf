@@ -96,20 +96,30 @@ export default function Home() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3 pt-4">
                 <a
                   href={`tel:${companyDetails.phone}`}
-                  className="gold-btn w-full sm:w-auto px-8 py-4 text-sm uppercase tracking-wider flex items-center justify-center gap-3"
+                  className="gold-btn w-full sm:w-auto px-7 py-3.5 text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-4 h-4" />
                   <span>Call {companyDetails.phone}</span>
+                </a>
+
+                <a
+                  href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-wa-pill w-full sm:w-auto px-7 py-3.5 text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md"
+                >
+                  <MessageSquare className="w-4 h-4" />
+                  <span>WhatsApp Inquiry</span>
                 </a>
 
                 <Link
                   to="/services"
-                  className="btn-yellow w-full sm:w-auto px-8 py-4 text-sm tracking-wider flex items-center justify-center gap-2"
+                  className="btn-yellow w-full sm:w-auto px-7 py-3.5 text-xs sm:text-sm tracking-wider flex items-center justify-center gap-2"
                 >
-                  <span>Explore Gunmen & Commandos</span>
+                  <span>Explore Force Catalog</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
