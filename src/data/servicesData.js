@@ -93,7 +93,7 @@ export const servicesData = [
     id: 'commercial-security-services',
     title: 'Commercial Security Services',
     category: 'Commercial',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
+    image: '/images/commercial-security.jpg',
     description: 'End-to-end security deployment for shopping malls, office towers, warehouses, tech parks, and commercial complexes.',
     features: ['Multi-tier Access Checkpoints', 'Loading Bay & Vehicle Screening', '24/7 CCTV Monitoring Integration', 'Loss Prevention & Asset Guarding'],
     badge: 'Corporate Grade'
@@ -102,7 +102,7 @@ export const servicesData = [
     id: 'security-advisory-services',
     title: 'Security Advisory Services',
     category: 'Advisory',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800',
+    image: '/images/commercial-security.jpg',
     description: 'Expert security risk assessment, vulnerability analysis, safety audits, and custom security blueprint development by senior military veterans.',
     features: ['Vulnerability & Gap Analysis', 'Emergency Action Plan Formulation', 'Security Protocol Training', 'Hardware & Tech Security Audit'],
     badge: 'Strategic Advisory'
@@ -129,7 +129,7 @@ export const servicesData = [
     id: 'security-services-company',
     title: 'Security Services For Company',
     category: 'Commercial',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800',
+    image: '/images/commercial-security.jpg',
     description: 'Customized facility protection for IT parks, factories, corporate headquarters, and multi-location corporate footprints.',
     features: ['Employee Shift Escorts & Safety', 'Visitor Management System (VMS)', 'Perimeter Intrusion Detection', '24/7 Security Helpdesk'],
     badge: 'Enterprise Solution'
