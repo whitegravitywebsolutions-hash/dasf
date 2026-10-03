@@ -50,7 +50,6 @@
   border: 1.5px solid #d97706;
   border-radius: 9999px;
   font-weight: 700;
-  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.25);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -58,7 +57,6 @@
   background-color: #b45309;
   border-color: #b45309;
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(217, 119, 6, 0.4);
 }
 
 .btn-yellow {
@@ -67,14 +65,12 @@
   border: 1.5px solid #f59e0b;
   border-radius: 9999px;
   font-weight: 700;
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-yellow:hover {
   background-color: #f59e0b;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.35);
 }
 
 .btn-dark {
@@ -89,7 +85,6 @@
 .btn-dark:hover {
   background-color: #1f2937;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 .btn-call-pill {
@@ -127,7 +122,6 @@
 }
 
 .card-hover:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
   border-color: #f59e0b;
 }
