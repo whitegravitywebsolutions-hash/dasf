@@ -128,33 +128,33 @@ export default function Services() {
                 key={service.id}
                 className="bg-white rounded-2xl overflow-hidden border border-[#eae6df] hover:border-amber-500 transition-all duration-300 flex flex-col card-hover group shadow-sm"
               >
-                {/* Image Container with Badge */}
-                <div className="relative h-56 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-slate-950/20"></div>
-                  
-                  {/* Category Pill */}
-                  <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-slate-900 border border-slate-200 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
-                    {service.category}
-                  </span>
+                {/* Vector Category Header Banner (No Stock Photo) */}
+                <div className="relative h-44 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 p-6 flex flex-col justify-between overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-xl pointer-events-none"></div>
 
-                  {/* Badge */}
-                  <span className="absolute top-3 right-3 bg-amber-500 text-slate-950 font-black text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
-                    {service.badge}
-                  </span>
+                  <div className="flex items-center justify-between relative z-10">
+                    <div className="p-3 rounded-xl bg-amber-500/20 border border-amber-400/30 text-amber-400">
+                      <ShieldCheck className="w-6 h-6 text-amber-400" />
+                    </div>
+                    <span className="bg-amber-500 text-slate-950 font-extrabold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
+                      {service.badge}
+                    </span>
+                  </div>
+
+                  <div className="relative z-10">
+                    <span className="text-[11px] font-bold text-amber-400 uppercase tracking-wider">
+                      {service.category}
+                    </span>
+                    <h3 className="text-lg font-bold text-white font-serif leading-tight">
+                      {service.title}
+                    </h3>
+                  </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 font-serif group-hover:text-amber-700 transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                    <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                       {service.description}
                     </p>
                   </div>

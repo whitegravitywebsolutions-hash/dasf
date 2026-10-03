@@ -78,28 +78,38 @@ export default function About() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Column: Brand Showcase Image */}
+          {/* Left Column: Brand Showcase Card (No Stock Image) */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative p-2 bg-white border-2 border-amber-400 rounded-3xl shadow-md overflow-hidden max-w-md w-full">
-              
-              <img
-                src="/images/about-hero-brand.jpg"
-                alt="Dharm Armed Security Force Brand"
-                className="w-full h-auto object-cover rounded-2xl transition-transform duration-500 hover:scale-105"
-              />
+            <div className="relative p-1 bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 rounded-3xl shadow-xl max-w-md w-full">
+              <div className="bg-slate-900 rounded-[22px] p-6 text-white text-center space-y-6 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
 
-              <div className="p-4 text-center border-t border-slate-100 mt-2">
-                <h3 className="text-lg font-bold text-slate-900 font-serif uppercase">
-                  Dharm Armed Security Force
-                </h3>
-                <p className="text-xs text-amber-700 font-bold mt-0.5 uppercase tracking-wider">
-                  🔐 Est. 2017 • Gunman • Gunwoman • Commando
-                </p>
-                <div className="text-xs text-slate-500 font-medium mt-1">
-                  Head Office: Chipiyana Buzurg, Ghaziabad, UP
+                <div className="w-16 h-16 rounded-2xl bg-amber-500/20 border border-amber-400/40 text-amber-400 mx-auto flex items-center justify-center">
+                  <ShieldCheck className="w-9 h-9 text-amber-400" />
+                </div>
+
+                <div className="space-y-1">
+                  <h3 className="text-xl font-extrabold font-serif uppercase tracking-wider bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent">
+                    Dharm Armed Security Force
+                  </h3>
+                  <p className="text-xs text-amber-400 font-bold uppercase tracking-widest">
+                    Est. 2017 • Pan India Security
+                  </p>
+                </div>
+
+                <div className="py-4 px-3 rounded-xl bg-slate-950/80 border border-slate-800 text-xs text-slate-300 space-y-2">
+                  <div className="font-bold text-amber-300">PSARA • GST • MSME Certified</div>
+                  <div>Head Office: Shop No. 6, Choudhary Market, Main Road, Chipiyana Buzurg, G.B. Nagar, Ghaziabad, UP</div>
+                </div>
+
+                <div className="pt-2 text-xs font-bold text-amber-400 uppercase tracking-wider flex justify-center gap-3">
+                  <span>🔫 Gunmen</span>
+                  <span>•</span>
+                  <span>👩‍✈️ Gunwomen</span>
+                  <span>•</span>
+                  <span>🎖️ Commandos</span>
                 </div>
               </div>
-
             </div>
           </div>
 

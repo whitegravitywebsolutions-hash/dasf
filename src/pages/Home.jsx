@@ -129,35 +129,68 @@ export default function Home() {
 
             </div>
 
-            {/* Hero Image Showcase (Full Width Container) */}
+            {/* Hero Command Security Unit Showcase (No Stock Images) */}
             <div className="lg:col-span-5 flex justify-center w-full">
               <div className="relative group w-full max-w-xl">
                 
                 {/* Gradient Glow Border Card */}
                 <div className="p-1 rounded-3xl bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 shadow-2xl shadow-amber-500/20">
-                  <div className="relative bg-slate-900 rounded-[22px] p-2 overflow-hidden">
+                  <div className="relative bg-slate-900 rounded-[22px] p-6 sm:p-8 flex flex-col justify-between overflow-hidden min-h-[360px] sm:min-h-[440px]">
                     
-                    <div className="relative w-full h-[360px] sm:h-[440px] lg:h-[480px] rounded-xl overflow-hidden">
-                      <img
-                        src="/images/hero-commando.jpg"
-                        alt="Dharm Armed Security Forces"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      
-                      {/* Floating Badge */}
-                      <div className="absolute top-4 left-4 bg-slate-950/90 backdrop-blur-md text-amber-400 border border-amber-500/40 text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
-                        <ShieldCheck className="w-4 h-4 text-amber-400" />
-                        <span>Armed Security Forces</span>
+                    {/* Background Pattern */}
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+                    {/* Header Emblem */}
+                    <div className="flex items-center justify-between border-b border-slate-800 pb-5">
+                      <div className="flex items-center gap-3">
+                        <div className="p-3 rounded-2xl bg-amber-500/20 border border-amber-400/40 text-amber-400">
+                          <ShieldCheck className="w-8 h-8 text-amber-400" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-black uppercase text-amber-400 tracking-wider">DASF Command Unit</div>
+                          <div className="text-xs text-slate-400 font-medium">Pan India Security Force</div>
+                        </div>
                       </div>
 
-                      {/* Bottom Info Banner */}
-                      <div className="absolute bottom-4 left-4 right-4 bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white p-4 rounded-xl shadow-lg">
-                        <div className="text-base font-black font-serif uppercase tracking-wider bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent">
-                          Dharm Armed Security Force
-                        </div>
-                        <div className="text-xs text-slate-300 font-semibold mt-0.5">
-                          Armed Gunmen • Commandos • PSOs • Pan India
-                        </div>
+                      <div className="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold">
+                        ● 24/7 Active
+                      </div>
+                    </div>
+
+                    {/* Core Force Metrics Grid */}
+                    <div className="grid grid-cols-2 gap-4 py-6">
+                      <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-center">
+                        <Award className="w-6 h-6 text-amber-400 mx-auto mb-1" />
+                        <div className="text-xl sm:text-2xl font-black text-white font-serif">1,500+</div>
+                        <div className="text-[11px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">Trained Personnel</div>
+                      </div>
+
+                      <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-center">
+                        <Lock className="w-6 h-6 text-amber-400 mx-auto mb-1" />
+                        <div className="text-xl sm:text-2xl font-black text-white font-serif">PSARA</div>
+                        <div className="text-[11px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">Government License</div>
+                      </div>
+
+                      <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-center">
+                        <UserCheck className="w-6 h-6 text-amber-400 mx-auto mb-1" />
+                        <div className="text-xl sm:text-2xl font-black text-white font-serif">Armed</div>
+                        <div className="text-[11px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">Gunmen & PSOs</div>
+                      </div>
+
+                      <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-center">
+                        <Building2 className="w-6 h-6 text-amber-400 mx-auto mb-1" />
+                        <div className="text-xl sm:text-2xl font-black text-white font-serif">28+</div>
+                        <div className="text-[11px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">States Covered</div>
+                      </div>
+                    </div>
+
+                    {/* Bottom Info Banner */}
+                    <div className="bg-slate-950/90 border border-amber-500/30 text-white p-4 rounded-xl text-center">
+                      <div className="text-sm font-black font-serif uppercase tracking-wider bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent">
+                        Dharm Armed Security Force
+                      </div>
+                      <div className="text-xs text-slate-300 font-semibold mt-0.5">
+                        Licensed Gunmen • Commandos • PSOs • Pan India
                       </div>
                     </div>
 
@@ -220,26 +253,33 @@ export default function Home() {
                 key={service.id}
                 className="bg-white rounded-2xl overflow-hidden border border-[#eae6df] hover:border-amber-500 transition-all duration-300 flex flex-col card-hover group shadow-sm"
               >
-                {/* Service Image */}
-                <div className="relative h-52 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-slate-950/40"></div>
-                  <span className="absolute top-3 left-3 bg-amber-500 text-slate-950 font-extrabold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
-                    {service.badge}
-                  </span>
+                {/* Vector Category Header Banner (No Stock Photo) */}
+                <div className="relative h-44 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 p-6 flex flex-col justify-between overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-xl pointer-events-none"></div>
+
+                  <div className="flex items-center justify-between relative z-10">
+                    <div className="p-3 rounded-xl bg-amber-500/20 border border-amber-400/30 text-amber-400">
+                      <ShieldCheck className="w-6 h-6 text-amber-400" />
+                    </div>
+                    <span className="bg-amber-500 text-slate-950 font-extrabold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
+                      {service.badge}
+                    </span>
+                  </div>
+
+                  <div className="relative z-10">
+                    <span className="text-[11px] font-bold text-amber-400 uppercase tracking-wider">
+                      {service.category}
+                    </span>
+                    <h4 className="text-base font-bold text-white font-serif leading-tight">
+                      {service.title}
+                    </h4>
+                  </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    <h3 className="text-lg font-bold text-slate-900 font-serif group-hover:text-amber-600 transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-xs text-slate-600 mt-2 line-clamp-2">
+                    <p className="text-xs text-slate-600 mt-1 line-clamp-2">
                       {service.description}
                     </p>
                   </div>
