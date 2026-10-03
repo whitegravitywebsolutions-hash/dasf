@@ -1,6 +1,5 @@
 import React from 'react';
 import { Award, ShieldCheck, FileCheck, CheckCircle2, BadgeCheck } from 'lucide-react';
-import { companyDetails } from '../data/servicesData';
 
 export default function CertificationsSection() {
   const certs = [
@@ -35,18 +34,18 @@ export default function CertificationsSection() {
   ];
 
   return (
-    <section className="py-16 bg-[#faf8f3] border-t border-b border-[#eae6df] relative overflow-hidden">
+    <section className="py-16 bg-slate-50 border-t border-b border-slate-200 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider">
-            <Award className="w-4 h-4 text-amber-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-slate-800 text-xs font-bold uppercase tracking-wider">
+            <Award className="w-4 h-4 text-slate-700" />
             <span>Government Approved & Certified</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif tracking-tight">
-            Official Accreditations & <span className="gold-gradient-text">Certifications</span>
+            Official Accreditations & <span className="text-slate-900">Certifications</span>
           </h2>
 
           <p className="text-slate-600 text-sm sm:text-base">
@@ -61,23 +60,23 @@ export default function CertificationsSection() {
             return (
               <div 
                 key={idx}
-                className="bg-white border border-[#eae6df] hover:border-amber-500 rounded-2xl p-6 transition-all duration-300 card-hover flex flex-col justify-between space-y-4 shadow-sm group"
+                className="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between space-y-4 group"
               >
                 <div className="space-y-3">
                   <div className="flex justify-between items-start">
-                    <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-amber-600 group-hover:scale-110 transition-transform">
+                    <div className="p-3 bg-slate-100 border border-slate-200 rounded-xl text-slate-700">
                       <Icon className="w-7 h-7" />
                     </div>
-                    <span className="text-[10px] font-extrabold bg-amber-100 text-amber-900 border border-amber-300 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                    <span className="text-[10px] font-extrabold bg-slate-100 text-slate-800 border border-slate-300 px-2.5 py-1 rounded-full uppercase tracking-wider">
                       {cert.badge}
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-bold text-slate-900 font-serif group-hover:text-amber-600 transition-colors">
+                    <h3 className="text-lg font-bold text-slate-900 font-serif">
                       {cert.title}
                     </h3>
-                    <p className="text-xs font-semibold text-amber-700 mt-0.5">
+                    <p className="text-xs font-semibold text-slate-600 mt-0.5">
                       {cert.subtitle}
                     </p>
                   </div>

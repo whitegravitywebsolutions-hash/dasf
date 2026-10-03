@@ -2,16 +2,12 @@
 @import "tailwindcss";
 
 :root {
-  --accent-gold: #d97706;
-  --accent-gold-hover: #b45309;
-  --accent-yellow: #f59e0b;
-  --accent-yellow-light: #fef08a;
-  --bg-page: #faf8f3;
-  --bg-surface: #ffffff;
-  --text-heading: #090e17;
-  --text-main: #111827;
-  --text-body: #4b5563;
-  --border-card: #eae6df;
+  --bg-page: #ffffff;
+  --bg-surface: #f8fafc;
+  --text-heading: #0f172a;
+  --text-main: #1e293b;
+  --text-body: #475569;
+  --border-card: #e2e8f0;
 }
 
 @layer base {
@@ -19,7 +15,7 @@
     scroll-behavior: smooth;
   }
   body {
-    background-color: var(--bg-page);
+    background-color: #ffffff;
     color: var(--text-main);
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
@@ -33,72 +29,73 @@
   }
 }
 
-/* Gold & Amber Tactical Gradients */
+/* Light Theme Clean Gradients (No Orange, No Dark Theme) */
 .gold-gradient-text {
-  background: linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #fbbf24 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gold-gradient-bg {
-  background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
 
 .gold-btn {
-  background-color: #d97706;
+  background-color: #0f172a;
   color: #ffffff;
-  border: 1.5px solid #d97706;
+  border: 1.5px solid #0f172a;
   border-radius: 9999px;
   font-weight: 700;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .gold-btn:hover {
-  background-color: #b45309;
-  border-color: #b45309;
+  background-color: #1e293b;
+  border-color: #1e293b;
   transform: translateY(-2px);
 }
 
 .btn-yellow {
-  background-color: #fbbf24;
-  color: #111827;
-  border: 1.5px solid #f59e0b;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border: 1.5px solid #cbd5e1;
   border-radius: 9999px;
   font-weight: 700;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-yellow:hover {
-  background-color: #f59e0b;
+  background-color: #e2e8f0;
+  border-color: #94a3b8;
   transform: translateY(-2px);
 }
 
 .btn-dark {
-  background-color: #090e17;
+  background-color: #0f172a;
   color: #ffffff;
-  border: 1.5px solid #090e17;
+  border: 1.5px solid #0f172a;
   border-radius: 9999px;
   font-weight: 700;
   transition: all 0.25s ease;
 }
 
 .btn-dark:hover {
-  background-color: #1f2937;
+  background-color: #1e293b;
   transform: translateY(-2px);
 }
 
 .btn-call-pill {
-  background-color: #fef3c7;
-  color: #92400e;
-  border: 1.5px solid #fde68a;
+  background-color: #eff6ff;
+  color: #1e40af;
+  border: 1.5px solid #bfdbfe;
   border-radius: 9999px;
   font-weight: 700;
   transition: all 0.2s ease;
 }
 
 .btn-call-pill:hover {
-  background-color: #fde68a;
-  color: #78350f;
+  background-color: #dbeafe;
+  color: #1e3a8a;
   transform: translateY(-1px);
 }
 
@@ -123,5 +120,5 @@
 
 .card-hover:hover {
   transform: translateY(-4px);
-  border-color: #f59e0b;
+  border-color: #2563eb;
 }

@@ -11,10 +11,6 @@ import {
   Lock, 
   UserCheck, 
   Building2, 
-  ShieldAlert, 
-  FileCheck,
-  ExternalLink,
-  Target,
   MessageSquare
 } from 'lucide-react';
 import { companyDetails, servicesData } from '../data/servicesData';
@@ -39,19 +35,155 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#faf8f3] text-slate-900">
+    <div className="min-h-screen bg-white text-slate-900">
       
+      {/* FULL WIDTH HERO SECTION - LIGHT THEME */}
+      <section className="w-full bg-slate-50 border-b border-slate-200 py-16 lg:py-24 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            
+            {/* Left Column: Hero Headline & Action Buttons */}
+            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+              
+              {/* Certification Badges */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-200/80 border border-slate-300 text-slate-900 text-xs font-bold uppercase tracking-wider">
+                  <Award className="w-4 h-4 text-slate-700" />
+                  <span>Pan India Certified Security Force</span>
+                </div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-900 text-xs font-bold">
+                  <span>PSARA • GST • MSME Certified</span>
+                </div>
+              </div>
 
+              {/* Main Headline */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 font-serif tracking-tight leading-tight">
+                Dharm Armed <br />
+                <span className="text-slate-900">Security Forces</span>
+              </h1>
 
-      {/* STATS BAR IN WARM CARDS */}
-      <section className="py-12 bg-white border-b border-[#eae6df]">
+              {/* Tagline */}
+              <p className="text-xl sm:text-2xl font-bold text-slate-800 tracking-wide font-sans">
+                🛡️ Armed Gunmen • Gunwomen • Commandos • PSOs
+              </p>
+
+              <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
+                Deploying highly trained Gunmen, Gunwomen, Tactical Commandos, PSOs, and Certified Security Personnel for VIP protection, corporate facilities, banks, and events across Ghaziabad & Pan India.
+              </p>
+
+              {/* Force Badges */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-1 text-xs sm:text-sm">
+                <span className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 text-slate-800 font-bold">
+                  <CheckCircle className="w-4 h-4 text-slate-700" />
+                  <span>Licensed Gunmen</span>
+                </span>
+                <span className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 text-slate-800 font-bold">
+                  <CheckCircle className="w-4 h-4 text-slate-700" />
+                  <span>Armed Gunwomen</span>
+                </span>
+                <span className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 text-slate-800 font-bold">
+                  <CheckCircle className="w-4 h-4 text-slate-700" />
+                  <span>Tactical Commandos</span>
+                </span>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-4">
+                <a
+                  href={`tel:${companyDetails.phone}`}
+                  className="w-full sm:w-auto px-7 py-3.5 bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-bold uppercase tracking-wider rounded-full flex items-center justify-center gap-2.5 transition-all"
+                >
+                  <Phone className="w-4 h-4 text-white" />
+                  <span>Call {companyDetails.phone}</span>
+                </a>
+
+                <a
+                  href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-7 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold rounded-full flex items-center justify-center gap-2 transition-all"
+                >
+                  <MessageSquare className="w-4 h-4" />
+                  <span>WhatsApp Inquiry</span>
+                </a>
+
+                <Link
+                  to="/services"
+                  className="w-full sm:w-auto px-7 py-3.5 bg-white border border-slate-300 hover:bg-slate-100 text-slate-900 text-xs sm:text-sm font-bold rounded-full flex items-center justify-center gap-2 transition-all"
+                >
+                  <span>Explore Force Catalog</span>
+                  <ArrowRight className="w-4 h-4 text-slate-700" />
+                </Link>
+              </div>
+
+            </div>
+
+            {/* Right Column: Hero Light Feature Dashboard */}
+            <div className="lg:col-span-5 flex justify-center w-full">
+              <div className="w-full max-w-md bg-white border border-slate-200 rounded-3xl p-6 space-y-6">
+                
+                <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2.5 rounded-xl bg-slate-100 text-slate-900 border border-slate-200">
+                      <ShieldCheck className="w-7 h-7" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-black uppercase text-slate-900 tracking-wider">DASF Force Unit</div>
+                      <div className="text-xs text-slate-500 font-medium">Pan India Security Agency</div>
+                    </div>
+                  </div>
+
+                  <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+                    Active 24/7
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-1">
+                    <Award className="w-6 h-6 text-slate-700 mx-auto" />
+                    <div className="text-2xl font-black text-slate-900 font-serif">1,500+</div>
+                    <div className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">Trained Force</div>
+                  </div>
+
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-1">
+                    <Lock className="w-6 h-6 text-slate-700 mx-auto" />
+                    <div className="text-2xl font-black text-slate-900 font-serif">PSARA</div>
+                    <div className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">License Certified</div>
+                  </div>
+
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-1">
+                    <UserCheck className="w-6 h-6 text-slate-700 mx-auto" />
+                    <div className="text-2xl font-black text-slate-900 font-serif">Armed</div>
+                    <div className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">Gunmen & PSOs</div>
+                  </div>
+
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-1">
+                    <Building2 className="w-6 h-6 text-slate-700 mx-auto" />
+                    <div className="text-2xl font-black text-slate-900 font-serif">28+</div>
+                    <div className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">States Covered</div>
+                  </div>
+                </div>
+
+                <div className="p-3.5 bg-slate-100 border border-slate-200 rounded-xl text-center text-xs font-bold text-slate-800">
+                  Head Office: Chipiyana Buzurg, Ghaziabad, UP
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* STATS BAR */}
+      <section className="py-12 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {stats.map((stat, idx) => {
               const Icon = stat.icon;
               return (
-                <div key={idx} className="p-6 rounded-2xl bg-[#faf8f3] border border-[#eae6df] hover:border-amber-500 transition-colors shadow-sm">
-                  <Icon className="w-8 h-8 text-amber-600 mx-auto mb-2" />
+                <div key={idx} className="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                  <Icon className="w-8 h-8 text-slate-700 mx-auto mb-2" />
                   <div className="text-3xl font-black text-slate-900">{stat.value}</div>
                   <div className="text-xs font-bold text-slate-600 uppercase tracking-wider mt-1">{stat.label}</div>
                 </div>
@@ -67,20 +199,20 @@ export default function Home() {
       {/* OWNER & LEADERSHIP PROFILE */}
       <OwnerSection />
 
-      {/* FEATURED SERVICES PREVIEW GRID */}
-      <section className="py-20 bg-[#faf8f3] border-t border-b border-[#eae6df]">
+      {/* FEATURED SERVICES CATALOG */}
+      <section className="py-20 bg-slate-50 border-t border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-amber-700">Our Tactical Force Catalog</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-slate-600">Our Tactical Force Catalog</span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif mt-1">
                 Featured Security Categories
               </h2>
             </div>
             <Link
               to="/services"
-              className="text-amber-700 font-bold text-sm hover:underline flex items-center gap-1 self-start md:self-auto"
+              className="text-slate-900 font-bold text-sm hover:underline flex items-center gap-1 self-start md:self-auto"
             >
               View All Services Catalog →
             </Link>
@@ -90,53 +222,49 @@ export default function Home() {
             {servicesData.slice(0, 6).map((service) => (
               <div
                 key={service.id}
-                className="bg-white rounded-2xl overflow-hidden border border-[#eae6df] hover:border-amber-500 transition-all duration-300 flex flex-col card-hover group shadow-sm"
+                className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-slate-400 transition-all duration-300 flex flex-col group"
               >
-                {/* Vector Category Header Banner (No Stock Photo) */}
-                <div className="relative h-44 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 p-6 flex flex-col justify-between overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-xl pointer-events-none"></div>
-
-                  <div className="flex items-center justify-between relative z-10">
-                    <div className="p-3 rounded-xl bg-amber-500/20 border border-amber-400/30 text-amber-400">
-                      <ShieldCheck className="w-6 h-6 text-amber-400" />
+                {/* Header Banner */}
+                <div className="h-36 bg-slate-100 border-b border-slate-200 p-5 flex flex-col justify-between">
+                  <div className="flex items-center justify-between">
+                    <div className="p-2.5 rounded-xl bg-white border border-slate-200 text-slate-800">
+                      <ShieldCheck className="w-5 h-5" />
                     </div>
-                    <span className="bg-amber-500 text-slate-950 font-extrabold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
+                    <span className="bg-slate-900 text-white font-extrabold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full">
                       {service.badge}
                     </span>
                   </div>
 
-                  <div className="relative z-10">
-                    <span className="text-[11px] font-bold text-amber-400 uppercase tracking-wider">
+                  <div>
+                    <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
                       {service.category}
                     </span>
-                    <h4 className="text-base font-bold text-white font-serif leading-tight">
+                    <h4 className="text-base font-bold text-slate-900 font-serif leading-tight">
                       {service.title}
                     </h4>
                   </div>
                 </div>
 
-                {/* Content */}
+                {/* Card Content */}
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                  <div>
-                    <p className="text-xs text-slate-600 mt-1 line-clamp-2">
-                      {service.description}
-                    </p>
-                  </div>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    {service.description}
+                  </p>
 
                   <ul className="space-y-1.5 text-xs text-slate-700">
                     {service.features.slice(0, 2).map((feat, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <CheckCircle className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                        <CheckCircle className="w-3.5 h-3.5 text-slate-700 shrink-0" />
                         <span>{feat}</span>
                       </li>
                     ))}
                   </ul>
 
-                  {/* Action Buttons: Enquire + WhatsApp CTA + Call */}
+                  {/* 3 Action CTAs */}
                   <div className="pt-3 border-t border-slate-100 flex items-center gap-2">
                     <button
                       onClick={() => handleOpenModal(service)}
-                      className="gold-btn flex-1 py-2.5 px-3 text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-sm"
+                      className="gold-btn flex-1 py-2.5 px-3 text-xs uppercase tracking-wider flex items-center justify-center gap-1.5"
                     >
                       <span>Enquire</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -146,7 +274,7 @@ export default function Home() {
                       href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20${encodeURIComponent(service.title)}.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-wa-pill px-3.5 py-2.5 text-xs flex items-center justify-center gap-1.5 shadow-sm"
+                      className="btn-wa-pill px-3.5 py-2.5 text-xs flex items-center justify-center gap-1.5"
                       title="WhatsApp Inquiry"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
@@ -155,7 +283,7 @@ export default function Home() {
 
                     <a
                       href={`tel:${companyDetails.phone}`}
-                      className="p-2.5 rounded-full bg-slate-900 hover:bg-slate-800 text-amber-400 border border-slate-700 transition-colors flex items-center justify-center shrink-0"
+                      className="p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 transition-colors flex items-center justify-center shrink-0"
                       title="Direct Call"
                     >
                       <Phone className="w-3.5 h-3.5" />
@@ -166,12 +294,12 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="mt-12 text-center">
             <Link
               to="/services"
-              className="btn-yellow inline-flex items-center gap-2 px-8 py-3.5 text-xs uppercase tracking-wider"
+              className="gold-btn inline-flex items-center gap-2 px-8 py-4 text-xs sm:text-sm uppercase tracking-wider"
             >
-              <span>Explore Complete Tactical Catalog</span>
+              <span>Explore 15+ Force Units in Catalog</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -179,39 +307,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* QUICK CALL TO ACTION BANNER */}
-      <section className="py-16 bg-slate-900 text-white border-t border-b border-slate-800 relative overflow-hidden">
-        <div className="max-w-5xl mx-auto px-4 text-center space-y-6 relative z-10">
-          <div className="w-16 h-16 bg-amber-500/20 border border-amber-500/40 rounded-full flex items-center justify-center mx-auto text-amber-400 shadow-lg">
-            <Phone className="w-8 h-8 animate-bounce" />
-          </div>
+      {/* WHATSAPP CTA BANNER */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-emerald-50 border border-emerald-200 rounded-3xl p-8 sm:p-12 space-y-6">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif">
+              Need Gunman, Gunwoman or Commando Deployment?
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto">
+              Connect with our deployment officer directly for fast quote & deployment across Ghaziabad & Pan India.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+              <a
+                href={`tel:${companyDetails.phone}`}
+                className="gold-btn px-8 py-4 text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2"
+              >
+                <Phone className="w-4 h-4" />
+                <span>Direct Call: {companyDetails.phone}</span>
+              </a>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-serif">
-            Need Gunman, Gunwoman or Commando Deployment?
-          </h2>
-
-          <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">
-            Contact Dharm Armed Security Force now for rapid 24/7 deployment across Ghaziabad, Delhi NCR, and Pan India. PSARA, GST & MSME Certified.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            <a
-              href={`tel:${companyDetails.phone}`}
-              className="gold-btn px-8 py-4 text-base uppercase tracking-wider flex items-center gap-3 shadow-2xl"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Direct Call: {companyDetails.phone}</span>
-            </a>
-
-            <a
-              href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20need%20urgent%20Gunman/Gunwoman/Commando%20deployment.`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-wa-pill px-8 py-4 text-base flex items-center gap-2 shadow-xl"
-            >
-              <MessageSquare className="w-5 h-5" />
-              <span>Instant WhatsApp Inquiry</span>
-            </a>
+              <a
+                href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-wa-pill px-8 py-4 text-xs sm:text-sm flex items-center gap-2"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>Instant WhatsApp Inquiry</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -220,7 +344,7 @@ export default function Home() {
       <InquiryModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        selectedService={selectedService}
+        service={selectedService}
       />
 
     </div>
