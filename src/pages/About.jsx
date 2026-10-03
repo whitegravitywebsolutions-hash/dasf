@@ -62,33 +62,31 @@ export default function About() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Column: Brand Showcase Card */}
+          {/* Left Column: Brand Showcase Card with Authentic DASF Squad Photo */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative p-6 bg-slate-50 border border-slate-200 rounded-3xl max-w-md w-full text-center space-y-6">
-              <div className="w-16 h-16 rounded-2xl bg-slate-200 border border-slate-300 text-slate-900 mx-auto flex items-center justify-center">
-                <ShieldCheck className="w-9 h-9 text-slate-900" />
+            <div className="relative bg-white border border-slate-200 rounded-3xl p-3 max-w-md w-full overflow-hidden space-y-3">
+              <div className="relative w-full h-64 sm:h-72 rounded-2xl overflow-hidden">
+                <img
+                  src="/images/dasf-hero-squad.jpg"
+                  alt="Dharm Armed Security Force Squad"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md text-white border border-slate-700 text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                  <span>Authentic DASF Squad</span>
+                </div>
               </div>
 
-              <div className="space-y-1">
+              <div className="p-4 text-center space-y-2">
                 <h3 className="text-xl font-extrabold font-serif uppercase tracking-wider text-slate-900">
                   Dharm Armed Security Force
                 </h3>
                 <p className="text-xs text-slate-600 font-bold uppercase tracking-widest">
-                  Est. 2017 • Pan India Security
+                  Est. 2017 • PSARA & GST Certified
                 </p>
-              </div>
-
-              <div className="py-4 px-3 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 space-y-2">
-                <div className="font-bold text-slate-900">PSARA • GST • MSME Certified</div>
-                <div>Head Office: Shop No. 6, Choudhary Market, Main Road, Chipiyana Buzurg, G.B. Nagar, Ghaziabad, UP</div>
-              </div>
-
-              <div className="pt-2 text-xs font-bold text-slate-700 uppercase tracking-wider flex justify-center gap-3">
-                <span>Gunmen</span>
-                <span>•</span>
-                <span>Gunwomen</span>
-                <span>•</span>
-                <span>Commandos</span>
+                <p className="text-xs text-slate-500">
+                  Head Office: Shop No. 6, Choudhary Market, Main Road, Chipiyana Buzurg, G.B. Nagar, Ghaziabad, UP
+                </p>
               </div>
             </div>
           </div>
