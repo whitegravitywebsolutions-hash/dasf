@@ -118,56 +118,34 @@ export default function Home() {
 
             </div>
 
-            {/* Right Column: Hero Light Feature Dashboard */}
+            {/* Right Column: Wide Hero Image Showcase */}
             <div className="lg:col-span-5 flex justify-center w-full">
-              <div className="w-full max-w-md bg-white border border-slate-200 rounded-3xl p-6 space-y-6">
-                
-                <div className="flex items-center justify-between border-b border-slate-100 pb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-slate-100 text-slate-900 border border-slate-200">
-                      <ShieldCheck className="w-7 h-7" />
+              <div className="relative group w-full max-w-lg">
+                <div className="bg-white border border-slate-200 rounded-3xl p-2 overflow-hidden">
+                  <div className="relative w-full h-[360px] sm:h-[420px] lg:h-[460px] rounded-2xl overflow-hidden">
+                    <img
+                      src="/images/hero-commando.jpg"
+                      alt="Dharm Armed Security Forces"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    
+                    {/* Floating Badge */}
+                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-slate-900 border border-slate-200 text-xs font-bold px-3.5 py-1.5 rounded-full flex items-center gap-2">
+                      <ShieldCheck className="w-4 h-4 text-slate-700" />
+                      <span>Armed Security Forces</span>
                     </div>
-                    <div>
-                      <div className="text-sm font-black uppercase text-slate-900 tracking-wider">DASF Force Unit</div>
-                      <div className="text-xs text-slate-500 font-medium">Pan India Security Agency</div>
+
+                    {/* Bottom Banner */}
+                    <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md border border-slate-200 text-slate-900 p-3.5 rounded-xl text-center">
+                      <div className="text-sm font-black font-serif uppercase tracking-wider text-slate-900">
+                        Dharm Armed Security Force
+                      </div>
+                      <div className="text-xs text-slate-600 font-semibold mt-0.5">
+                        Armed Gunmen • Commandos • PSOs • Pan India
+                      </div>
                     </div>
                   </div>
-
-                  <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
-                    Active 24/7
-                  </span>
                 </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-1">
-                    <Award className="w-6 h-6 text-slate-700 mx-auto" />
-                    <div className="text-2xl font-black text-slate-900 font-serif">1,500+</div>
-                    <div className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">Trained Force</div>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-1">
-                    <Lock className="w-6 h-6 text-slate-700 mx-auto" />
-                    <div className="text-2xl font-black text-slate-900 font-serif">PSARA</div>
-                    <div className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">License Certified</div>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-1">
-                    <UserCheck className="w-6 h-6 text-slate-700 mx-auto" />
-                    <div className="text-2xl font-black text-slate-900 font-serif">Armed</div>
-                    <div className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">Gunmen & PSOs</div>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-1">
-                    <Building2 className="w-6 h-6 text-slate-700 mx-auto" />
-                    <div className="text-2xl font-black text-slate-900 font-serif">28+</div>
-                    <div className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">States Covered</div>
-                  </div>
-                </div>
-
-                <div className="p-3.5 bg-slate-100 border border-slate-200 rounded-xl text-center text-xs font-bold text-slate-800">
-                  Head Office: Chipiyana Buzurg, Ghaziabad, UP
-                </div>
-
               </div>
             </div>
 
