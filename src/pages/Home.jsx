@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ShieldCheck, 
@@ -8,10 +8,9 @@ import {
   Clock, 
   CheckCircle, 
   ArrowRight, 
-  Lock, 
-  UserCheck, 
-  Building2, 
-  MessageSquare
+  MessageSquare,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { companyDetails, servicesData } from '../data/servicesData';
 import InquiryModal from '../components/InquiryModal';
@@ -21,6 +20,55 @@ import OwnerSection from '../components/OwnerSection';
 export default function Home() {
   const [selectedService, setSelectedService] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      image: '/images/hero-commando.jpg',
+      badge: 'TACTICAL COMMANDO SQUAD',
+      title: 'Elite Tactical Commando Squads',
+      subtitle: 'Deploying trained anti-threat commando units for high-risk assets, VIP escorting & convoy protection across Pan India.',
+      tag: '🔫 Armed Commando Force'
+    },
+    {
+      image: '/images/gunman-security.jpg',
+      badge: 'LICENSED ARMED GUNMEN',
+      title: 'Licensed Armed Gunmen Services',
+      subtitle: 'Ex-Military firearms officers for bank vaults, cash-in-transit, VIP protection & high-risk perimeter defense.',
+      tag: '🎯 Licensed Firearm Officers'
+    },
+    {
+      image: '/images/pso-officer.jpg',
+      badge: 'VIP CLOSE PROTECTION',
+      title: 'Personal Security Officer (PSO)',
+      subtitle: 'Specialized 1-on-1 PSO bodyguards supervised under D.S. Tomar (Ansh PSO) for executives, VIPs & dignitaries.',
+      tag: '🛡️ Dedicated Escort PSO'
+    },
+    {
+      image: '/images/gunwoman-security.jpg',
+      badge: 'SPECIALIZED FEMALE SECURITY',
+      title: 'Armed Gunwomen & Female Guards',
+      subtitle: 'Certified female security officers and armed gunwomen for female VIP protection, institutional security & frisking.',
+      tag: '👩‍✈️ Gunwoman Squad'
+    },
+    {
+      image: '/images/bank-security.jpg',
+      badge: 'BANKING & FINANCIAL SECURITY',
+      title: 'Bank Vault & ATM Guarding',
+      subtitle: 'High-security armed guarding for bank branches, currency chests, vault rooms & armored cash replenishment.',
+      tag: '🏦 Vault Defense Guarding'
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   const handleOpenModal = (service) => {
     setSelectedService(service);
@@ -37,120 +85,120 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
       
-      {/* FULL WIDTH HERO SECTION - LIGHT THEME */}
-      <section className="w-full bg-slate-50 border-b border-slate-200 py-16 lg:py-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      {/* FULL-WIDTH HERO IMAGE SLIDER CAROUSEL */}
+      <section className="w-full relative h-[500px] sm:h-[580px] lg:h-[640px] bg-slate-950 overflow-hidden text-white">
+        
+        {/* Slides Images with Transition */}
+        {slides.map((slide, idx) => (
+          <div
+            key={idx}
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+              idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
+          >
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="w-full h-full object-cover object-center brightness-[0.4]"
+            />
+            {/* Dark Gradient Overlay for Readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-transparent"></div>
+          </div>
+        ))}
+
+        {/* Content Container Overlaid on Slider */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center relative z-20">
+          <div className="max-w-3xl space-y-5 text-left">
             
-            {/* Left Column: Hero Headline & Action Buttons */}
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              
-              {/* Certification Badges */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-200/80 border border-slate-300 text-slate-900 text-xs font-bold uppercase tracking-wider">
-                  <Award className="w-4 h-4 text-slate-700" />
-                  <span>Pan India Certified Security Force</span>
-                </div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-900 text-xs font-bold">
-                  <span>PSARA • GST • MSME Certified</span>
-                </div>
-              </div>
-
-              {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 font-serif tracking-tight leading-tight">
-                Dharm Armed <br />
-                <span className="text-slate-900">Security Forces</span>
-              </h1>
-
-              {/* Tagline */}
-              <p className="text-xl sm:text-2xl font-bold text-slate-800 tracking-wide font-sans">
-                🛡️ Armed Gunmen • Gunwomen • Commandos • PSOs
-              </p>
-
-              <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
-                Deploying highly trained Gunmen, Gunwomen, Tactical Commandos, PSOs, and Certified Security Personnel for VIP protection, corporate facilities, banks, and events across Ghaziabad & Pan India.
-              </p>
-
-              {/* Force Badges */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-1 text-xs sm:text-sm">
-                <span className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 text-slate-800 font-bold">
-                  <CheckCircle className="w-4 h-4 text-slate-700" />
-                  <span>Licensed Gunmen</span>
-                </span>
-                <span className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 text-slate-800 font-bold">
-                  <CheckCircle className="w-4 h-4 text-slate-700" />
-                  <span>Armed Gunwomen</span>
-                </span>
-                <span className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 text-slate-800 font-bold">
-                  <CheckCircle className="w-4 h-4 text-slate-700" />
-                  <span>Tactical Commandos</span>
-                </span>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-4">
-                <a
-                  href={`tel:${companyDetails.phone}`}
-                  className="w-full sm:w-auto px-7 py-3.5 bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-bold uppercase tracking-wider rounded-full flex items-center justify-center gap-2.5 transition-all"
-                >
-                  <Phone className="w-4 h-4 text-white" />
-                  <span>Call {companyDetails.phone}</span>
-                </a>
-
-                <a
-                  href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-7 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold rounded-full flex items-center justify-center gap-2 transition-all"
-                >
-                  <MessageSquare className="w-4 h-4" />
-                  <span>WhatsApp Inquiry</span>
-                </a>
-
-                <Link
-                  to="/services"
-                  className="w-full sm:w-auto px-7 py-3.5 bg-white border border-slate-300 hover:bg-slate-100 text-slate-900 text-xs sm:text-sm font-bold rounded-full flex items-center justify-center gap-2 transition-all"
-                >
-                  <span>Explore Force Catalog</span>
-                  <ArrowRight className="w-4 h-4 text-slate-700" />
-                </Link>
-              </div>
-
+            {/* Badges */}
+            <div className="flex flex-wrap items-center gap-2.5">
+              <span className="px-3.5 py-1 rounded-full bg-slate-900/90 border border-slate-700 text-white text-xs font-black uppercase tracking-wider backdrop-blur-md">
+                {slides[currentSlide].badge}
+              </span>
+              <span className="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs font-bold backdrop-blur-md">
+                PSARA • GST • MSME Certified
+              </span>
             </div>
 
-            {/* Right Column: Wide Hero Image Showcase */}
-            <div className="lg:col-span-5 flex justify-center w-full">
-              <div className="relative group w-full max-w-lg">
-                <div className="bg-white border border-slate-200 rounded-3xl p-2 overflow-hidden">
-                  <div className="relative w-full h-[360px] sm:h-[420px] lg:h-[460px] rounded-2xl overflow-hidden">
-                    <img
-                      src="/images/hero-commando.jpg"
-                      alt="Dharm Armed Security Forces"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    
-                    {/* Floating Badge */}
-                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-slate-900 border border-slate-200 text-xs font-bold px-3.5 py-1.5 rounded-full flex items-center gap-2">
-                      <ShieldCheck className="w-4 h-4 text-slate-700" />
-                      <span>Armed Security Forces</span>
-                    </div>
+            {/* Title */}
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white font-serif tracking-tight leading-tight">
+              {slides[currentSlide].title}
+            </h1>
 
-                    {/* Bottom Banner */}
-                    <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md border border-slate-200 text-slate-900 p-3.5 rounded-xl text-center">
-                      <div className="text-sm font-black font-serif uppercase tracking-wider text-slate-900">
-                        Dharm Armed Security Force
-                      </div>
-                      <div className="text-xs text-slate-600 font-semibold mt-0.5">
-                        Armed Gunmen • Commandos • PSOs • Pan India
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {/* Tagline */}
+            <p className="text-xl sm:text-2xl font-bold text-white tracking-wide font-sans">
+              {slides[currentSlide].tag}
+            </p>
+
+            {/* Subtitle */}
+            <p className="text-sm sm:text-base text-slate-200 leading-relaxed max-w-2xl">
+              {slides[currentSlide].subtitle}
+            </p>
+
+            {/* 3 Action CTAs */}
+            <div className="flex flex-col sm:flex-row flex-wrap items-center gap-3.5 pt-2">
+              <a
+                href={`tel:${companyDetails.phone}`}
+                className="w-full sm:w-auto px-7 py-3.5 bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-bold uppercase tracking-wider rounded-full border border-slate-700 flex items-center justify-center gap-2.5 transition-all shadow-md"
+              >
+                <Phone className="w-4 h-4 text-white" />
+                <span>Call {companyDetails.phone}</span>
+              </a>
+
+              <a
+                href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-7 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold rounded-full flex items-center justify-center gap-2 transition-all shadow-md"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>WhatsApp Inquiry</span>
+              </a>
+
+              <Link
+                to="/services"
+                className="w-full sm:w-auto px-7 py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs sm:text-sm font-bold rounded-full backdrop-blur-md flex items-center justify-center gap-2 transition-all"
+              >
+                <span>Explore Force Catalog</span>
+                <ArrowRight className="w-4 h-4 text-slate-200" />
+              </Link>
             </div>
 
           </div>
         </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-slate-950/60 hover:bg-slate-900 text-white border border-slate-700 transition-colors focus:outline-none"
+          aria-label="Previous Slide"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-slate-950/60 hover:bg-slate-900 text-white border border-slate-700 transition-colors focus:outline-none"
+          aria-label="Next Slide"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+
+        {/* Indicator Dots */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentSlide(idx)}
+              className={`h-2.5 rounded-full transition-all ${
+                idx === currentSlide
+                  ? 'w-8 bg-white'
+                  : 'w-2.5 bg-white/40 hover:bg-white/70'
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+
       </section>
 
       {/* STATS BAR */}
