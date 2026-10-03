@@ -74,46 +74,33 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-[#faf8f3] text-slate-900 py-12">
       
-      {/* HEADER BANNER - CENTERED */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="bg-white border border-[#eae6df] rounded-3xl p-8 sm:p-12 relative overflow-hidden text-center">
-          <div className="max-w-3xl mx-auto relative z-10 space-y-4">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider">
-              <Phone className="w-4 h-4 text-amber-600" />
-              <span>Direct 24/7 Security Hotline: {companyDetails.phone}</span>
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 font-serif tracking-tight">
-              Contact <span className="gold-gradient-text">Dharm Armed Security Force</span>
-            </h1>
-
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-              Inquire for Gunman, Gunwoman, Commando force, PSO or Security Guard deployment in Ghaziabad & across India.
-            </p>
-          </div>
-        </div>
+      {/* TOP HERO SECTION - MINIMAL TITLE */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 text-center">
+        <h1 className="text-4xl sm:text-5xl font-black text-slate-900 font-serif tracking-tight">
+          Contact Us
+        </h1>
       </section>
 
-      {/* CONTACT INFO & FORM GRID */}
+      {/* CONTACT INFO & FORM GRID (SIMPLE UN-BOXED LAYOUT) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
-          {/* Left Column: Direct Contact Details */}
-          <div className="lg:col-span-5 space-y-6">
+          {/* Left Column: Direct Contact Details (Unboxed) */}
+          <div className="lg:col-span-5 space-y-8">
             
-            <div className="bg-white border border-[#eae6df] rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
-              <h2 className="text-2xl font-bold text-slate-900 font-serif border-b border-slate-100 pb-3">
-                Official Contact Hub
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold text-slate-900 font-serif border-b border-slate-200 pb-3">
+                Get In Touch
               </h2>
 
-              <div className="space-y-4">
+              <div className="space-y-6">
                 
-                {/* Phone Card */}
+                {/* Phone Item */}
                 <a
                   href={`tel:${companyDetails.phone}`}
-                  className="flex items-start gap-4 p-4 rounded-2xl bg-[#faf8f3] border border-[#eae6df] hover:border-amber-500 transition-all group"
+                  className="flex items-start gap-4 transition-colors group"
                 >
-                  <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-amber-600 group-hover:scale-110 transition-transform">
+                  <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-amber-600 group-hover:bg-amber-100 shrink-0">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
@@ -123,12 +110,12 @@ export default function Contact() {
                   </div>
                 </a>
 
-                {/* Email Card */}
+                {/* Email Item */}
                 <a
                   href={`mailto:${companyDetails.email}`}
-                  className="flex items-start gap-4 p-4 rounded-2xl bg-[#faf8f3] border border-[#eae6df] hover:border-amber-500 transition-all group"
+                  className="flex items-start gap-4 transition-colors group"
                 >
-                  <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-amber-600 group-hover:scale-110 transition-transform">
+                  <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-amber-600 group-hover:bg-amber-100 shrink-0">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
@@ -138,9 +125,9 @@ export default function Contact() {
                   </div>
                 </a>
 
-                {/* Address Card */}
-                <div className="flex items-start gap-4 p-4 rounded-2xl bg-[#faf8f3] border border-[#eae6df]">
-                  <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-amber-600">
+                {/* Address Item */}
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-amber-600 shrink-0">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
@@ -154,7 +141,7 @@ export default function Contact() {
                   href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-wa-pill w-full py-3.5 text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm"
+                  className="btn-wa-pill w-full py-3.5 text-xs uppercase tracking-wider flex items-center justify-center gap-2"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>Connect Directly on WhatsApp</span>
@@ -163,40 +150,20 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* WhatsApp Call to Action Box */}
-            <div className="p-6 bg-emerald-50/90 border border-emerald-200 rounded-3xl text-center space-y-3 shadow-sm">
-              <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center mx-auto text-white shadow-md">
-                <MessageSquare className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="text-base font-extrabold text-slate-900">Need Immediate Security Response?</h3>
-                <p className="text-xs text-slate-600 mt-1">Connect with our security force coordinator directly on WhatsApp for instant quote & deployment.</p>
-              </div>
-              <a
-                href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-wa-pill w-full py-3.5 text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow"
-              >
-                <MessageSquare className="w-4 h-4" />
-                <span>Chat Instant on WhatsApp ({companyDetails.phone})</span>
-              </a>
-            </div>
-
           </div>
 
-          {/* Right Column: Interactive Inquiry Form */}
+          {/* Right Column: Simple Unboxed Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white border border-[#eae6df] rounded-3xl p-6 sm:p-8 shadow-sm">
+            <div className="space-y-6">
               
               {!submitted ? (
                 <div className="space-y-6">
-                  <div className="border-b border-slate-100 pb-4">
+                  <div className="border-b border-slate-200 pb-3">
                     <h2 className="text-2xl font-bold text-slate-900 font-serif">
-                      Send Security Requirement
+                      Send Requirement
                     </h2>
-                    <p className="text-xs text-amber-700 font-bold mt-1">
-                      Fill out the form below to receive a custom proposal for your site.
+                    <p className="text-xs text-slate-600 mt-1">
+                      Fill out the details below for a quick security quote.
                     </p>
                   </div>
 
@@ -347,9 +314,9 @@ export default function Contact() {
       {/* CERTIFICATIONS SECTION */}
       <CertificationsSection />
 
-      {/* LOCATION MAP PLACEHOLDER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
-        <div className="bg-white border border-[#eae6df] rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+      {/* LOCATION MAP SECTION (UN-BOXED) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16 border-t border-slate-200 pt-12">
+        <div className="space-y-4">
           <div className="flex items-center gap-3">
             <MapPin className="w-6 h-6 text-amber-600" />
             <h3 className="text-xl font-bold text-slate-900 font-serif">
@@ -361,7 +328,7 @@ export default function Contact() {
           </p>
 
           <div className="w-full h-64 rounded-2xl bg-[#faf8f3] border border-[#eae6df] flex flex-col items-center justify-center text-center p-6 space-y-3 relative overflow-hidden">
-            <MapPin className="w-10 h-10 text-amber-600 animate-bounce" />
+            <MapPin className="w-10 h-10 text-amber-600" />
             <div className="text-base font-bold text-slate-900">Dharm Armed Security Force (DASF)</div>
             <div className="text-xs text-amber-800 font-bold max-w-lg">
               {companyDetails.location}

@@ -41,37 +41,11 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-[#faf8f3] text-slate-900 py-12">
       
-      {/* HEADER BANNER - CENTERED */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="bg-white border border-[#eae6df] rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-sm text-center">
-          
-          <div className="max-w-3xl mx-auto relative z-10 space-y-4">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider">
-              <Layers className="w-4 h-4 text-amber-600" />
-              <span>Full Service Catalog • Armed & Unarmed Force</span>
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 font-serif tracking-tight">
-              Categories of <span className="gold-gradient-text">Dharm Armed Security Force</span>
-            </h1>
-
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-              Explore our certified security manpower catalog featuring Armed Gunmen, Armed Gunwomen, Tactical Commandos, VIP Bodyguards, and Event Bouncers. Operating under PSARA, GST & MSME certifications across Ghaziabad & Pan India.
-            </p>
-
-            <div className="pt-2 flex flex-wrap items-center justify-center gap-4 text-xs font-bold text-slate-700">
-              <span className="flex items-center gap-1.5 text-amber-700">
-                <CheckCircle className="w-4 h-4" /> 15+ Specialized Service Categories
-              </span>
-              <span className="flex items-center gap-1.5 text-amber-700">
-                <CheckCircle className="w-4 h-4" /> Gunmen • Gunwomen • Commandos • PSOs
-              </span>
-              <span className="flex items-center gap-1.5 text-amber-700">
-                <CheckCircle className="w-4 h-4" /> PSARA & GST Certified
-              </span>
-            </div>
-          </div>
-        </div>
+      {/* TOP HERO SECTION - MINIMAL TITLE */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 text-center">
+        <h1 className="text-4xl sm:text-5xl font-black text-slate-900 font-serif tracking-tight">
+          Services
+        </h1>
       </section>
 
       {/* FILTER & SEARCH BAR */}
