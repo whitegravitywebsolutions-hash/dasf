@@ -41,32 +41,32 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#faf8f3] text-slate-900">
       
-      {/* HERO SECTION */}
-      <section className="relative py-14 lg:py-24 overflow-hidden bg-gradient-to-br from-[#0b0f19] via-[#111827] to-[#1f2937] text-white border-b border-amber-500/20">
+      {/* HERO SECTION - FULL WIDTH */}
+      <section className="relative w-full py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-[#0b0f19] via-[#111827] to-[#1f2937] text-white border-b border-amber-500/20">
         
         {/* Glowing Gradient Ambient Lights */}
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-0 left-10 w-80 h-80 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 left-10 w-[500px] h-[500px] bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             
             {/* Hero Text */}
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div className="lg:col-span-7 space-y-7 text-center lg:text-left">
               
               {/* Badges */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs sm:text-sm font-bold uppercase tracking-wider backdrop-blur-md">
                   <Award className="w-4 h-4 text-amber-400 animate-pulse" />
                   <span>Pan India Certified Security Force</span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-bold backdrop-blur-md">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs sm:text-sm font-bold backdrop-blur-md">
                   <span>PSARA • GST • MSME Certified</span>
                 </div>
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-serif tracking-tight leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white font-serif tracking-tight leading-tight">
                 Dharm Armed <br />
                 <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-yellow-500 bg-clip-text text-transparent">
                   Security Forces
@@ -74,35 +74,35 @@ export default function Home() {
               </h1>
 
               {/* Tagline */}
-              <p className="text-xl sm:text-2xl font-bold text-amber-400 tracking-wide font-sans">
+              <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-amber-400 tracking-wide font-sans">
                 🛡️ Armed Gunmen • Gunwomen • Commandos • PSOs
               </p>
 
-              <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl leading-relaxed">
                 Deploying highly trained Gunmen, Gunwomen, Tactical Commandos, PSOs, and Certified Security Personnel for VIP protection, corporate facilities, banks, and events across Ghaziabad & Pan India.
               </p>
 
               {/* Force Pill Badges */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-1 text-xs">
-                <span className="flex items-center gap-2 bg-slate-800/80 backdrop-blur-md px-4 py-2 rounded-full border border-slate-700 text-amber-300 font-bold shadow-md">
-                  <CheckCircle className="w-4 h-4 text-amber-400" />
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-1 text-xs sm:text-sm">
+                <span className="flex items-center gap-2 bg-slate-800/80 backdrop-blur-md px-4 py-2.5 rounded-full border border-slate-700 text-amber-300 font-bold shadow-md">
+                  <CheckCircle className="w-4.5 h-4.5 text-amber-400" />
                   <span>🔫 Licensed Gunmen</span>
                 </span>
-                <span className="flex items-center gap-2 bg-slate-800/80 backdrop-blur-md px-4 py-2 rounded-full border border-slate-700 text-amber-300 font-bold shadow-md">
-                  <CheckCircle className="w-4 h-4 text-amber-400" />
+                <span className="flex items-center gap-2 bg-slate-800/80 backdrop-blur-md px-4 py-2.5 rounded-full border border-slate-700 text-amber-300 font-bold shadow-md">
+                  <CheckCircle className="w-4.5 h-4.5 text-amber-400" />
                   <span>👩‍✈️ Armed Gunwomen</span>
                 </span>
-                <span className="flex items-center gap-2 bg-slate-800/80 backdrop-blur-md px-4 py-2 rounded-full border border-slate-700 text-amber-300 font-bold shadow-md">
-                  <CheckCircle className="w-4 h-4 text-amber-400" />
+                <span className="flex items-center gap-2 bg-slate-800/80 backdrop-blur-md px-4 py-2.5 rounded-full border border-slate-700 text-amber-300 font-bold shadow-md">
+                  <CheckCircle className="w-4.5 h-4.5 text-amber-400" />
                   <span>🎖️ Tactical Commandos</span>
                 </span>
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-4">
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
                 <a
                   href={`tel:${companyDetails.phone}`}
-                  className="w-full sm:w-auto px-7 py-3.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-full shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2.5 transition-all hover:-translate-y-0.5"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-full shadow-lg shadow-amber-500/25 flex items-center justify-center gap-3 transition-all hover:-translate-y-0.5"
                 >
                   <Phone className="w-4 h-4 text-slate-950" />
                   <span>Call {companyDetails.phone}</span>
@@ -112,7 +112,7 @@ export default function Home() {
                   href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-7 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white text-xs sm:text-sm font-bold rounded-full shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2 transition-all hover:-translate-y-0.5"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white text-xs sm:text-sm font-bold rounded-full shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2.5 transition-all hover:-translate-y-0.5"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>WhatsApp Inquiry</span>
@@ -120,7 +120,7 @@ export default function Home() {
 
                 <Link
                   to="/services"
-                  className="w-full sm:w-auto px-7 py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs sm:text-sm font-bold rounded-full backdrop-blur-md flex items-center justify-center gap-2 transition-all hover:-translate-y-0.5"
+                  className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs sm:text-sm font-bold rounded-full backdrop-blur-md flex items-center justify-center gap-2.5 transition-all hover:-translate-y-0.5"
                 >
                   <span>Explore Force Catalog</span>
                   <ArrowRight className="w-4 h-4 text-amber-400" />
@@ -129,15 +129,15 @@ export default function Home() {
 
             </div>
 
-            {/* Hero Image Showcase */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative group max-w-md w-full">
+            {/* Hero Image Showcase (Full Width Container) */}
+            <div className="lg:col-span-5 flex justify-center w-full">
+              <div className="relative group w-full max-w-xl">
                 
                 {/* Gradient Glow Border Card */}
                 <div className="p-1 rounded-3xl bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 shadow-2xl shadow-amber-500/20">
                   <div className="relative bg-slate-900 rounded-[22px] p-2 overflow-hidden">
                     
-                    <div className="relative w-full h-80 sm:h-96 rounded-xl overflow-hidden">
+                    <div className="relative w-full h-[360px] sm:h-[440px] lg:h-[480px] rounded-xl overflow-hidden">
                       <img
                         src="/images/hero-commando.jpg"
                         alt="Dharm Armed Security Forces"
@@ -145,17 +145,17 @@ export default function Home() {
                       />
                       
                       {/* Floating Badge */}
-                      <div className="absolute top-4 left-4 bg-slate-950/90 backdrop-blur-md text-amber-400 border border-amber-500/40 text-xs font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-2">
+                      <div className="absolute top-4 left-4 bg-slate-950/90 backdrop-blur-md text-amber-400 border border-amber-500/40 text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
                         <ShieldCheck className="w-4 h-4 text-amber-400" />
                         <span>Armed Security Forces</span>
                       </div>
 
                       {/* Bottom Info Banner */}
-                      <div className="absolute bottom-4 left-4 right-4 bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white p-3.5 rounded-xl shadow-lg">
-                        <div className="text-sm font-black font-serif uppercase tracking-wider bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent">
+                      <div className="absolute bottom-4 left-4 right-4 bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white p-4 rounded-xl shadow-lg">
+                        <div className="text-base font-black font-serif uppercase tracking-wider bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent">
                           Dharm Armed Security Force
                         </div>
-                        <div className="text-[11px] text-slate-300 font-semibold mt-0.5">
+                        <div className="text-xs text-slate-300 font-semibold mt-0.5">
                           Armed Gunmen • Commandos • PSOs • Pan India
                         </div>
                       </div>
