@@ -12,15 +12,8 @@ import InquiryModal from '../components/InquiryModal';
 import CertificationsSection from '../components/CertificationsSection';
 
 export default function Services() {
-  const [searchQuery, setSearchQuery] = useState('');
   const [selectedService, setSelectedService] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const filteredServices = servicesData.filter(service => {
-    return service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-           service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-           service.category.toLowerCase().includes(searchQuery.toLowerCase());
-  });
 
   const handleOpenModal = (service) => {
     setSelectedService(service);
@@ -31,7 +24,7 @@ export default function Services() {
     <div className="min-h-screen bg-slate-50 text-slate-900 py-10">
       
       {/* TOP HERO SECTION - MINIMAL TITLE */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-6 text-center">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-10 text-center">
         <h1 className="text-4xl sm:text-5xl font-black text-slate-900 font-serif tracking-tight">
           Services
         </h1>
@@ -40,35 +33,10 @@ export default function Services() {
         </p>
       </section>
 
-      {/* SEARCH BAR & COUNTER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-        <div className="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 flex flex-col md:flex-row gap-4 items-center justify-between">
-          
-          {/* Search Bar */}
-          <div className="relative w-full md:w-96">
-            <Search className="w-5 h-5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-            <input
-              type="text"
-              placeholder="Search gunman, commando, bouncer, pso..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-slate-50 border border-slate-300 focus:border-slate-800 rounded-xl pl-11 pr-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none"
-            />
-          </div>
-
-          {/* Results Count */}
-          <div className="text-xs text-slate-600 font-bold">
-            Showing <span className="text-slate-900 font-black text-sm">{filteredServices.length}</span> of <span className="text-slate-900 font-black text-sm">{servicesData.length}</span> Tactical Security Services
-          </div>
-
-        </div>
-      </section>
-
       {/* SERVICES GRID */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        {filteredServices.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {servicesData.map((service) => (
               <div
                 key={service.id}
                 className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-slate-400 transition-all duration-300 flex flex-col group hover:-translate-y-1 hover:shadow-lg"
@@ -151,19 +119,7 @@ export default function Services() {
               </div>
             ))}
           </div>
-        ) : (
-          <div className="text-center py-16 bg-slate-50 border border-slate-200 rounded-3xl space-y-4">
-            <div className="text-xl font-bold text-slate-800 font-serif">No security category found for "{searchQuery}"</div>
-            <p className="text-xs text-slate-600">Try searching for gunmen, commando, bouncer, pso, or reset filters.</p>
-            <button
-              onClick={() => { setSearchQuery(''); setSelectedCategory('All'); }}
-              className="gold-btn px-6 py-2.5 text-xs uppercase tracking-wider"
-            >
-              Reset All Filters
-            </button>
-          </div>
-        )}
-      </section>
+        </section>
 
       {/* WHATSAPP CTA BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">

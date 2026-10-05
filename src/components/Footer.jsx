@@ -53,7 +53,7 @@ export default function Footer() {
 
                 {/* Instagram */}
                 <a
-                  href="https://www.instagram.com/shreeambeypackaging/"
+                  href="https://www.instagram.com/dharmarmedsecurityforce/?hl=en"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-white border border-slate-300 hover:border-slate-800 hover:text-slate-900 text-slate-600 flex items-center justify-center transition-colors"
