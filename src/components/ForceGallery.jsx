@@ -66,11 +66,11 @@ export default function ForceGallery() {
               key={idx} 
               className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-slate-400 transition-all duration-300 group flex flex-col"
             >
-              <div className="relative h-64 overflow-hidden bg-slate-100">
+              <div className="relative h-72 sm:h-80 overflow-hidden bg-slate-100">
                 <img
                   src={img.src}
                   alt={img.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 object-center"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 object-top"
                 />
                 <div className="absolute top-3 left-3 bg-slate-900/90 text-white text-[11px] font-extrabold px-3 py-1 rounded-full border border-slate-700 uppercase tracking-wider flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
