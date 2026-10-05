@@ -43,7 +43,7 @@ export default function ForceGallery() {
       title: 'Active Duty Tactical Unit',
       category: 'Armed Gunman',
       desc: 'High-vigilance tactical security personnel for high-risk assets.',
-      pos: 'object-center'
+      pos: 'object-[center_40%]'
     }
   ];
 
