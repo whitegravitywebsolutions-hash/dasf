@@ -29,7 +29,7 @@ export default function ForceGallery() {
       title: 'Field Guard Deployment',
       category: 'On-Site Security',
       desc: 'Armed and unarmed security deployment for commercial sites.',
-      pos: 'object-center'
+      pos: 'object-[center_60%]'
     },
     {
       src: '/images/dasf-owner-portrait.jpg',
