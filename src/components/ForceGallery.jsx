@@ -4,10 +4,10 @@ import { ShieldCheck, Camera, CheckCircle2 } from 'lucide-react';
 export default function ForceGallery() {
   const galleryImages = [
     {
-      src: '/images/dasf-squad-1.jpg',
+      src: '/images/dasf-squad-men-women.jpg',
       title: 'DASF Armed Security Squad',
-      category: 'Armed Squad',
-      desc: 'Official parade and deployment ready security force squad.',
+      category: 'Men & Women Squad',
+      desc: 'Certified male & female security officers, gunmen, gunwomen, and tactical commandos deployed in full uniform.',
       pos: 'object-center'
     },
     {

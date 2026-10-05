@@ -64,8 +64,8 @@ export default function About() {
           
           {/* Left Column: Brand Showcase Card with Authentic DASF Squad Photo */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative bg-white border border-slate-200 rounded-3xl p-3 max-w-md w-full overflow-hidden space-y-3">
-              <div className="relative w-full h-64 sm:h-72 rounded-2xl overflow-hidden">
+            <div className="relative bg-white border border-slate-200 rounded-3xl p-3 max-w-md w-full overflow-hidden">
+              <div className="relative w-full h-72 sm:h-80 rounded-2xl overflow-hidden">
                 <img
                   src="/images/dasf-hero-squad.jpg"
                   alt="Dharm Armed Security Force Squad"
@@ -75,18 +75,6 @@ export default function About() {
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />
                   <span>Authentic DASF Squad</span>
                 </div>
-              </div>
-
-              <div className="p-4 text-center space-y-2">
-                <h3 className="text-xl font-extrabold font-serif uppercase tracking-wider text-slate-900">
-                  Dharm Armed Security Force
-                </h3>
-                <p className="text-xs text-slate-600 font-bold uppercase tracking-widest">
-                  Est. 2017 • PSARA & GST Certified
-                </p>
-                <p className="text-xs text-slate-500">
-                  Head Office: Shop No. 6, Choudhary Market, Main Road, Chipiyana Buzurg, G.B. Nagar, Ghaziabad, UP
-                </p>
               </div>
             </div>
           </div>
