@@ -14,6 +14,7 @@ import { companyDetails, servicesData } from '../data/servicesData';
 import InquiryModal from '../components/InquiryModal';
 import CertificationsSection from '../components/CertificationsSection';
 import OwnerSection from '../components/OwnerSection';
+import ForceGallery from '../components/ForceGallery';
 
 export default function Home() {
   const [selectedService, setSelectedService] = useState(null);
@@ -154,6 +155,9 @@ export default function Home() {
 
       {/* OWNER & LEADERSHIP PROFILE */}
       <OwnerSection />
+
+      {/* AUTHENTIC DASF MEDIA GALLERY */}
+      <ForceGallery />
 
       {/* FEATURED SERVICES CATALOG */}
       <section className="py-20 bg-slate-50 border-t border-b border-slate-200">
