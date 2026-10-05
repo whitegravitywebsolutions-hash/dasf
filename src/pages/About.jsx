@@ -54,13 +54,10 @@ export default function About() {
       {/* TOP HERO & LEADERSHIP COMBINED SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16">
         
-        {/* Page Heading Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
-          <span className="px-4 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-slate-800 text-xs font-bold uppercase tracking-wider inline-block">
-            Leadership, Legacy & Vision • Est. 2017
-          </span>
+        {/* Page Heading Header - Simple About Us */}
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <h1 className="text-4xl sm:text-5xl font-black text-slate-900 font-serif tracking-tight">
-            About Us & Leadership
+            About Us
           </h1>
         </div>
 
@@ -76,7 +73,7 @@ export default function About() {
                   <img
                     src={companyDetails.owner.image}
                     alt={companyDetails.owner.name}
-                    className="w-full h-[400px] sm:h-[460px] object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-[380px] sm:h-[440px] object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
 
                   {/* Owner Caption Overlay */}
@@ -94,9 +91,9 @@ export default function About() {
             </div>
 
             {/* Right Column: Founder's Vision & Company Legacy */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-5">
               
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-600">
                   <Award className="w-4 h-4 text-emerald-600" />
                   <span>Pan India Certified Security Agency</span>
@@ -106,20 +103,11 @@ export default function About() {
                   Dharm Armed <br />
                   <span className="text-slate-800">Security Forces (DASF)</span>
                 </h2>
-
-                <div className="pt-1">
-                  <span className="inline-block px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm font-bold font-serif">
-                    "धर्म सशस्त्र सुरक्षा बल - {companyDetails.slogan}"
-                  </span>
-                </div>
               </div>
 
+              {/* Shortened Concise Description */}
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                {companyDetails.owner.bio}
-              </p>
-
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Operating under official PSARA license, GST registration, and MSME certification, DASF manages a force of over 1,500+ security personnel. Our guards, commandos, gunmen, and gunwomen are rigorously trained in rapid threat response, VIP convoy defense, perimeter monitoring, and crisis de-escalation across 28+ states.
+                Founded in 2017 by D.S. Tomar (Ansh PSO), Dharm Armed Security Force (DASF) delivers licensed PSARA, GST, and MSME certified security manpower. Managing a trained force of 1,500+ gunmen, gunwomen, tactical commandos, and PSOs, DASF provides high-vigilance protection for VIPs, commercial hubs, banks, and events across 28+ states.
               </p>
 
               {/* Quick Feature Grid */}
