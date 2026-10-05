@@ -13,20 +13,13 @@ import CertificationsSection from '../components/CertificationsSection';
 
 export default function Services() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedService, setSelectedService] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const categories = ['All', 'Armed & Tactical', 'VIP & Executive', 'Manpower', 'Specialized', 'Event Security', 'Nightlife & Venues', 'Commercial', 'Banking & Financial', 'Advisory'];
-
   const filteredServices = servicesData.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-
-    return matchesSearch && matchesCategory;
+    return service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+           service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+           service.category.toLowerCase().includes(searchQuery.toLowerCase());
   });
 
   const handleOpenModal = (service) => {
@@ -35,55 +28,37 @@ export default function Services() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 py-12">
+    <div className="min-h-screen bg-slate-50 text-slate-900 py-10">
       
       {/* TOP HERO SECTION - MINIMAL TITLE */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 text-center">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-6 text-center">
         <h1 className="text-4xl sm:text-5xl font-black text-slate-900 font-serif tracking-tight">
           Services
         </h1>
+        <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl mx-auto">
+          Explore our certified armed gunmen, gunwomen, commandos, PSOs, and security guard services.
+        </p>
       </section>
 
-      {/* FILTER & SEARCH BAR */}
+      {/* SEARCH BAR & COUNTER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6 space-y-4">
+        <div className="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 flex flex-col md:flex-row gap-4 items-center justify-between">
           
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            
-            {/* Search Bar */}
-            <div className="relative w-full md:w-96">
-              <Search className="w-5 h-5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-              <input
-                type="text"
-                placeholder="Search gunman, commando, bouncer, pso..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white border border-slate-300 focus:border-slate-800 rounded-xl pl-11 pr-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none"
-              />
-            </div>
-
-            {/* Results Count */}
-            <div className="text-xs text-slate-600 font-bold">
-              Showing <span className="text-slate-900 font-black">{filteredServices.length}</span> of <span className="text-slate-900 font-black">{servicesData.length}</span> Security Categories
-            </div>
-
+          {/* Search Bar */}
+          <div className="relative w-full md:w-96">
+            <Search className="w-5 h-5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              placeholder="Search gunman, commando, bouncer, pso..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full bg-slate-50 border border-slate-300 focus:border-slate-800 rounded-xl pl-11 pr-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none"
+            />
           </div>
 
-          {/* Category Tabs */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none pt-2 border-t border-slate-200">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all ${
-                  selectedCategory === cat
-                    ? 'bg-slate-900 text-white font-extrabold'
-                    : 'bg-white text-slate-700 hover:bg-slate-200 border border-slate-300'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+          {/* Results Count */}
+          <div className="text-xs text-slate-600 font-bold">
+            Showing <span className="text-slate-900 font-black text-sm">{filteredServices.length}</span> of <span className="text-slate-900 font-black text-sm">{servicesData.length}</span> Tactical Security Services
           </div>
 
         </div>
@@ -96,24 +71,24 @@ export default function Services() {
             {filteredServices.map((service) => (
               <div
                 key={service.id}
-                className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-slate-400 transition-all duration-300 flex flex-col group"
+                className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-slate-400 transition-all duration-300 flex flex-col group hover:-translate-y-1 hover:shadow-lg"
               >
-                {/* Header Banner */}
-                <div className="h-40 bg-slate-100 border-b border-slate-200 p-6 flex flex-col justify-between">
+                {/* Header Banner - Rich Slate Navy */}
+                <div className="bg-slate-900 border-b border-slate-800 p-5 text-white flex flex-col justify-between h-36">
                   <div className="flex items-center justify-between">
-                    <div className="p-3 rounded-xl bg-white border border-slate-200 text-slate-800">
-                      <ShieldCheck className="w-6 h-6 text-slate-800" />
+                    <div className="p-2.5 rounded-xl bg-slate-800 border border-slate-700 text-emerald-400">
+                      <ShieldCheck className="w-5 h-5" />
                     </div>
-                    <span className="bg-slate-900 text-white font-extrabold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full">
+                    <span className="bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full backdrop-blur-md">
                       {service.badge}
                     </span>
                   </div>
 
                   <div>
-                    <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+                    <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
                       {service.category}
                     </span>
-                    <h3 className="text-lg font-bold text-slate-900 font-serif leading-tight">
+                    <h3 className="text-lg font-bold text-white font-serif leading-tight">
                       {service.title}
                     </h3>
                   </div>
@@ -128,14 +103,14 @@ export default function Services() {
                   </div>
 
                   {/* Feature Checklist */}
-                  <div className="space-y-2 pt-2 border-t border-slate-100">
+                  <div className="space-y-2 pt-3 border-t border-slate-100">
                     <div className="text-[11px] font-bold text-slate-800 uppercase tracking-wider">
                       Key Highlights:
                     </div>
                     <ul className="space-y-1.5 text-xs text-slate-700">
                       {service.features.map((feat, idx) => (
                         <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle className="w-3.5 h-3.5 text-slate-700 shrink-0 mt-0.5" />
+                          <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </li>
                       ))}
@@ -146,17 +121,17 @@ export default function Services() {
                   <div className="pt-4 border-t border-slate-100 flex items-center gap-2">
                     <button
                       onClick={() => handleOpenModal(service)}
-                      className="gold-btn flex-1 py-2.5 px-3 text-xs uppercase tracking-wider flex items-center justify-center gap-1.5"
+                      className="flex-1 py-2.5 px-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors border border-slate-800"
                     >
-                      <span>Enquire</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <span>Inquire</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
                     </button>
 
                     <a
                       href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20${encodeURIComponent(service.title)}.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-wa-pill px-3.5 py-2.5 text-xs flex items-center justify-center gap-1.5"
+                      className="px-3.5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-colors"
                       title="WhatsApp Inquiry"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
@@ -165,7 +140,7 @@ export default function Services() {
 
                     <a
                       href={`tel:${companyDetails.phone}`}
-                      className="p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 transition-colors flex items-center justify-center shrink-0"
+                      className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 transition-colors flex items-center justify-center shrink-0"
                       title="Direct Call"
                     >
                       <Phone className="w-3.5 h-3.5" />
