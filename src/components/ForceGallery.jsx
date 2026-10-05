@@ -4,6 +4,13 @@ import { ShieldCheck, Camera, CheckCircle2 } from 'lucide-react';
 export default function ForceGallery() {
   const galleryImages = [
     {
+      src: '/images/dasf-owner-portrait.jpg',
+      title: 'D.S. Tomar (Ansh PSO)',
+      category: 'Leadership',
+      desc: 'Proprietor & Founder of Dharm Armed Security Force.',
+      pos: 'object-center'
+    },
+    {
       src: '/images/dasf-squad-men-women.jpg',
       title: 'DASF Armed Security Squad',
       category: 'Men & Women Squad',
@@ -30,13 +37,6 @@ export default function ForceGallery() {
       category: 'On-Site Security',
       desc: 'Armed and unarmed security deployment for commercial sites.',
       pos: 'object-[center_60%]'
-    },
-    {
-      src: '/images/dasf-owner-portrait.jpg',
-      title: 'D.S. Tomar (Ansh PSO)',
-      category: 'Leadership',
-      desc: 'Proprietor & Founder of Dharm Armed Security Force.',
-      pos: 'object-center'
     },
     {
       src: '/images/dasf-gunman-active.jpg',
