@@ -51,64 +51,122 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white text-slate-900 py-12">
       
-      {/* TOP HERO SECTION - MINIMAL TITLE */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 text-center">
-        <h1 className="text-4xl sm:text-5xl font-black text-slate-900 font-serif tracking-tight">
-          About Us
-        </h1>
-      </section>
+      {/* TOP HERO & LEADERSHIP COMBINED SECTION */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16">
+        
+        {/* Page Heading Header */}
+        <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
+          <span className="px-4 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-slate-800 text-xs font-bold uppercase tracking-wider inline-block">
+            Leadership, Legacy & Vision • Est. 2017
+          </span>
+          <h1 className="text-4xl sm:text-5xl font-black text-slate-900 font-serif tracking-tight">
+            About Us & Leadership
+          </h1>
+        </div>
 
-      {/* DETAILED COMPANY OVERVIEW */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          {/* Left Column: Brand Showcase Card with Authentic DASF Squad Photo */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative bg-white border border-slate-200 rounded-3xl p-3 max-w-md w-full overflow-hidden">
-              <div className="relative w-full h-72 sm:h-80 rounded-2xl overflow-hidden">
-                <img
-                  src="/images/dasf-hero-squad.jpg"
-                  alt="Dharm Armed Security Force Squad"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md text-white border border-slate-700 text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                  <span>Authentic DASF Squad</span>
+        {/* Combined Hero Card Container */}
+        <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 lg:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            
+            {/* Left Column: Owner Portrait Photo */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative group max-w-sm w-full">
+                
+                <div className="relative bg-white border border-slate-300 rounded-3xl overflow-hidden">
+                  <img
+                    src={companyDetails.owner.image}
+                    alt={companyDetails.owner.name}
+                    className="w-full h-[400px] sm:h-[460px] object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+
+                  {/* Owner Caption Overlay */}
+                  <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 border border-slate-200 backdrop-blur-md text-center">
+                    <h3 className="text-xl font-black text-slate-900 font-serif tracking-tight">
+                      {companyDetails.owner.name}
+                    </h3>
+                    <p className="text-xs font-bold text-slate-700 uppercase tracking-widest mt-0.5">
+                      {companyDetails.owner.title} • DASF Founder
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Right Column: Founder's Vision & Company Legacy */}
+            <div className="lg:col-span-7 space-y-6">
+              
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-600">
+                  <Award className="w-4 h-4 text-emerald-600" />
+                  <span>Pan India Certified Security Agency</span>
+                </div>
+
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif tracking-tight leading-tight">
+                  Dharm Armed <br />
+                  <span className="text-slate-800">Security Forces (DASF)</span>
+                </h2>
+
+                <div className="pt-1">
+                  <span className="inline-block px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm font-bold font-serif">
+                    "धर्म सशस्त्र सुरक्षा बल - {companyDetails.slogan}"
+                  </span>
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* Right Column: Mission and Narrative */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="space-y-2">
-              <span className="text-xs font-bold uppercase tracking-widest text-slate-600">Our Legacy (Est. 2017)</span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif">
-                Gunmen, Gunwomen & Tactical Commandos
-              </h2>
-            </div>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                {companyDetails.owner.bio}
+              </p>
 
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Dharm Armed Security Force (DASF) was founded in 2017 by D.S. Tomar (Ansh PSO) with a singular mission: to deliver uncompromising, highly disciplined, and statutory compliant armed & unarmed security manpower to clients across India.
-            </p>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Operating under official PSARA license, GST registration, and MSME certification, DASF manages a force of over 1,500+ security personnel. Our guards, commandos, gunmen, and gunwomen are rigorously trained in rapid threat response, VIP convoy defense, perimeter monitoring, and crisis de-escalation across 28+ states.
+              </p>
 
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Operating under PSARA license, GST registration, and MSME certification, DASF manages a force of over 1,500+ security personnel. Our guards, commandos, and PSOs are trained in rapid threat response, VIP convoy defense, perimeter monitoring, and crisis de-escalation.
-            </p>
+              {/* Quick Feature Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <div className="p-3.5 rounded-2xl bg-white border border-slate-200 flex items-center gap-3">
+                  <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <div>
+                    <div className="text-xs font-bold text-slate-900">PSARA & GST Certified</div>
+                    <div className="text-[11px] text-slate-500">Full statutory compliance</div>
+                  </div>
+                </div>
 
-            <div className="pt-4 border-t border-slate-200 flex flex-wrap gap-4 text-xs font-bold">
-              <div className="flex items-center gap-2 text-slate-900 bg-slate-100 px-4 py-2 rounded-full border border-slate-200">
-                <Award className="w-4 h-4 text-slate-700" />
-                <span>PSARA Licensed Entity</span>
+                <div className="p-3.5 rounded-2xl bg-white border border-slate-200 flex items-center gap-3">
+                  <BadgeCheck className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <div>
+                    <div className="text-xs font-bold text-slate-900">Armed Gunmen & PSOs</div>
+                    <div className="text-[11px] text-slate-500">Male & female tactical escort</div>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-slate-900 bg-slate-100 px-4 py-2 rounded-full border border-slate-200">
-                <ShieldCheck className="w-4 h-4 text-slate-700" />
-                <span>Pan-India Mobility</span>
-              </div>
-            </div>
-          </div>
 
+              {/* Direct Hotlines CTA */}
+              <div className="pt-4 border-t border-slate-200 flex flex-wrap items-center gap-3">
+                <a
+                  href={`tel:${companyDetails.phone}`}
+                  className="gold-btn px-6 py-3 text-xs uppercase tracking-wider flex items-center gap-2"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Call Hotline: {companyDetails.phone}</span>
+                </a>
+
+                <a
+                  href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20D.S.%20Tomar%20Sir,%20I%20want%20to%20enquire%20about%20DASF%20security%20services.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-wa-pill px-6 py-3 text-xs flex items-center gap-2"
+                >
+                  <MessageSquare className="w-4 h-4" />
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
         </div>
+
       </section>
 
       {/* CORE VALUES GRID */}
@@ -194,9 +252,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* PROPRIETOR SECTION */}
-      <OwnerSection />
 
       {/* CERTIFICATIONS SECTION */}
       <CertificationsSection />
