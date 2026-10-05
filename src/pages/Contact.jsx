@@ -299,34 +299,43 @@ export default function Contact() {
       {/* GOOGLE MAPS & LOCATION SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
         <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4">
-          <div className="flex items-center gap-3">
-            <MapPin className="w-6 h-6 text-slate-700" />
-            <h3 className="text-xl font-bold text-slate-900 font-serif">
-              Official Headquarters Location
-            </h3>
-          </div>
-          <p className="text-xs text-slate-600">
-            {companyDetails.location}
-          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <div className="flex items-center gap-2.5">
+                <MapPin className="w-6 h-6 text-slate-800" />
+                <h3 className="text-xl font-bold text-slate-900 font-serif">
+                  Official Headquarters Location
+                </h3>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 font-medium pl-8">
+                {companyDetails.location}
+              </p>
+            </div>
 
-          <div className="w-full h-64 rounded-2xl bg-white border border-slate-200 flex flex-col items-center justify-center text-center p-6 space-y-3 relative overflow-hidden">
-            <MapPin className="w-10 h-10 text-slate-800" />
-            <div className="text-base font-bold text-slate-900">Dharm Armed Security Force (DASF)</div>
-            <div className="text-xs text-slate-700 font-bold max-w-lg">
-              {companyDetails.location}
-            </div>
-            
-            <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-              <a
-                href={`https://maps.google.com/?q=${encodeURIComponent(companyDetails.location)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="gold-btn px-5 py-2.5 text-xs flex items-center gap-2"
-              >
-                <span>Open in Google Maps ↗</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-            </div>
+            <a
+              href={`https://maps.google.com/?q=${encodeURIComponent('Dharm Armed Security Force DASF Shop No. 6, Choudhary Market, Main Road, Chipiyana Buzurg, Ghaziabad, Uttar Pradesh 201009')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="gold-btn px-5 py-2.5 text-xs flex items-center gap-2 self-start sm:self-auto"
+            >
+              <span>Open in Google Maps App ↗</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
+
+          {/* Embedded Interactive Google Map */}
+          <div className="w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-slate-300 bg-white relative">
+            <iframe
+              title="Dharm Armed Security Force (DASF) Google Map Location"
+              src={`https://maps.google.com/maps?q=${encodeURIComponent('Dharm Armed Security Force DASF Shop No. 6, Choudhary Market, Main Road, Chipiyana Buzurg, Ghaziabad, Uttar Pradesh 201009')}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            ></iframe>
           </div>
         </div>
       </section>

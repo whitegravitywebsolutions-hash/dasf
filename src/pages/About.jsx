@@ -14,7 +14,6 @@ import {
 import { companyDetails } from '../data/servicesData';
 import CertificationsSection from '../components/CertificationsSection';
 import OwnerSection from '../components/OwnerSection';
-import ForceGallery from '../components/ForceGallery';
 
 export default function About() {
   const coreValues = [
@@ -210,9 +209,6 @@ export default function About() {
 
       {/* PROPRIETOR SECTION */}
       <OwnerSection />
-
-      {/* AUTHENTIC DASF MEDIA GALLERY */}
-      <ForceGallery />
 
       {/* CERTIFICATIONS SECTION */}
       <CertificationsSection />
