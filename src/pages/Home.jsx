@@ -116,15 +116,6 @@ export default function Home() {
                   alt="Dharm Armed Security Force Squad"
                   className="w-full h-[360px] sm:h-[450px] lg:h-[480px] object-cover object-center"
                 />
-                
-                {/* Clean Bottom Caption Bar */}
-                <div className="bg-white border-t border-slate-200 px-4 py-3 flex items-center justify-between text-xs sm:text-sm font-semibold text-slate-700">
-                  <span className="flex items-center gap-2">
-                    <ShieldCheck className="w-4.5 h-4.5 text-emerald-600" />
-                    Official DASF Security Squad
-                  </span>
-                  <span className="text-slate-500 font-normal">Ghaziabad, U.P.</span>
-                </div>
               </div>
             </div>
 
