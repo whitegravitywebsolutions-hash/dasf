@@ -7,37 +7,43 @@ export default function ForceGallery() {
       src: '/images/dasf-squad-1.jpg',
       title: 'DASF Armed Security Squad',
       category: 'Armed Squad',
-      desc: 'Official parade and deployment ready security force squad.'
+      desc: 'Official parade and deployment ready security force squad.',
+      pos: 'object-center'
     },
     {
       src: '/images/dasf-officers-uniform.jpg',
       title: 'Armed Security Officers',
       category: 'Gunmen & Officers',
-      desc: 'Licensed gunman and tactical security officers in uniform.'
+      desc: 'Licensed gunman and tactical security officers in uniform.',
+      pos: 'object-[center_85%]'
     },
     {
       src: '/images/dasf-pso-tactical.jpg',
       title: 'Executive PSO Duty',
       category: 'VIP Protection',
-      desc: 'Personal Security Officers for executive and VIP escort.'
+      desc: 'Personal Security Officers for executive and VIP escort.',
+      pos: 'object-center'
     },
     {
       src: '/images/dasf-guard-deployment.jpg',
       title: 'Field Guard Deployment',
       category: 'On-Site Security',
-      desc: 'Armed and unarmed security deployment for commercial sites.'
+      desc: 'Armed and unarmed security deployment for commercial sites.',
+      pos: 'object-center'
     },
     {
       src: '/images/dasf-owner-portrait.jpg',
       title: 'D.S. Tomar (Ansh PSO)',
       category: 'Leadership',
-      desc: 'Proprietor & Founder of Dharm Armed Security Force.'
+      desc: 'Proprietor & Founder of Dharm Armed Security Force.',
+      pos: 'object-center'
     },
     {
       src: '/images/dasf-gunman-active.jpg',
       title: 'Active Duty Tactical Unit',
       category: 'Armed Gunman',
-      desc: 'High-vigilance tactical security personnel for high-risk assets.'
+      desc: 'High-vigilance tactical security personnel for high-risk assets.',
+      pos: 'object-center'
     }
   ];
 
@@ -66,11 +72,11 @@ export default function ForceGallery() {
               key={idx} 
               className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-slate-400 transition-all duration-300 group flex flex-col"
             >
-              <div className="relative h-72 sm:h-80 overflow-hidden bg-slate-100">
+              <div className="relative h-80 sm:h-96 overflow-hidden bg-slate-100">
                 <img
                   src={img.src}
                   alt={img.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 object-top"
+                  className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${img.pos || 'object-center'}`}
                 />
                 <div className="absolute top-3 left-3 bg-slate-900/90 text-white text-[11px] font-extrabold px-3 py-1 rounded-full border border-slate-700 uppercase tracking-wider flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
