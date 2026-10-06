@@ -51,9 +51,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[560px] sm:min-h-[620px] lg:min-h-[680px] flex flex-col justify-center relative z-20 py-12">
           <div className="max-w-3xl space-y-6 text-left">
             
-            {/* Top Guarantee Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-600 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-md w-fit">
-              <ShieldCheck className="w-4 h-4 text-white" />
+            {/* Top Guarantee Badge - Transparent / No Pill Background */}
+            <div className="inline-flex items-center gap-2 text-emerald-300 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-fit">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
               <span>PSARA & GST Certified Security Force</span>
             </div>
 
