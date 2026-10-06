@@ -51,6 +51,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[560px] sm:min-h-[620px] lg:min-h-[680px] flex flex-col justify-center relative z-20 py-12">
           <div className="max-w-3xl space-y-6 text-left">
             
+            {/* Official 3D Logo Banner Graphic */}
+            <div className="pt-1">
+              <img
+                src="/images/dasf-banner-logo.jpg"
+                alt="Dharm Armed Security Force Official 3D Logo"
+                className="h-20 sm:h-28 md:h-32 w-auto object-contain rounded-2xl border border-emerald-500/30 shadow-2xl bg-black/40 backdrop-blur-md p-2"
+              />
+            </div>
+
             {/* Top Guarantee Badge - Transparent / No Pill Background */}
             <div className="inline-flex items-center gap-2 text-emerald-300 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-fit">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
@@ -58,7 +67,7 @@ export default function Home() {
             </div>
 
             {/* Massive Bold Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-none font-sans">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight leading-none font-sans">
               DHARM ARMED <br />
               <span className="text-white">SECURITY FORCE</span>
             </h1>
