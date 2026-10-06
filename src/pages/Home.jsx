@@ -38,41 +38,50 @@ export default function Home() {
   return (
     <div className="min-h-screen text-slate-900">
 
-      {/* FULL-WIDTH HERO BANNER SECTION (AUTHENTIC SQUAD BACKGROUND) */}
+      {/* FULL-WIDTH GREEN HERO BANNER SECTION (MATCHING USER SCREENSHOT EXACTLY) */}
       <section className="w-full relative min-h-[560px] sm:min-h-[620px] lg:min-h-[680px] overflow-hidden bg-slate-950 text-white">
-        {/* Full-Width Grand Squad Background Image */}
+        {/* Full-Width Squad Background Image */}
         <img
           src="/images/dasf-hero-squad-grand.jpg"
-          alt="Dharm Armed Security Force Grand Squad"
-          className="w-full h-full absolute inset-0 object-cover object-top sm:object-center"
+          alt="Dharm Armed Security Force Squad"
+          className="w-full h-full absolute inset-0 object-cover object-[center_75%]"
         />
 
-        {/* Deep Slate/Emerald Luxury Gradient Overlay (Left-to-Right) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/85 to-slate-950/40 lg:via-slate-950/80 lg:to-slate-950/30"></div>
+        {/* Deep Emerald Green Gradient Overlay (Left-to-Right) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/95 via-emerald-950/80 to-emerald-950/30 lg:via-emerald-950/75 lg:to-transparent"></div>
 
         {/* Content Container (Left-aligned, high impact) */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[560px] sm:min-h-[620px] lg:min-h-[680px] flex flex-col justify-center relative z-20 py-12">
           <div className="max-w-3xl space-y-6 text-left">
             
+            {/* Official 3D Logo Banner Graphic */}
+            <div className="pt-1">
+              <img
+                src="/images/dasf-banner-logo.jpg"
+                alt="Dharm Armed Security Force Official 3D Logo"
+                className="h-20 sm:h-28 md:h-32 w-auto object-contain rounded-2xl border border-emerald-500/30 shadow-2xl bg-black/40 backdrop-blur-md p-2"
+              />
+            </div>
+
             {/* Top Guarantee Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/95 border border-amber-300 text-amber-800 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-fit shadow-sm">
-              <ShieldCheck className="w-4 h-4 text-amber-800" />
-              <span className="text-amber-800">PSARA & GST Certified Security Force • Est. 2017</span>
+            <div className="inline-flex items-center gap-2 text-emerald-300 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-fit">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <span>PSARA & GST CERTIFIED SECURITY FORCE</span>
             </div>
 
             {/* Massive Bold Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight leading-none font-serif">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight leading-none font-sans">
               DHARM ARMED <br />
-              <span className="text-amber-400">SECURITY FORCE</span>
+              <span className="text-white">SECURITY FORCE</span>
             </h1>
 
             {/* Subheading / Tagline */}
-            <p className="text-lg sm:text-2xl font-extrabold text-white font-serif tracking-wide">
+            <p className="text-lg sm:text-2xl font-extrabold text-emerald-400 font-sans tracking-wide">
               🛡️ Armed Gunmen • Gunwomen • Commandos • PSOs
             </p>
 
             {/* Sub-description */}
-            <p className="text-sm sm:text-base lg:text-lg text-slate-100 leading-relaxed max-w-2xl font-medium">
+            <p className="text-sm sm:text-base lg:text-lg text-emerald-100/90 leading-relaxed max-w-2xl font-medium">
               Deploying highly trained Gunmen, Gunwomen, Tactical Commandos, PSOs, and Certified Security Personnel for VIP protection, commercial facilities, banks, and events across Ghaziabad & Pan India.
             </p>
 
@@ -80,7 +89,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row flex-wrap items-center gap-4 pt-3">
               <a
                 href={`tel:${companyDetails.phone}`}
-                className="w-full sm:w-auto px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white text-xs sm:text-sm font-extrabold font-serif uppercase tracking-wider rounded-xl flex items-center justify-center gap-2.5 transition-all shadow-lg hover:scale-105"
+                className="w-full sm:w-auto px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-xl flex items-center justify-center gap-2.5 transition-all shadow-lg hover:scale-105"
               >
                 <Phone className="w-4.5 h-4.5 text-white" />
                 <span>Call Hotline: {companyDetails.phone}</span>
@@ -91,24 +100,24 @@ export default function Home() {
                 href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-extrabold font-serif uppercase tracking-wider rounded-xl backdrop-blur-md flex items-center justify-center gap-2.5 transition-all hover:scale-105 shadow-md"
+                className="w-full sm:w-auto px-8 py-4 bg-emerald-700/60 hover:bg-emerald-700/80 border border-emerald-400/40 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-xl backdrop-blur-md flex items-center justify-center gap-2.5 transition-all hover:scale-105 shadow-md"
               >
-                <MessageSquare className="w-4.5 h-4.5" />
-                <span>Instant WhatsApp Inquiry</span>
+                <MessageSquare className="w-4.5 h-4.5 text-emerald-400" />
+                <span>WhatsApp Inquiry</span>
               </a>
 
               <Link
                 to="/services"
-                className="w-full sm:w-auto px-7 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white text-xs sm:text-sm font-extrabold font-serif uppercase tracking-wider rounded-xl backdrop-blur-md flex items-center justify-center gap-2 transition-all"
+                className="w-full sm:w-auto px-7 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-xl backdrop-blur-md flex items-center justify-center gap-2 transition-all"
               >
                 <span>View Services</span>
               </Link>
             </div>
 
             {/* Bottom Quick Info Strip */}
-            <div className="pt-4 flex flex-wrap items-center gap-6 text-xs font-bold text-amber-200/90 border-t border-slate-700/80 max-w-xl">
+            <div className="pt-4 flex flex-wrap items-center gap-6 text-xs font-bold text-emerald-200/80 border-t border-emerald-800/60 max-w-xl">
               <span className="flex items-center gap-1.5">
-                <CheckCircle className="w-4 h-4 text-emerald-400" /> 24/7 Rapid Response
+                <ShieldCheck className="w-4 h-4 text-emerald-400" /> 24/7 Rapid Response
               </span>
               <span>•</span>
               <span>1,500+ Active Personnel</span>
