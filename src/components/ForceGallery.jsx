@@ -8,7 +8,7 @@ export default function ForceGallery() {
       title: 'D.S. Tomar (Ansh PSO)',
       category: 'Leadership',
       desc: 'Proprietor & Founder of Dharm Armed Security Force.',
-      pos: 'object-top'
+      pos: 'object-[center_20%]'
     },
     {
       src: '/images/dasf-squad-men-women.jpg',
