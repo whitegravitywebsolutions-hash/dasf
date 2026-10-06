@@ -38,120 +38,82 @@ export default function Home() {
   return (
     <div className="min-h-screen text-slate-900">
 
-      {/* LUXURY ELEGANT HERO SECTION (#FAF8F3 MATCHING THEME) */}
-      <section className="relative py-12 sm:py-16 lg:py-20 bg-[#FAF8F3] border-b border-[#E5DEC8] overflow-hidden">
-        {/* Background Subtle Accent Glows */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-100/30 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20"></div>
+      {/* FULL-WIDTH HERO BANNER SECTION (AUTHENTIC SQUAD BACKGROUND) */}
+      <section className="w-full relative min-h-[560px] sm:min-h-[620px] lg:min-h-[680px] overflow-hidden bg-slate-950 text-white">
+        {/* Full-Width Grand Squad Background Image */}
+        <img
+          src="/images/dasf-hero-squad-grand.jpg"
+          alt="Dharm Armed Security Force Grand Squad"
+          className="w-full h-full absolute inset-0 object-cover object-top sm:object-center"
+        />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        {/* Deep Slate/Emerald Luxury Gradient Overlay (Left-to-Right) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/85 to-slate-950/40 lg:via-slate-950/80 lg:to-slate-950/30"></div>
+
+        {/* Content Container (Left-aligned, high impact) */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[560px] sm:min-h-[620px] lg:min-h-[680px] flex flex-col justify-center relative z-20 py-12">
+          <div className="max-w-3xl space-y-6 text-left">
             
-            {/* Left Column: Brand Title & Value Props */}
-            <div className="lg:col-span-7 space-y-6 text-left">
-              
-              {/* Top Guarantee Pill Badge */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-amber-100/90 border border-amber-300/80 text-amber-900 text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-sm">
-                <ShieldCheck className="w-4.5 h-4.5 text-amber-700" />
-                <span>PSARA & GST Certified Security Force • Est. 2017</span>
-              </div>
-
-              {/* Main Headline Title */}
-              <div className="space-y-2">
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 font-serif leading-none uppercase tracking-tight">
-                  Dharm Armed <br />
-                  <span className="text-amber-700">Security Force</span>
-                </h1>
-                <p className="text-xl sm:text-2xl font-extrabold text-slate-800 font-serif tracking-wide pt-1">
-                  🛡️ Armed Gunmen • Gunwomen • Commandos • PSOs
-                </p>
-              </div>
-
-              {/* Lead Paragraph */}
-              <p className="text-slate-700 text-base sm:text-lg leading-relaxed max-w-2xl font-medium">
-                Dharm Armed Security Force (DASF) delivers high-vigilance, PSARA licensed security manpower across Ghaziabad, NCR & Pan India. Managing a force of 1,500+ trained troops for VIP protection, banks, commercial hubs, and events.
-              </p>
-
-              {/* High Impact Action Buttons */}
-              <div className="flex flex-col sm:flex-row flex-wrap items-center gap-4 pt-2">
-                <a
-                  href={`tel:${companyDetails.phone}`}
-                  className="w-full sm:w-auto px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white border border-amber-600 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-2xl flex items-center justify-center gap-3 transition-all shadow-lg hover:-translate-y-0.5"
-                >
-                  <Phone className="w-4.5 h-4.5 text-white" />
-                  <span>Call Hotline: {companyDetails.phone}</span>
-                  <ArrowRight className="w-4 h-4 text-white" />
-                </a>
-
-                <a
-                  href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-8 py-4 bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-2xl flex items-center justify-center gap-2.5 transition-all shadow-md hover:-translate-y-0.5"
-                >
-                  <MessageSquare className="w-4.5 h-4.5" />
-                  <span>Instant WhatsApp Inquiry</span>
-                </a>
-
-                <Link
-                  to="/services"
-                  className="w-full sm:w-auto px-6 py-4 bg-white hover:bg-amber-50 border border-[#E5DEC8] text-slate-900 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-2xl flex items-center justify-center gap-2 transition-all shadow-sm"
-                >
-                  <span>Explore 15+ Units</span>
-                </Link>
-              </div>
-
-              {/* Bottom Trust Indicators */}
-              <div className="pt-4 flex flex-wrap items-center gap-5 text-xs font-bold text-slate-700 border-t border-[#E5DEC8]">
-                <span className="flex items-center gap-1.5 text-emerald-800">
-                  <CheckCircle className="w-4 h-4 text-emerald-600" /> 24/7 Rapid Response
-                </span>
-                <span>•</span>
-                <span className="text-slate-900 font-extrabold">1,500+ Active Personnel</span>
-                <span>•</span>
-                <span className="text-slate-900 font-extrabold">28+ States Coverage</span>
-              </div>
-
+            {/* Top Guarantee Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/95 border border-amber-300 text-amber-800 text-xs sm:text-sm font-extrabold uppercase tracking-wider w-fit shadow-sm">
+              <ShieldCheck className="w-4 h-4 text-amber-800" />
+              <span className="text-amber-800">PSARA & GST Certified Security Force • Est. 2017</span>
             </div>
 
-            {/* Right Column: Authentic Hero Squad Photo Showcase Card */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-lg group">
-                
-                {/* Main Hero Photo Container Frame - Clean Light Card */}
-                <div className="relative bg-white border-2 border-amber-400/80 rounded-3xl p-3 sm:p-4 shadow-2xl overflow-hidden group-hover:scale-102 transition-transform duration-500">
-                  <div className="relative flex items-center justify-center rounded-2xl overflow-hidden border border-[#E5DEC8]">
-                    <img
-                      src="/images/dasf-hero-squad-photo.jpg"
-                      alt="Dharm Armed Security Force Active Deployment Officers"
-                      className="w-full h-80 sm:h-[400px] object-cover object-top"
-                    />
-                  </div>
-                </div>
+            {/* Massive Bold Headline */}
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight leading-none font-serif">
+              DHARM ARMED <br />
+              <span className="text-amber-400">SECURITY FORCE</span>
+            </h1>
 
-                {/* Floating GMB Rating Badge (Top Right) */}
-                <div className="absolute -top-4 -right-2 sm:-right-4 bg-white border border-[#E5DEC8] rounded-2xl p-3 shadow-xl flex items-center gap-3 z-20">
-                  <div className="p-2 bg-amber-500 text-white rounded-xl">
-                    <Star className="w-5 h-5 fill-white" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-extrabold text-slate-900">4.9 / 5.0 Rating</div>
-                    <div className="text-[10px] font-semibold text-slate-500">Google Verified Reviews</div>
-                  </div>
-                </div>
+            {/* Subheading / Tagline */}
+            <p className="text-lg sm:text-2xl font-extrabold text-white font-serif tracking-wide">
+              🛡️ Armed Gunmen • Gunwomen • Commandos • PSOs
+            </p>
 
-                {/* Floating Deployment Badge (Bottom Left) */}
-                <div className="absolute -bottom-4 -left-2 sm:-left-4 bg-white text-slate-900 border border-[#E5DEC8] rounded-2xl p-3.5 shadow-xl flex items-center gap-3 z-20">
-                  <div className="p-2 bg-emerald-600 text-white rounded-xl font-bold text-xs">
-                    DASF
-                  </div>
-                  <div>
-                    <div className="text-xs font-extrabold text-amber-800">1,500+ Troops Deployed</div>
-                    <div className="text-[10px] font-semibold text-slate-600">VIPs • Banks • Commercial</div>
-                  </div>
-                </div>
+            {/* Sub-description */}
+            <p className="text-sm sm:text-base lg:text-lg text-slate-100 leading-relaxed max-w-2xl font-medium">
+              Deploying highly trained Gunmen, Gunwomen, Tactical Commandos, PSOs, and Certified Security Personnel for VIP protection, commercial facilities, banks, and events across Ghaziabad & Pan India.
+            </p>
 
-              </div>
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row flex-wrap items-center gap-4 pt-3">
+              <a
+                href={`tel:${companyDetails.phone}`}
+                className="w-full sm:w-auto px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white text-xs sm:text-sm font-extrabold font-serif uppercase tracking-wider rounded-xl flex items-center justify-center gap-2.5 transition-all shadow-lg hover:scale-105"
+              >
+                <Phone className="w-4.5 h-4.5 text-white" />
+                <span>Call Hotline: {companyDetails.phone}</span>
+                <ArrowRight className="w-4 h-4 text-white" />
+              </a>
+
+              <a
+                href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-8 py-4 bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-extrabold font-serif uppercase tracking-wider rounded-xl backdrop-blur-md flex items-center justify-center gap-2.5 transition-all hover:scale-105 shadow-md"
+              >
+                <MessageSquare className="w-4.5 h-4.5" />
+                <span>Instant WhatsApp Inquiry</span>
+              </a>
+
+              <Link
+                to="/services"
+                className="w-full sm:w-auto px-7 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white text-xs sm:text-sm font-extrabold font-serif uppercase tracking-wider rounded-xl backdrop-blur-md flex items-center justify-center gap-2 transition-all"
+              >
+                <span>View Services</span>
+              </Link>
+            </div>
+
+            {/* Bottom Quick Info Strip */}
+            <div className="pt-4 flex flex-wrap items-center gap-6 text-xs font-bold text-amber-200/90 border-t border-slate-700/80 max-w-xl">
+              <span className="flex items-center gap-1.5">
+                <CheckCircle className="w-4 h-4 text-emerald-400" /> 24/7 Rapid Response
+              </span>
+              <span>•</span>
+              <span>1,500+ Active Personnel</span>
+              <span>•</span>
+              <span>28+ States Mobility</span>
             </div>
 
           </div>
