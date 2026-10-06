@@ -45,7 +45,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 py-12">
+    <div className="min-h-screen bg-[#FAF8F3] text-slate-900 py-12">
       
       {/* TOP HERO SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-10 text-center space-y-3">

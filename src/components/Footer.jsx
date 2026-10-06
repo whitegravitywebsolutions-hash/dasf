@@ -1,49 +1,61 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, ArrowRight, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, MessageSquare, ShieldCheck } from 'lucide-react';
 import { companyDetails, servicesData } from '../data/servicesData';
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-50 text-slate-700 border-t border-slate-200 pt-16 pb-8 relative overflow-hidden">
-      
+    <footer className="bg-slate-950 text-slate-300 border-t border-slate-800 pt-16 pb-8 relative overflow-hidden">
+      {/* Background Accent Glows */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           
           {/* Column 1: Brand Info & Social Icons */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-3 group">
-              <img 
-                src={companyDetails.logo} 
-                alt="Dharm Armed Security Force" 
-                className="h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-              />
+              <div className="p-1.5 rounded-2xl bg-slate-900 border border-slate-800 shadow-inner group-hover:scale-105 transition-transform duration-300">
+                <img 
+                  src={companyDetails.logo} 
+                  alt="Dharm Armed Security Force" 
+                  className="h-14 sm:h-16 w-auto object-contain"
+                />
+              </div>
               <div className="flex flex-col">
-                <span className="text-base sm:text-lg font-black tracking-tight text-slate-900 font-serif leading-tight">
+                <span className="text-base sm:text-lg font-black tracking-tight text-white font-serif leading-tight">
                   Dharm Armed Security
                 </span>
-                <span className="text-xs sm:text-sm font-extrabold text-slate-600 tracking-wider font-serif uppercase">
-                  Force
+                <span className="text-xs sm:text-sm font-extrabold text-amber-400 tracking-wider font-serif uppercase">
+                  Force (DASF)
                 </span>
               </div>
             </Link>
             
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Armed Gunmen, Gunwomen, Commandos, PSOs & Security Guards. Dedicated to safeguarding enterprises, VIPs, banks, and events across Pan India.
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Armed Gunmen, Gunwomen, Commandos, PSOs & Security Personnel. Dedicated to safeguarding enterprises, VIPs, banks, and events across Pan India since 2017.
             </p>
+
+            {/* Statutory Compliance Badge */}
+            <div className="pt-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-amber-500/40 text-amber-400 text-[11px] font-extrabold uppercase tracking-wider">
+                <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+                <span>PSARA & GST Certified Agency</span>
+              </div>
+            </div>
 
             {/* Social Media Icons */}
             <div className="pt-2 space-y-2">
-              <div className="text-slate-900 font-bold uppercase tracking-wider text-[11px]">
+              <div className="text-slate-200 font-bold uppercase tracking-wider text-[11px]">
                 Follow Us & Connect:
               </div>
               <div className="flex items-center gap-2.5">
-                {/* Facebook */}
                 <a
                   href="https://www.facebook.com/people/Dharm-Armed-Security-Force/61594678872450/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white border border-slate-300 hover:border-slate-800 hover:text-slate-900 text-slate-600 flex items-center justify-center transition-colors"
+                  className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-400 hover:text-amber-400 text-slate-400 flex items-center justify-center transition-colors"
                   aria-label="Facebook"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -51,12 +63,11 @@ export default function Footer() {
                   </svg>
                 </a>
 
-                {/* Instagram */}
                 <a
                   href="https://www.instagram.com/dharmarmedsecurityforce/?hl=en"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white border border-slate-300 hover:border-slate-800 hover:text-slate-900 text-slate-600 flex items-center justify-center transition-colors"
+                  className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-400 hover:text-amber-400 text-slate-400 flex items-center justify-center transition-colors"
                   aria-label="Instagram"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -64,12 +75,11 @@ export default function Footer() {
                   </svg>
                 </a>
 
-                {/* WhatsApp */}
                 <a
                   href={`https://wa.me/${companyDetails.phoneClean}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-emerald-100 border border-emerald-300 hover:bg-emerald-200 text-emerald-700 flex items-center justify-center transition-colors"
+                  className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-400 text-emerald-400 flex items-center justify-center transition-colors"
                   aria-label="WhatsApp"
                 >
                   <MessageSquare className="w-4 h-4" />
@@ -80,19 +90,19 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 uppercase tracking-wider">
+            <h4 className="text-base font-bold text-white border-b border-slate-800 pb-2 uppercase tracking-wider font-serif">
               Quick Navigation
             </h4>
-            <ul className="space-y-2.5 text-sm">
-              {['Home', 'Services', 'About Us', 'Contact'].map((item) => {
-                const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '').replace('us', '')}`;
+            <ul className="space-y-2.5 text-xs font-semibold">
+              {['Home', 'Services Catalog', 'About Us', 'Contact Dispatch'].map((item) => {
+                const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' catalog', '').replace(' dispatch', '').replace(' ', '').replace('us', '')}`;
                 return (
                   <li key={item}>
                     <Link 
                       to={path} 
-                      className="hover:text-slate-900 transition-colors flex items-center gap-2 group text-slate-600"
+                      className="hover:text-amber-400 transition-colors flex items-center gap-2 group text-slate-400"
                     >
-                      <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-3.5 h-3.5 text-amber-500 group-hover:translate-x-1 transition-transform" />
                       <span>{item}</span>
                     </Link>
                   </li>
@@ -103,24 +113,24 @@ export default function Footer() {
 
           {/* Column 3: Featured Services */}
           <div className="space-y-4">
-            <h4 className="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 uppercase tracking-wider">
-              Security Forces
+            <h4 className="text-base font-bold text-white border-b border-slate-800 pb-2 uppercase tracking-wider font-serif">
+              Tactical Forces
             </h4>
             <ul className="space-y-2 text-xs">
               {servicesData.slice(0, 6).map((service) => (
                 <li key={service.id}>
                   <Link 
                     to="/services" 
-                    className="text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2"
+                    className="text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-2"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                     <span>{service.title}</span>
                   </Link>
                 </li>
               ))}
               <li>
-                <Link to="/services" className="text-slate-900 hover:underline text-xs font-semibold pt-1 inline-block">
-                  View Full Catalog →
+                <Link to="/services" className="text-amber-400 hover:underline text-xs font-bold pt-1 inline-block">
+                  View Full 15+ Forces Catalog →
                 </Link>
               </li>
             </ul>
@@ -128,38 +138,38 @@ export default function Footer() {
 
           {/* Column 4: Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 uppercase tracking-wider">
-              Contact Dispatch
+            <h4 className="text-base font-bold text-white border-b border-slate-800 pb-2 uppercase tracking-wider font-serif">
+              Dispatch Hotline
             </h4>
             
-            <div className="space-y-3 text-sm">
+            <div className="space-y-3 text-xs">
               <a 
                 href={`tel:${companyDetails.phone}`}
-                className="flex items-start gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-slate-400 transition-colors group"
+                className="flex items-start gap-3 p-3 rounded-2xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 transition-colors group"
               >
-                <Phone className="w-5 h-5 text-slate-700 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                <Phone className="w-4.5 h-4.5 text-amber-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <div className="text-xs text-slate-500 font-medium">Hotline Call</div>
-                  <div className="text-slate-900 font-bold">{companyDetails.phone}</div>
+                  <div className="text-[11px] text-slate-400 font-medium">Direct Hotline</div>
+                  <div className="text-amber-400 font-extrabold text-sm">{companyDetails.phone}</div>
                 </div>
               </a>
 
               <a 
                 href={`mailto:${companyDetails.email}`}
-                className="flex items-start gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-slate-400 transition-colors group"
+                className="flex items-start gap-3 p-3 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 transition-colors group"
               >
-                <Mail className="w-5 h-5 text-slate-700 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                <Mail className="w-4.5 h-4.5 text-emerald-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <div className="text-xs text-slate-500 font-medium">Official Email</div>
-                  <div className="text-slate-900 font-semibold text-xs break-all">{companyDetails.email}</div>
+                  <div className="text-[11px] text-slate-400 font-medium">Official Dispatch Email</div>
+                  <div className="text-white font-medium text-xs break-all">{companyDetails.email}</div>
                 </div>
               </a>
 
-              <div className="flex items-start gap-3 p-3 rounded-xl bg-white border border-slate-200">
-                <MapPin className="w-5 h-5 text-slate-700 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 p-3 rounded-2xl bg-slate-900 border border-slate-800">
+                <MapPin className="w-4.5 h-4.5 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-xs text-slate-500 font-medium">Head Office Location</div>
-                  <div className="text-slate-800 text-xs font-medium">{companyDetails.location}</div>
+                  <div className="text-[11px] text-slate-400 font-medium">Headquarters</div>
+                  <div className="text-slate-300 text-xs font-medium">{companyDetails.location}</div>
                 </div>
               </div>
             </div>
@@ -167,17 +177,17 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom copyright line */}
-        <div className="border-t border-slate-200 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+        {/* Bottom copyright bar */}
+        <div className="border-t border-slate-900 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} {companyDetails.name}. All Rights Reserved.</p>
           <div className="flex items-center gap-4">
-            <p className="text-slate-600 font-medium">
+            <p className="text-slate-400 font-medium">
               Designed & Developed by{' '}
               <a 
                 href="https://whitegravity.in/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-slate-900 font-bold hover:underline transition-colors"
+                className="text-amber-400 font-bold hover:underline transition-colors"
               >
                 White Gravity Web Solutions
               </a>
