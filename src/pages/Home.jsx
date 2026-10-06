@@ -35,84 +35,82 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
       
-      {/* FULL-WIDTH HERO BANNER SECTION WITH AUTHENTIC DASF SQUAD PHOTO */}
-      <section className="w-full relative h-[540px] sm:h-[620px] lg:h-[660px] overflow-hidden border-b border-slate-200 bg-slate-100">
+      {/* FULL-WIDTH GREEN HERO BANNER SECTION (MATCHING DESIGN REFERENCE) */}
+      <section className="w-full relative min-h-[560px] sm:min-h-[620px] lg:min-h-[680px] overflow-hidden bg-slate-950 text-white">
         {/* Full-Width Squad Image */}
         <img
           src="/images/dasf-hero-squad.jpg"
           alt="Dharm Armed Security Force Squad"
-          className="w-full h-full object-cover object-top sm:object-center"
+          className="w-full h-full absolute inset-0 object-cover object-top sm:object-center"
         />
 
-        {/* Soft Radial & Gradient Overlay for Perfect Contrast */}
-        <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/70 to-white/40 lg:from-white/90 lg:via-white/60 lg:to-transparent"></div>
+        {/* Deep Emerald Green Gradient Overlay (Left-to-Right) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/95 via-emerald-950/80 to-emerald-950/30 lg:via-emerald-950/75 lg:to-transparent"></div>
 
-        {/* Center-Aligned Hero Content Container */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center items-center relative z-20 text-center">
-          <div className="max-w-3xl space-y-5 text-center bg-white/95 backdrop-blur-md p-6 sm:p-10 lg:p-12 rounded-3xl border border-slate-200/90 shadow-xl mx-auto">
+        {/* Content Container (Left-aligned, high impact) */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[560px] sm:min-h-[620px] lg:min-h-[680px] flex flex-col justify-center relative z-20 py-12">
+          <div className="max-w-3xl space-y-6 text-left">
             
-            {/* Badges - Centered */}
-            <div className="flex flex-wrap items-center justify-center gap-2">
-              <span className="px-3.5 py-1.5 rounded-full bg-slate-900 text-white text-xs sm:text-sm font-bold uppercase tracking-wider flex items-center gap-2">
-                <Award className="w-4 h-4 text-emerald-400" />
-                <span>Pan India Certified Force</span>
-              </span>
-              <span className="px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-900 text-xs font-semibold">
-                PSARA • GST • MSME Certified
-              </span>
+            {/* Top Guarantee Pill Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-600 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-md w-fit">
+              <ShieldCheck className="w-4 h-4 text-white" />
+              <span>PSARA & GST Certified Security Force</span>
             </div>
 
-            {/* Main Title - Centered */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-              Dharm Armed Security Force
+            {/* Massive Bold Headline */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-none font-sans">
+              DHARM ARMED <br />
+              <span className="text-white">SECURITY FORCE</span>
             </h1>
 
-            {/* Subheading / Tagline - Centered */}
-            <p className="text-base sm:text-xl font-bold text-emerald-700 tracking-wide">
+            {/* Subheading / Tagline */}
+            <p className="text-lg sm:text-2xl font-extrabold text-emerald-400 tracking-wide">
               🛡️ Armed Gunmen • Gunwomen • Commandos • PSOs
             </p>
 
-            {/* Description - Centered */}
-            <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            {/* Sub-description */}
+            <p className="text-sm sm:text-base lg:text-lg text-emerald-100/90 leading-relaxed max-w-2xl">
               Deploying highly trained Gunmen, Gunwomen, Tactical Commandos, PSOs, and Certified Security Personnel for VIP protection, commercial facilities, banks, and events across Ghaziabad & Pan India.
             </p>
 
-            {/* 3 Action Buttons - Centered */}
-            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 pt-2">
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row flex-wrap items-center gap-4 pt-3">
               <a
                 href={`tel:${companyDetails.phone}`}
-                className="w-full sm:w-auto px-7 py-3.5 bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-bold uppercase tracking-wider rounded-full flex items-center justify-center gap-2.5 transition-all border border-slate-800"
+                className="w-full sm:w-auto px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-xl flex items-center justify-center gap-2.5 transition-all shadow-lg hover:scale-105"
               >
-                <Phone className="w-4 h-4 text-emerald-400" />
-                <span>Call {companyDetails.phone}</span>
+                <Phone className="w-4.5 h-4.5" />
+                <span>Call Hotline: {companyDetails.phone}</span>
+                <ArrowRight className="w-4 h-4" />
               </a>
 
               <a
                 href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold rounded-full flex items-center justify-center gap-2 transition-all"
+                className="w-full sm:w-auto px-8 py-4 bg-emerald-700/60 hover:bg-emerald-700/80 border border-emerald-400/40 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-xl backdrop-blur-md flex items-center justify-center gap-2.5 transition-all hover:scale-105"
               >
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-4.5 h-4.5 text-emerald-400" />
                 <span>WhatsApp Inquiry</span>
               </a>
 
               <Link
                 to="/services"
-                className="w-full sm:w-auto px-7 py-3.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 text-xs sm:text-sm font-bold rounded-full flex items-center justify-center gap-2 transition-all"
+                className="w-full sm:w-auto px-7 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-xl backdrop-blur-md flex items-center justify-center gap-2 transition-all"
               >
-                <span>Explore Catalog</span>
-                <ArrowRight className="w-4 h-4 text-slate-600" />
+                <span>View Services</span>
               </Link>
             </div>
 
-            {/* Quick Info Strip - Centered */}
-            <div className="pt-3 flex items-center justify-center gap-4 text-xs font-semibold text-slate-600 border-t border-slate-200 max-w-lg mx-auto">
+            {/* Bottom Quick Info Strip */}
+            <div className="pt-4 flex flex-wrap items-center gap-6 text-xs font-bold text-emerald-200/80 border-t border-emerald-800/60 max-w-xl">
               <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-slate-700" /> 24/7 Rapid Response
+                <ShieldCheck className="w-4 h-4 text-emerald-400" /> 24/7 Rapid Response
               </span>
               <span>•</span>
-              <span>Licensed Security Agency</span>
+              <span>1,500+ Active Personnel</span>
+              <span>•</span>
+              <span>28+ States Mobility</span>
             </div>
 
           </div>
