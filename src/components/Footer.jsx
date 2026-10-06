@@ -5,10 +5,10 @@ import { companyDetails, servicesData } from '../data/servicesData';
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-300 border-t border-slate-800 pt-16 pb-8 relative overflow-hidden">
+    <footer className="bg-[#F3ECE1] text-slate-800 border-t border-[#E5DEC8] pt-16 pb-8 relative overflow-hidden">
       {/* Background Accent Glows */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Column 1: Brand Info & Social Icons */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="p-1.5 rounded-2xl bg-slate-900 border border-slate-800 shadow-inner group-hover:scale-105 transition-transform duration-300">
+              <div className="p-1.5 rounded-2xl bg-white border border-[#E5DEC8] shadow-sm group-hover:scale-105 transition-transform duration-300">
                 <img 
                   src={companyDetails.logo} 
                   alt="Dharm Armed Security Force" 
@@ -24,30 +24,30 @@ export default function Footer() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-base sm:text-lg font-black tracking-tight text-white font-serif leading-tight">
+                <span className="text-base sm:text-lg font-black tracking-tight text-slate-900 font-serif leading-tight uppercase">
                   Dharm Armed Security
                 </span>
-                <span className="text-xs sm:text-sm font-extrabold text-amber-400 tracking-wider font-serif uppercase">
+                <span className="text-xs sm:text-sm font-extrabold text-amber-800 tracking-wider font-serif uppercase">
                   Force (DASF)
                 </span>
               </div>
             </Link>
             
-            <p className="text-xs text-slate-400 leading-relaxed">
+            <p className="text-xs text-slate-700 leading-relaxed font-medium">
               Armed Gunmen, Gunwomen, Commandos, PSOs & Security Personnel. Dedicated to safeguarding enterprises, VIPs, banks, and events across Pan India since 2017.
             </p>
 
             {/* Statutory Compliance Badge */}
             <div className="pt-1">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-amber-500/40 text-amber-400 text-[11px] font-extrabold uppercase tracking-wider">
-                <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-amber-400 text-amber-900 text-[11px] font-extrabold uppercase tracking-wider shadow-sm">
+                <ShieldCheck className="w-3.5 h-3.5 text-amber-700" />
                 <span>PSARA & GST Certified Agency</span>
               </div>
             </div>
 
             {/* Social Media Icons */}
             <div className="pt-2 space-y-2">
-              <div className="text-slate-200 font-bold uppercase tracking-wider text-[11px]">
+              <div className="text-slate-900 font-bold uppercase tracking-wider text-[11px]">
                 Follow Us & Connect:
               </div>
               <div className="flex items-center gap-2.5">
@@ -55,7 +55,7 @@ export default function Footer() {
                   href="https://www.facebook.com/people/Dharm-Armed-Security-Force/61594678872450/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-400 hover:text-amber-400 text-slate-400 flex items-center justify-center transition-colors"
+                  className="w-9 h-9 rounded-xl bg-white border border-[#E5DEC8] hover:border-amber-600 hover:text-amber-800 text-slate-700 flex items-center justify-center transition-colors shadow-sm"
                   aria-label="Facebook"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@ export default function Footer() {
                   href="https://www.instagram.com/dharmarmedsecurityforce/?hl=en"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-400 hover:text-amber-400 text-slate-400 flex items-center justify-center transition-colors"
+                  className="w-9 h-9 rounded-xl bg-white border border-[#E5DEC8] hover:border-amber-600 hover:text-amber-800 text-slate-700 flex items-center justify-center transition-colors shadow-sm"
                   aria-label="Instagram"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -79,7 +79,7 @@ export default function Footer() {
                   href={`https://wa.me/${companyDetails.phoneClean}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-400 text-emerald-400 flex items-center justify-center transition-colors"
+                  className="w-9 h-9 rounded-xl bg-white border border-[#E5DEC8] hover:border-emerald-600 text-emerald-700 flex items-center justify-center transition-colors shadow-sm"
                   aria-label="WhatsApp"
                 >
                   <MessageSquare className="w-4 h-4" />
@@ -90,7 +90,7 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-base font-bold text-white border-b border-slate-800 pb-2 uppercase tracking-wider font-serif">
+            <h4 className="text-base font-bold text-slate-900 border-b border-[#E5DEC8] pb-2 uppercase tracking-wider font-serif">
               Quick Navigation
             </h4>
             <ul className="space-y-2.5 text-xs font-semibold">
@@ -100,9 +100,9 @@ export default function Footer() {
                   <li key={item}>
                     <Link 
                       to={path} 
-                      className="hover:text-amber-400 transition-colors flex items-center gap-2 group text-slate-400"
+                      className="hover:text-amber-800 transition-colors flex items-center gap-2 group text-slate-700 font-medium"
                     >
-                      <ArrowRight className="w-3.5 h-3.5 text-amber-500 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-3.5 h-3.5 text-amber-700 group-hover:translate-x-1 transition-transform" />
                       <span>{item}</span>
                     </Link>
                   </li>
@@ -113,7 +113,7 @@ export default function Footer() {
 
           {/* Column 3: Featured Services */}
           <div className="space-y-4">
-            <h4 className="text-base font-bold text-white border-b border-slate-800 pb-2 uppercase tracking-wider font-serif">
+            <h4 className="text-base font-bold text-slate-900 border-b border-[#E5DEC8] pb-2 uppercase tracking-wider font-serif">
               Tactical Forces
             </h4>
             <ul className="space-y-2 text-xs">
@@ -121,15 +121,15 @@ export default function Footer() {
                 <li key={service.id}>
                   <Link 
                     to="/services" 
-                    className="text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-2"
+                    className="text-slate-700 hover:text-amber-800 transition-colors flex items-center gap-2 font-medium"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-700"></span>
                     <span>{service.title}</span>
                   </Link>
                 </li>
               ))}
               <li>
-                <Link to="/services" className="text-amber-400 hover:underline text-xs font-bold pt-1 inline-block">
+                <Link to="/services" className="text-amber-800 hover:underline text-xs font-extrabold pt-1 inline-block">
                   View Full 15+ Forces Catalog →
                 </Link>
               </li>
@@ -138,38 +138,38 @@ export default function Footer() {
 
           {/* Column 4: Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-base font-bold text-white border-b border-slate-800 pb-2 uppercase tracking-wider font-serif">
+            <h4 className="text-base font-bold text-slate-900 border-b border-[#E5DEC8] pb-2 uppercase tracking-wider font-serif">
               Dispatch Hotline
             </h4>
             
             <div className="space-y-3 text-xs">
               <a 
                 href={`tel:${companyDetails.phone}`}
-                className="flex items-start gap-3 p-3 rounded-2xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 transition-colors group"
+                className="flex items-start gap-3 p-3 rounded-2xl bg-white border border-[#E5DEC8] hover:border-amber-500/60 transition-colors group shadow-sm"
               >
-                <Phone className="w-4.5 h-4.5 text-amber-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                <Phone className="w-4.5 h-4.5 text-amber-700 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <div className="text-[11px] text-slate-400 font-medium">Direct Hotline</div>
-                  <div className="text-amber-400 font-extrabold text-sm">{companyDetails.phone}</div>
+                  <div className="text-[11px] text-slate-600 font-medium">Direct Hotline</div>
+                  <div className="text-amber-800 font-extrabold text-sm">{companyDetails.phone}</div>
                 </div>
               </a>
 
               <a 
                 href={`mailto:${companyDetails.email}`}
-                className="flex items-start gap-3 p-3 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 transition-colors group"
+                className="flex items-start gap-3 p-3 rounded-2xl bg-white border border-[#E5DEC8] hover:border-emerald-500/60 transition-colors group shadow-sm"
               >
-                <Mail className="w-4.5 h-4.5 text-emerald-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                <Mail className="w-4.5 h-4.5 text-emerald-700 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <div className="text-[11px] text-slate-400 font-medium">Official Dispatch Email</div>
-                  <div className="text-white font-medium text-xs break-all">{companyDetails.email}</div>
+                  <div className="text-[11px] text-slate-600 font-medium">Official Dispatch Email</div>
+                  <div className="text-slate-900 font-semibold text-xs break-all">{companyDetails.email}</div>
                 </div>
               </a>
 
-              <div className="flex items-start gap-3 p-3 rounded-2xl bg-slate-900 border border-slate-800">
-                <MapPin className="w-4.5 h-4.5 text-amber-400 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 p-3 rounded-2xl bg-white border border-[#E5DEC8] shadow-sm">
+                <MapPin className="w-4.5 h-4.5 text-amber-700 shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-[11px] text-slate-400 font-medium">Headquarters</div>
-                  <div className="text-slate-300 text-xs font-medium">{companyDetails.location}</div>
+                  <div className="text-[11px] text-slate-600 font-medium">Headquarters</div>
+                  <div className="text-slate-800 text-xs font-semibold">{companyDetails.location}</div>
                 </div>
               </div>
             </div>
@@ -178,16 +178,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright bar */}
-        <div className="border-t border-slate-900 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+        <div className="border-t border-[#E5DEC8] pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-600">
           <p>© {new Date().getFullYear()} {companyDetails.name}. All Rights Reserved.</p>
           <div className="flex items-center gap-4">
-            <p className="text-slate-400 font-medium">
+            <p className="text-slate-700 font-medium">
               Designed & Developed by{' '}
               <a 
                 href="https://whitegravity.in/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-amber-400 font-bold hover:underline transition-colors"
+                className="text-amber-800 font-extrabold hover:underline transition-colors"
               >
                 White Gravity Web Solutions
               </a>

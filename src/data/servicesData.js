@@ -13,7 +13,7 @@ export const servicesData = [
     title: 'Personal Security Officer (PSO)',
     category: 'VIP & Executive',
     image: '/images/pso-officer.jpg',
-    description: 'Specialized 1-on-1 Personal Security Officers (PSO) and close protection details supervised under D.S. Tomar (Ansh PSO) for executives, VIPs, and dignitaries.',
+    description: 'Specialized 1-on-1 Personal Security Officers (PSO) and close protection details supervised under Dharam Singh Tomar (Ansh PSO) for executives, VIPs, and dignitaries.',
     features: ['Dedicated Personal Security Officer (PSO)', 'Tactical Bodyguard Escort', 'Route Reconnaissance & Threat Defense', 'Armed & Unarmed PSO Options'],
     badge: 'PSO Specialist'
   },

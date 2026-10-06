@@ -18,25 +18,25 @@ export default function ForceGallery() {
       pos: 'object-center'
     },
     {
-      src: '/images/dasf-officers-uniform.jpg',
+      src: '/images/dasf-armed-security-officers.jpg',
       title: 'Armed Security Officers',
       category: 'Gunmen & Officers',
       desc: 'Licensed gunman and tactical security officers in uniform.',
-      pos: 'object-[center_85%]'
+      pos: 'object-[center_30%]'
     },
     {
-      src: '/images/dasf-pso-tactical.jpg',
+      src: '/images/dasf-executive-pso-escort.jpg',
       title: 'Executive PSO Duty',
       category: 'VIP Protection',
       desc: 'Personal Security Officers for executive and VIP escort.',
-      pos: 'object-center'
+      pos: 'object-[center_25%]'
     },
     {
-      src: '/images/dasf-guard-deployment.jpg',
+      src: '/images/dasf-field-guard-deployment.jpg',
       title: 'Field Guard Deployment',
       category: 'On-Site Security',
       desc: 'Armed and unarmed security deployment for commercial sites.',
-      pos: 'object-[center_60%]'
+      pos: 'object-[center_20%]'
     },
     {
       src: '/images/dasf-gunman-active.jpg',

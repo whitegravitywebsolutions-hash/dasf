@@ -76,18 +76,18 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row flex-wrap items-center gap-4 pt-2">
                 <a
                   href={`tel:${companyDetails.phone}`}
-                  className="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-amber-400 border border-amber-500/40 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-2xl flex items-center justify-center gap-3 transition-all shadow-xl hover:-translate-y-0.5"
+                  className="w-full sm:w-auto px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white border border-amber-600 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-2xl flex items-center justify-center gap-3 transition-all shadow-lg hover:-translate-y-0.5"
                 >
-                  <Phone className="w-4.5 h-4.5 text-amber-400" />
+                  <Phone className="w-4.5 h-4.5 text-white" />
                   <span>Call Hotline: {companyDetails.phone}</span>
-                  <ArrowRight className="w-4 h-4 text-amber-400" />
+                  <ArrowRight className="w-4 h-4 text-white" />
                 </a>
 
                 <a
                   href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharm%20Armed%20Security%20Force,%20I%20want%20to%20enquire%20about%20your%20security%20services.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-8 py-4 bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-2xl flex items-center justify-center gap-2.5 transition-all shadow-lg hover:-translate-y-0.5"
+                  className="w-full sm:w-auto px-8 py-4 bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-2xl flex items-center justify-center gap-2.5 transition-all shadow-md hover:-translate-y-0.5"
                 >
                   <MessageSquare className="w-4.5 h-4.5" />
                   <span>Instant WhatsApp Inquiry</span>
@@ -95,14 +95,14 @@ export default function Home() {
 
                 <Link
                   to="/services"
-                  className="w-full sm:w-auto px-6 py-4 bg-white hover:bg-amber-50 border border-slate-300 text-slate-900 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-2xl flex items-center justify-center gap-2 transition-all shadow-sm"
+                  className="w-full sm:w-auto px-6 py-4 bg-white hover:bg-amber-50 border border-[#E5DEC8] text-slate-900 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-2xl flex items-center justify-center gap-2 transition-all shadow-sm"
                 >
                   <span>Explore 15+ Units</span>
                 </Link>
               </div>
 
               {/* Bottom Trust Indicators */}
-              <div className="pt-4 flex flex-wrap items-center gap-5 text-xs font-bold text-slate-700 border-t border-slate-300/80">
+              <div className="pt-4 flex flex-wrap items-center gap-5 text-xs font-bold text-slate-700 border-t border-[#E5DEC8]">
                 <span className="flex items-center gap-1.5 text-emerald-800">
                   <CheckCircle className="w-4 h-4 text-emerald-600" /> 24/7 Rapid Response
                 </span>
@@ -114,34 +114,23 @@ export default function Home() {
 
             </div>
 
-            {/* Right Column: Official 3D Logo Brand Graphic Showcase Card (PER USER RED ARROW INSTRUCTION) */}
+            {/* Right Column: Authentic Hero Squad Photo Showcase Card */}
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative w-full max-w-lg group">
                 
-                {/* Main 3D Brand Logo Showcase Container Frame */}
-                <div className="relative bg-slate-950 border-2 border-amber-500/50 rounded-3xl p-4 sm:p-6 shadow-2xl overflow-hidden group-hover:scale-102 transition-transform duration-500">
-                  <div className="relative flex items-center justify-center min-h-[300px] sm:min-h-[360px]">
+                {/* Main Hero Photo Container Frame - Clean Light Card */}
+                <div className="relative bg-white border-2 border-amber-400/80 rounded-3xl p-3 sm:p-4 shadow-2xl overflow-hidden group-hover:scale-102 transition-transform duration-500">
+                  <div className="relative flex items-center justify-center rounded-2xl overflow-hidden border border-[#E5DEC8]">
                     <img
-                      src="/images/dasf-hero-brand-3d.png"
-                      alt="Dharm Armed Security Force Official 3D Brand Logo"
-                      className="w-full h-auto max-h-[340px] object-contain drop-shadow-2xl"
+                      src="/images/dasf-hero-squad-photo.jpg"
+                      alt="Dharm Armed Security Force Active Deployment Officers"
+                      className="w-full h-80 sm:h-[400px] object-cover object-top"
                     />
-                  </div>
-
-                  {/* Bottom Caption Overlay */}
-                  <div className="mt-4 p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800 text-white backdrop-blur-md">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <div className="text-[11px] font-extrabold text-amber-400 uppercase tracking-widest">Official Tactical Emblem</div>
-                        <div className="text-xs font-black text-white mt-0.5">Dharm Armed Security Force (DASF)</div>
-                      </div>
-                      <span className="text-[10px] font-extrabold bg-emerald-600 text-white px-2.5 py-1 rounded-full uppercase">PSARA Govt Licensed</span>
-                    </div>
                   </div>
                 </div>
 
                 {/* Floating GMB Rating Badge (Top Right) */}
-                <div className="absolute -top-4 -right-2 sm:-right-4 bg-white border border-slate-200 rounded-2xl p-3 shadow-xl flex items-center gap-3 z-20">
+                <div className="absolute -top-4 -right-2 sm:-right-4 bg-white border border-[#E5DEC8] rounded-2xl p-3 shadow-xl flex items-center gap-3 z-20">
                   <div className="p-2 bg-amber-500 text-white rounded-xl">
                     <Star className="w-5 h-5 fill-white" />
                   </div>
@@ -152,13 +141,13 @@ export default function Home() {
                 </div>
 
                 {/* Floating Deployment Badge (Bottom Left) */}
-                <div className="absolute -bottom-4 -left-2 sm:-left-4 bg-slate-900 text-white border border-slate-800 rounded-2xl p-3.5 shadow-xl flex items-center gap-3 z-20">
-                  <div className="p-2 bg-emerald-500 text-slate-950 rounded-xl font-bold text-xs">
+                <div className="absolute -bottom-4 -left-2 sm:-left-4 bg-white text-slate-900 border border-[#E5DEC8] rounded-2xl p-3.5 shadow-xl flex items-center gap-3 z-20">
+                  <div className="p-2 bg-emerald-600 text-white rounded-xl font-bold text-xs">
                     DASF
                   </div>
                   <div>
-                    <div className="text-xs font-extrabold text-amber-400">1,500+ Troops Deployed</div>
-                    <div className="text-[10px] font-medium text-slate-300">VIPs • Banks • Commercial</div>
+                    <div className="text-xs font-extrabold text-amber-800">1,500+ Troops Deployed</div>
+                    <div className="text-[10px] font-semibold text-slate-600">VIPs • Banks • Commercial</div>
                   </div>
                 </div>
 
@@ -198,7 +187,7 @@ export default function Home() {
 
       {/* FEATURED SERVICES CATALOG */}
       {/* FEATURED SERVICES CATALOG (OUR TACTICAL FORCE CATALOG) */}
-      <section className="py-20 bg-[#F3ECE1]/60 border-t border-b border-[#E5DEC8] relative overflow-hidden">
+      <section className="py-20 bg-white border-t border-b border-[#E5DEC8] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           {/* Section Header */}
@@ -224,24 +213,22 @@ export default function Home() {
                 key={service.id}
                 className="bg-white rounded-3xl overflow-hidden border border-[#E5DEC8] hover:border-amber-500/60 transition-all duration-300 flex flex-col group hover:-translate-y-1.5 hover:shadow-xl shadow-sm"
               >
-                {/* Header Banner - Rich Slate Navy */}
-                <div className="bg-slate-950 border-b border-slate-800 p-6 text-white flex flex-col justify-between h-40 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
-
+                {/* Header Banner - Clean Light Palette */}
+                <div className="bg-[#FAF8F3] border-b border-[#E5DEC8] p-6 text-slate-900 flex flex-col justify-between h-40 relative overflow-hidden">
                   <div className="flex items-center justify-between relative z-10">
-                    <div className="p-2.5 rounded-2xl bg-slate-900 border border-slate-800 text-amber-400">
+                    <div className="p-2.5 rounded-2xl bg-amber-100 border border-amber-300 text-amber-800">
                       <ShieldCheck className="w-5 h-5" />
                     </div>
-                    <span className="bg-amber-500/20 border border-amber-400/40 text-amber-300 font-extrabold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-md">
+                    <span className="bg-amber-100 border border-amber-300 text-amber-900 font-extrabold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">
                       {service.badge}
                     </span>
                   </div>
 
                   <div className="relative z-10 pt-2">
-                    <span className="text-[10px] font-extrabold text-amber-400/90 uppercase tracking-widest">
+                    <span className="text-[10px] font-extrabold text-amber-800 uppercase tracking-widest">
                       {service.category}
                     </span>
-                    <h3 className="text-lg font-black text-white font-serif leading-tight">
+                    <h3 className="text-lg font-black text-slate-900 font-serif leading-tight">
                       {service.title}
                     </h3>
                   </div>
@@ -271,10 +258,10 @@ export default function Home() {
                   <div className="pt-4 border-t border-slate-100 flex items-center gap-2">
                     <button
                       onClick={() => handleOpenModal(service)}
-                      className="flex-1 py-3 px-3 bg-slate-900 hover:bg-slate-800 text-amber-400 font-serif font-extrabold rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all shadow-sm border border-slate-800"
+                      className="flex-1 py-3 px-3 bg-amber-600 hover:bg-amber-700 text-white font-serif font-extrabold rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all shadow-sm"
                     >
                       <span>Inquire</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-amber-400" />
+                      <ArrowRight className="w-3.5 h-3.5 text-white" />
                     </button>
 
                     <a
@@ -306,10 +293,10 @@ export default function Home() {
           <div className="mt-14 text-center">
             <Link
               to="/services"
-              className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-amber-400 border border-amber-500/40 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-2xl inline-flex items-center gap-2.5 shadow-xl transition-all hover:scale-105"
+              className="px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white border border-amber-600 text-xs sm:text-sm font-extrabold uppercase tracking-wider rounded-2xl inline-flex items-center gap-2.5 shadow-lg transition-all hover:scale-105"
             >
               <span>Explore All 15+ Tactical Units in Catalog</span>
-              <ArrowRight className="w-4 h-4 text-amber-400" />
+              <ArrowRight className="w-4 h-4 text-white" />
             </Link>
           </div>
 
@@ -317,9 +304,9 @@ export default function Home() {
       </section>
 
       {/* WHATSAPP CTA BANNER */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-50 border-t border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-emerald-50 border border-emerald-200 rounded-3xl p-8 sm:p-12 space-y-6">
+          <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 space-y-6 shadow-sm">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif">
               Need Gunman, Gunwoman or Commando Deployment?
             </h2>
@@ -350,46 +337,59 @@ export default function Home() {
       </section>
 
       {/* GOOGLE MAPS & LOCATION SECTION */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
-        <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div className="space-y-1">
-              <div className="flex items-center gap-2.5">
-                <MapPin className="w-6 h-6 text-slate-800" />
-                <h3 className="text-xl font-bold text-slate-900 font-serif">
-                  Official Headquarters Location
-                </h3>
+      <section className="py-16 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2.5">
+                  <MapPin className="w-6 h-6 text-slate-800" />
+                  <h3 className="text-xl font-bold text-slate-900 font-serif">
+                    Official Headquarters Location
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-600 font-medium pl-8">
+                  {companyDetails.location}
+                </p>
               </div>
-              <p className="text-xs sm:text-sm text-slate-600 font-medium pl-8">
-                {companyDetails.location}
-              </p>
+
+              <a
+                href={`https://maps.google.com/?q=${encodeURIComponent('Dharm Armed Security Force DASF Shop No. 6, Choudhary Market, Main Road, Chipiyana Buzurg, Ghaziabad, Uttar Pradesh 201009')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gold-btn px-5 py-2.5 text-xs flex items-center gap-2 self-start sm:self-auto"
+              >
+                <span>Open in Google Maps App ↗</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             </div>
 
-            <a
-              href={`https://maps.google.com/?q=${encodeURIComponent('Dharm Armed Security Force DASF Shop No. 6, Choudhary Market, Main Road, Chipiyana Buzurg, Ghaziabad, Uttar Pradesh 201009')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="gold-btn px-5 py-2.5 text-xs flex items-center gap-2 self-start sm:self-auto"
-            >
-              <span>Open in Google Maps App ↗</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
+            {/* Embedded Interactive Google Map */}
+            <div className="w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-slate-300 bg-white relative">
+              <iframe
+                title="Dharm Armed Security Force (DASF) Google Map Location"
+                src={`https://maps.google.com/maps?q=${encodeURIComponent('Dharm Armed Security Force DASF Shop No. 6, Choudhary Market, Main Road, Chipiyana Buzurg, Ghaziabad, Uttar Pradesh 201009')}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              ></iframe>
+            </div>
           </div>
+        </div>
+      </section>
 
-          {/* Embedded Interactive Google Map */}
-          <div className="w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-slate-300 bg-white relative">
-            <iframe
-              title="Dharm Armed Security Force (DASF) Google Map Location"
-              src={`https://maps.google.com/maps?q=${encodeURIComponent('Dharm Armed Security Force DASF Shop No. 6, Choudhary Market, Main Road, Chipiyana Buzurg, Ghaziabad, Uttar Pradesh 201009')}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full"
-            ></iframe>
-          </div>
+      {/* SIMPLE FULL-WIDTH STATUTORY ACCREDITATION BANNER (AFTER MAP) */}
+      <section className="py-8 bg-slate-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <img
+            src="/images/home-after-map-banner.png"
+            alt="PSARA Registered & Licensed Security Agency - Central Government Act 2005 & Ministry of MSME Govt of India"
+            className="w-full h-auto object-contain rounded-2xl shadow-sm"
+          />
         </div>
       </section>
 
