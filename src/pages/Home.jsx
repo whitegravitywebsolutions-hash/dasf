@@ -44,7 +44,7 @@ export default function Home() {
         <img
           src="/images/dasf-hero-squad-grand.jpg"
           alt="Dharm Armed Security Force Squad"
-          className="w-full h-full absolute inset-0 object-cover object-[center_75%]"
+          className="w-full h-full absolute inset-0 object-cover object-[center_35%]"
         />
 
         {/* Deep Emerald Green Gradient Overlay (Left-to-Right) */}
