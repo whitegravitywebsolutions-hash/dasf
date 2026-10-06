@@ -66,7 +66,7 @@ export default function Contact() {
             
             <div className="space-y-4">
               <h2 className="text-2xl font-bold text-slate-900 font-serif border-b border-slate-200 pb-3">
-                Official Dispatch Hub
+                Official Contact Hub
               </h2>
 
               {/* Phone Card */}
@@ -96,7 +96,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-xs font-bold text-emerald-800 uppercase tracking-wider">Instant WhatsApp Inquiry</div>
-                  <div className="text-base font-bold text-slate-900">Chat with Security Dispatch</div>
+                  <div className="text-base font-bold text-slate-900">Chat with Security Team</div>
                   <div className="text-xs text-emerald-700 font-bold mt-0.5">Click for Direct Chat ↗</div>
                 </div>
               </a>
@@ -277,7 +277,7 @@ export default function Contact() {
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 font-serif">Inquiry Submitted Successfully!</h3>
                   <p className="text-sm text-slate-600 max-w-sm mx-auto">
-                    We have received your requirement. Redirecting to WhatsApp dispatch officer...
+                    We have received your requirement. Redirecting to WhatsApp support officer...
                   </p>
                   <div className="pt-4">
                     <button

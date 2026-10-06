@@ -30,7 +30,7 @@ export default function InquiryModal({ isOpen, onClose, selectedService }) {
     e.preventDefault();
     setSubmitted(true);
     
-    // Construct WhatsApp message URL for immediate dispatch option
+    // Construct WhatsApp message URL for immediate response option
     const text = `*Security Inquiry - ${formData.service}*%0A` +
       `*Name:* ${formData.name}%0A` +
       `*Phone:* ${formData.phone}%0A` +
@@ -186,7 +186,7 @@ export default function InquiryModal({ isOpen, onClose, selectedService }) {
             </h3>
             
             <p className="text-sm text-slate-600 max-w-sm mx-auto">
-              Thank you, <span className="text-amber-700 font-bold">{formData.name}</span>. Our security dispatch officer is initiating your request on WhatsApp.
+              Thank you, <span className="text-amber-700 font-bold">{formData.name}</span>. Our security team is initiating your request on WhatsApp.
             </p>
 
             <div className="p-3 bg-[#faf8f3] border border-amber-300 rounded-xl text-xs text-amber-900 font-bold">

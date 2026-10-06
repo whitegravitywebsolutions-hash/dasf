@@ -94,20 +94,22 @@ export default function Footer() {
               Quick Navigation
             </h4>
             <ul className="space-y-2.5 text-xs font-semibold">
-              {['Home', 'Services Catalog', 'About Us', 'Contact Dispatch'].map((item) => {
-                const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' catalog', '').replace(' dispatch', '').replace(' ', '').replace('us', '')}`;
-                return (
-                  <li key={item}>
-                    <Link 
-                      to={path} 
-                      className="hover:text-amber-800 transition-colors flex items-center gap-2 group text-slate-700 font-medium"
-                    >
-                      <ArrowRight className="w-3.5 h-3.5 text-amber-700 group-hover:translate-x-1 transition-transform" />
-                      <span>{item}</span>
-                    </Link>
-                  </li>
-                );
-              })}
+              {[
+                { name: 'Home', path: '/' },
+                { name: 'Services Catalog', path: '/services' },
+                { name: 'About Us', path: '/about' },
+                { name: 'Contact Us', path: '/contact' }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    to={item.path} 
+                    className="hover:text-amber-800 transition-colors flex items-center gap-2 group text-slate-700 font-medium"
+                  >
+                    <ArrowRight className="w-3.5 h-3.5 text-amber-700 group-hover:translate-x-1 transition-transform" />
+                    <span>{item.name}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -139,7 +141,7 @@ export default function Footer() {
           {/* Column 4: Contact Info */}
           <div className="space-y-4">
             <h4 className="text-base font-bold text-slate-900 border-b border-[#E5DEC8] pb-2 uppercase tracking-wider font-serif">
-              Dispatch Hotline
+              Direct Hotline
             </h4>
             
             <div className="space-y-3 text-xs">
@@ -160,7 +162,7 @@ export default function Footer() {
               >
                 <Mail className="w-4.5 h-4.5 text-emerald-700 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <div className="text-[11px] text-slate-600 font-medium">Official Dispatch Email</div>
+                  <div className="text-[11px] text-slate-600 font-medium">Official Email</div>
                   <div className="text-slate-900 font-semibold text-xs break-all">{companyDetails.email}</div>
                 </div>
               </a>

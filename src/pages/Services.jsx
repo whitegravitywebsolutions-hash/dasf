@@ -126,7 +126,7 @@ export default function Services() {
             Custom Security Requirement?
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
-            Contact our dispatch office for custom armed gunmen, PSO, commando or security guard deployment tailored to your facility.
+            Contact our office for custom armed gunmen, PSO, commando or security guard deployment tailored to your facility.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 pt-2">
             <a

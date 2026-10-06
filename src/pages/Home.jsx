@@ -42,9 +42,9 @@ export default function Home() {
       <section className="w-full relative min-h-[560px] sm:min-h-[620px] lg:min-h-[680px] overflow-hidden bg-slate-950 text-white">
         {/* Full-Width Squad Background Image */}
         <img
-          src="/images/dasf-hero-squad-grand.jpg"
+          src="/images/dasf-event-bouncers-squad.jpg"
           alt="Dharm Armed Security Force Squad"
-          className="w-full h-full absolute inset-0 object-cover object-[center_35%]"
+          className="w-full h-full absolute inset-0 object-cover object-[center_50%]"
         />
 
         {/* Deep Emerald Green Gradient Overlay (Left-to-Right) */}

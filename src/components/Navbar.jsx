@@ -11,14 +11,14 @@ export default function Navbar() {
     { name: 'Home', path: '/' },
     { name: 'Services Catalog', path: '/services' },
     { name: 'About Us', path: '/about' },
-    { name: 'Contact Dispatch', path: '/contact' },
+    { name: 'Contact Us', path: '/contact' },
   ];
 
   const isActive = (path) => location.pathname === path;
 
   return (
     <header className="sticky top-0 z-50 shadow-md">
-      {/* TOP ANNOUNCEMENT / DISPATCH BAR */}
+      {/* TOP ANNOUNCEMENT BAR */}
       <div className="bg-[#F3ECE1] text-slate-900 text-xs py-2 px-4 border-b border-[#E5DEC8]">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           
@@ -28,7 +28,7 @@ export default function Navbar() {
             </span>
             <span className="hidden md:inline text-slate-400">•</span>
             <span className="hidden md:flex items-center gap-1 text-slate-700">
-              <MapPin className="w-3 h-3 text-emerald-700" /> Ghaziabad & Pan India Dispatch
+              <MapPin className="w-3 h-3 text-emerald-700" /> Ghaziabad & Pan India Services
             </span>
           </div>
 
