@@ -70,8 +70,8 @@ export default function Home() {
             </div>
 
             {/* Massive Bold Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight leading-none font-sans">
-              DHARM ARMED <br />
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-none font-sans">
+              <span className="text-amber-400">DHARM ARMED</span> <br />
               <span className="text-white">SECURITY FORCE</span>
             </h1>
 
