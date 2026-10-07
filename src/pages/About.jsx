@@ -79,7 +79,7 @@ export default function About() {
                   {/* Owner Caption Overlay */}
                   <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 border border-slate-200 backdrop-blur-md text-center">
                     <h3 className="text-xl font-black text-slate-900 font-serif tracking-tight">
-                      Dharam Singh Tomar
+                      Dharmveer Singh Tomar
                     </h3>
                     <p className="text-xs font-bold text-slate-700 uppercase tracking-widest mt-0.5">
                       Proprietor & Founder • DASF
@@ -107,7 +107,7 @@ export default function About() {
 
               {/* Shortened Concise Description */}
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Founded in 2017 by Dharam Singh Tomar (Ansh PSO), Dharm Armed Security Force (DASF) delivers licensed PSARA, GST, and MSME certified security manpower. Managing a trained force of 1,500+ gunmen, gunwomen, tactical commandos, and PSOs, DASF provides high-vigilance protection for VIPs, commercial hubs, banks, and events across 28+ states.
+                Founded in 2017 by Dharmveer Singh Tomar (Ansh PSO), Dharm Armed Security Force (DASF) delivers licensed PSARA, GST, and MSME certified security manpower. Managing a trained force of 1,500+ gunmen, gunwomen, tactical commandos, and PSOs, DASF provides high-vigilance protection for VIPs, commercial hubs, banks, and events across 28+ states.
               </p>
 
               {/* Quick Feature Grid */}
@@ -251,7 +251,7 @@ export default function About() {
             Ready to Secure Your Facility or VIP?
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
-            Connect directly with Dharam Singh Tomar & the DASF coordination team for immediate armed gunman or commando deployment.
+            Connect directly with Dharmveer Singh Tomar & the DASF coordination team for immediate armed gunman or commando deployment.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 pt-2">
             <a

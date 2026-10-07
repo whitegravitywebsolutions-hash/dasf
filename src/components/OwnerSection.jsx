@@ -20,14 +20,14 @@ export default function OwnerSection() {
                 <div className="relative bg-white border border-slate-300 rounded-3xl overflow-hidden shadow-md">
                   <img
                     src={owner.image}
-                    alt="Dharam Singh Tomar - Proprietor & Founder"
+                    alt="Dharmveer Singh Tomar - Proprietor & Founder"
                     className="w-full h-96 sm:h-[420px] object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
 
                   {/* Caption Frame displaying full name */}
                   <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 border border-slate-200 backdrop-blur-md text-center shadow-sm">
                     <h3 className="text-xl font-black text-slate-900 font-serif tracking-tight">
-                      Dharam Singh Tomar
+                      Dharmveer Singh Tomar
                     </h3>
                     <p className="text-xs font-bold text-slate-700 uppercase tracking-widest mt-0.5">
                       Proprietor & Founder • DASF
@@ -86,7 +86,7 @@ export default function OwnerSection() {
                 </a>
 
                 <a
-                  href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharam%20Singh%20Tomar%20Sir,%20I%20want%20to%20enquire%20about%20DASF%20security%20services.`}
+                  href={`https://wa.me/${companyDetails.phoneClean}?text=Hello%20Dharmveer%20Singh%20Tomar%20Sir,%20I%20want%20to%20enquire%20about%20DASF%20security%20services.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-wa-pill px-6 py-3 text-xs flex items-center gap-2"
